@@ -1,0 +1,10 @@
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Release\CallDataTakeCareGetTextFile.exe.config
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Release\CallDataTakeCareGetTextFile.exe
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Release\CallDataTakeCareGetTextFile.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Release\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Release\DBCheckup.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Release\CallDataTakeCareGetTextFile.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Release\CallDataTakeCareGetTextFile.Properties.Resources.resources
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Release\CallDataTakeCareGetTextFile.csproj.GenerateResource.Cache
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Release\CallDataTakeCareGetTextFile.exe
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Release\CallDataTakeCareGetTextFile.pdb

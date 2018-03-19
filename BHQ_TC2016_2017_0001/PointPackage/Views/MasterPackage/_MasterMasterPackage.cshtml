@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Setup package master.";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sectionHeader').css('width', $('#main').css('width'));
+        $('#sectionDetail').css('margin-top', $('#sectionHeader').css('height'));
+    });
+
+    $(window).resize(function () {
+        $('#sectionHeader').css('width', $('#main').css('width'));
+        $('#sectionDetail').css('margin-top', $('#sectionHeader').css('height'));
+    });
+</script>
+
+<div id="main">
+    <section id="sectionHeader" class="two" style="top:0px; padding-top:1px; right:0; position:fixed; z-index:1000; display:block; padding:9px;">
+        <header>
+            <h2 style="text-align:right">Setup package master</h2>
+        </header>
+    </section>
+    <section id="sectionDetail" class="four" style="padding:1em;">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </section>
+</div>

@@ -1,0 +1,30 @@
+﻿@model PointPackage.Models.ViewPackageModel
+@{
+    Layout = "~/Views/PatientSearch/_MasterPatientSearch.cshtml";
+}
+
+<script type="text/javascript">
+    function clickPackage(package_code) {
+        $('#ViewPackage').append('<input type="hidden" name="package_code" value=' + package_code + ' />');
+        $('#ViewPackage').submit();
+    }
+</script>
+@using (Html.BeginForm("ViewPackage", "PatientSearch", FormMethod.Post, new { id = "ViewPackage" }))
+{
+    @Html.HiddenFor(x => x.queue_no)
+    @Html.HiddenFor(x => x.tpr_id)
+    <div class="row">
+        @for (var i = 0; i < Model.listPackage.Count; i++)
+        {
+            <div class="12u$">
+                <article class="item" onclick="clickPackage('@Model.listPackage[i].package_code');" style="cursor:pointer;">
+                    <header align="left" style="padding:15px 15px 15px 15px;">
+                        <h3>Package Code : @Model.listPackage[i].package_code</h3>
+                        <h3>Package Name : @Model.listPackage[i].package_name</h3>
+                    </header>
+                </article>
+            </div>
+        }
+    </div>
+}
+

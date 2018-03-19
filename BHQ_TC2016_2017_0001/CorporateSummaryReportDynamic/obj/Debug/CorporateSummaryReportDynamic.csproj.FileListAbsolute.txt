@@ -1,0 +1,14 @@
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\AutoComplete.asmx
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\AutoComplete.asmx.cs
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\CorporateSummaryReportDynamic.dll
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\CorporateSummaryReportDynamic.pdb
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\ConfigEMRCheckUp.dll
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBCheckup.dll
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBToDoList.dll
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\EMR_Library.dll
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\ConfigEMRCheckUp.pdb
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBCheckup.pdb
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBToDoList.pdb
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\obj\Debug\CorporateSummaryReportDynamic.csprojResolveAssemblyReference.cache
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\obj\Debug\CorporateSummaryReportDynamic.dll
+D:\Workspaces\Visual Studio 2010\EMRCheckUp\branches\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\obj\Debug\CorporateSummaryReportDynamic.pdb

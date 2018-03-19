@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PathWay" Class="pathwayDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.88.10.148;Initial Catalog=PathWay;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PathWayConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="" Member="output_results">
+    <Type Name="output_result">
+      <Column Name="Lab_Code" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_TName" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_EName" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_Standard_Value_Max" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_Standard_Value_Min" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_Standard_Unit" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_Result_Thai" Type="System.String" CanBeNull="true" />
+      <Column Name="Lab_Result_Eng" Type="System.String" CanBeNull="true" />
+      <Column Name="mlr_id" Type="System.Int32" CanBeNull="true" />
+      <Column Name="Lab_Summary" Type="System.String" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="output_room_queues">
+    <Type Name="output_room_queue">
+      <Column Name="room_code" Type="System.String" CanBeNull="true" />
+      <Column Name="queue_no" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="output_queue_servings">
+    <Type Name="output_queue_serving">
+      <Column Name="room_no" Type="System.String" CanBeNull="false" />
+      <Column Name="room_code" Type="System.String" CanBeNull="false" />
+      <Column Name="queue_no" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="output_lang_call_queues">
+    <Type Name="output_lang_call_queue">
+      <Column Name="nation" Type="System.String" CanBeNull="false" />
+      <Column Name="room_no" Type="System.String" CanBeNull="false" />
+      <Column Name="queue_no" Type="System.String" CanBeNull="false" />
+      <Column Name="hpc_site" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="out_put_display_profiles">
+    <Type Name="out_put_display_profile">
+      <Column Name="p_hn_no" Type="System.String" CanBeNull="true" />
+      <Column Name="p_en_no" Type="System.String" CanBeNull="true" />
+      <Column Name="p_name_th" Type="System.String" CanBeNull="true" />
+      <Column Name="p_name_en" Type="System.String" CanBeNull="true" />
+      <Column Name="p_dob" Member="p_dob_date" Storage="_p_dob" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="p_visit_date" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="p_gender" Type="System.String" CanBeNull="true" />
+      <Column Name="p_nation" Type="System.String" CanBeNull="true" />
+      <Column Name="p_married" Type="System.String" CanBeNull="true" />
+      <Column Name="p_age_th" Type="System.String" CanBeNull="true" />
+      <Column Name="p_age" Member="p_age_en" Storage="_p_age" Type="System.String" CanBeNull="true" />
+      <Column Name="p_allergy" Type="System.String" CanBeNull="true" />
+      <Column Name="p_address" Type="System.String" CanBeNull="true" />
+      <Column Name="p_telephone" Type="System.String" CanBeNull="true" />
+      <Column Name="p_avia_flag" Type="System.Byte" CanBeNull="true" />
+      <Column Name="p_image" Type="System.Byte[]" CanBeNull="true" />
+      <Column Name="p_regis_type" Type="System.Boolean" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="questionaire_patiants">
+    <Type Name="questionaire_patiant">
+      <Column Name="p_hn_no" Type="System.String" CanBeNull="true" />
+      <Column Name="p_type" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_his_smok" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_his_nsmok_yrs" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_his_qsmok_yrs" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_his_smok_amt" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_his_smok_dur" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_his_alcohol" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_his_alco_yrs" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_his_alco_social" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_his_exercise" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_ill_concern" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_ill_conc_oth" Type="System.String" CanBeNull="true" />
+      <Column Name="p_ill_psycho" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_ill_psycho_oth" Type="System.String" CanBeNull="true" />
+      <Column Name="p_ill_med_his" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_ill_med_hyper" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_heart" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_diab" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_coro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_dysl" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_cper" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_gout" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_abdd" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_pulm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_para" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_stro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_putb" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_sist" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_kidn" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_epil" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_resp" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_asth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_emph" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_chro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_canc" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_canc_oth" Type="System.String" CanBeNull="true" />
+      <Column Name="p_ill_med_alle" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_pept" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_oth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_med_others" Type="System.String" CanBeNull="true" />
+      <Column Name="p_ill_cur_med" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_ill_cmed_diab" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_hyper" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_demia" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_cardi" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_dysl" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_horm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_oth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_ill_cmed_others" Type="System.String" CanBeNull="true" />
+      <Column Name="p_ill_allergy" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_ill_drug_or_food" Type="System.String" CanBeNull="true" />
+      <Column Name="p_pill_adm" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_pill_admission" Type="System.String" CanBeNull="true" />
+      <Column Name="p_pill_sur" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_pill_surgery" Type="System.String" CanBeNull="true" />
+      <Column Name="p_vinf_hepB_virus" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_vinf_hepA_virus" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_vinf_vaccine" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fhis_f_disease" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_hyper" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_heart" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_diab" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_coro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_coro_cs" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_dysl" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_gout" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_pulm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_para" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_putb" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_stro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_pepu" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_asth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_alle" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_canc" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_canc_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_oth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_fdis_others" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fhis_m_disease" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_hyper" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_heart" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_diab" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_coro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_coro_cs" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_dysl" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_gout" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_pulm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_para" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_putb" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_stro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_pepu" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_asth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_alle" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_canc" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_canc_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_oth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_mdis_others" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fhis_b_disease" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_hyper" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_heart" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_diab" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro_bfm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro_afm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro_nfm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro_bm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro_am" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_coro_nm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_dysl" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_gout" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_pulm" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_para" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_putb" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_stro" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_pepu" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_asth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_alle" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_canc" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_canc_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_oth" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fhis_bdis_others" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fhis_others" Type="System.String" CanBeNull="true" />
+      <Column Name="p_fwm_menopause" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_fwm_meno_start" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fwm_lst_st_mens" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="p_fwm_lst_ed_mens" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="p_fwm_character" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fwm_pregnancy" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_fwm_over_weight" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_license" Type="System.Byte[]" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="out_put_status">
+    <Type Name="out_put_status">
+      <Column Name="success_flag" Type="System.String" CanBeNull="true" />
+      <Column Name="error_code" Type="System.String" CanBeNull="true" />
+      <Column Name="error_name" Type="System.String" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="output_queues">
+    <Type Name="output_queue">
+      <Column Name="queue_no" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="questionaire_aviations">
+    <Type Name="questionaire_aviation">
+      <Column Name="p_hn_no" Type="System.String" CanBeNull="true" />
+      <Column Name="p_type" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_doc_type" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_nameEN" Type="System.String" CanBeNull="true" />
+      <Column Name="p_marital" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_place_exam" Type="System.String" CanBeNull="true" />
+      <Column Name="p_license_type" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_avia_type" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_avia_oths" Type="System.String" CanBeNull="true" />
+      <Column Name="p_license_no" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chge_address" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_th_address" Type="System.String" CanBeNull="true" />
+      <Column Name="p_th_mobile" Type="System.String" CanBeNull="true" />
+      <Column Name="p_en_address" Type="System.String" CanBeNull="true" />
+      <Column Name="p_en_mobile" Type="System.String" CanBeNull="true" />
+      <Column Name="p_th_occupa" Type="System.String" CanBeNull="true" />
+      <Column Name="p_th_comp" Type="System.String" CanBeNull="true" />
+      <Column Name="p_th_office" Type="System.String" CanBeNull="true" />
+      <Column Name="p_th_of_mobile" Type="System.String" CanBeNull="true" />
+      <Column Name="p_cont_address" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_person_emer" Type="System.String" CanBeNull="true" />
+      <Column Name="p_telep_emer" Type="System.String" CanBeNull="true" />
+      <Column Name="p_prev_examined" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_prev_exam_loc" Type="System.String" CanBeNull="true" />
+      <Column Name="p_prev_exam_date" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="p_prev_exam_deca" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_med_waiver" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_waiver_spec" Type="System.String" CanBeNull="true" />
+      <Column Name="p_tot_fling_time" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_last_six_time" Type="System.Double" CanBeNull="true" />
+      <Column Name="p_pres_aircraft" Type="System.String" CanBeNull="true" />
+      <Column Name="p_aircraft_type" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_aircraft_name" Type="System.String" CanBeNull="true" />
+      <Column Name="p_aircraft_jet" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_aircraft_turbo" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_aircraft_heli" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_aircraft_piston" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_aircraft_other" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_aircraft_oth" Type="System.String" CanBeNull="true" />
+      <Column Name="p_flying_status" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_smoking" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_smoking_since" Type="System.String" CanBeNull="true" />
+      <Column Name="p_smoking_type" Type="System.String" CanBeNull="true" />
+      <Column Name="p_smoking_amt" Type="System.String" CanBeNull="true" />
+      <Column Name="p_use_medicine" Type="System.Char" CanBeNull="true" />
+      <Column Name="tqa_med_name" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_amount" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_startdate" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="tqa_med_reason" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_name2" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_amount2" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_startdate2" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="tqa_med_reason2" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_name3" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_amount3" Type="System.String" CanBeNull="true" />
+      <Column Name="tqa_med_startdate3" Type="System.DateTime" CanBeNull="true" />
+      <Column Name="tqa_med_reason3" Type="System.String" CanBeNull="true" />
+      <Column Name="p_avg_alcohal" Type="System.String" CanBeNull="true" />
+      <Column Name="p_m20_exercise" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_freq" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_freq_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_dizz" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_dizz_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_unco" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_unco_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_eyet" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_eyet_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_hayf" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_hayf_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_hert" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_hert_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_chst" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_chst_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_high" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_high_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_stom" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_stom_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_jaun" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_jaun_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_kidn" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_kidn_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_suga" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_suga_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_epil" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_epil_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_nurv" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_nurv_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_temp" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_temp_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_drug" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_drug_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_suic" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_suic_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_losw" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_losw_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_moti" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_moti_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_reje" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_reje_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_adms" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_adms_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_avia" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_avia_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_otha" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_otha_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_gyna" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_gyna_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_othi" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_othi_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_heth" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_heth_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_lung" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_lung_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_alco" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_alco_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_ment" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_ment_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_chis_fam_diab" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_chis_fam_card" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_chis_fam_ment" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_chis_conviction" Type="System.Char" CanBeNull="true" />
+      <Column Name="p_chis_conv_rmk" Type="System.String" CanBeNull="true" />
+      <Column Name="p_remark" Type="System.String" CanBeNull="true" />
+      <Column Name="p_license" Type="System.String" CanBeNull="true" />
+      <Column Name="p_single_pilot" Type="System.Boolean" CanBeNull="true" />
+      <Column Name="p_muti_pilot" Type="System.Boolean" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="testObjs">
+    <Type Name="testObj">
+      <Column Name="string1" Type="System.String" IsPrimaryKey="true" CanBeNull="true" />
+      <Column Name="string2" Type="System.String" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="output_screen_languages">
+    <Type Name="output_screen_language">
+      <Column Name="mrm_code" Type="System.String" CanBeNull="true" />
+      <Column Name="mrm_scrn_eng" Type="System.String" CanBeNull="true" />
+      <Column Name="mrm_scrn_thai" Type="System.String" CanBeNull="true" />
+      <Column Name="mrm_scrn_arabic" Type="System.String" CanBeNull="true" />
+      <Column Name="mrm_scrn_myan" Type="System.String" CanBeNull="true" />
+      <Column Name="mrm_scrn_japan" Type="System.String" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="ResultPaths">
+    <Type Name="ResultPath">
+      <Column Name="en" Type="System.String" CanBeNull="false" />
+      <Column Name="path" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="CareProviderCodes">
+    <Type Name="CareProviderCode">
+      <Column Name="SSUSR_Initials" Type="System.String" CanBeNull="false" />
+      <Column Name="CTPCP_Desc" Type="System.String" CanBeNull="false" />
+      <Column Name="CTPCP_Code" Type="System.String" CanBeNull="false" />
+      <Column Name="DoctorName" Type="System.String" CanBeNull="false" />
+      <Column Name="CTPCP_SMCNo" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

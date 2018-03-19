@@ -1,0 +1,4 @@
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\bin\Release\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\bin\Release\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\obj\Release\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\obj\Release\ConfigEMRCheckUp.pdb

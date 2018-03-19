@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{098771D4-1D3C-4AC1-9540-F2254E2EDAD9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMRQuestionnaire</RootNamespace>
+    <AssemblyName>EMRQuestionnaire</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="css\buttons.css" />
+    <Content Include="css\FontsThai\fontsthaisans_neueregular.css" />
+    <Content Include="css\fonts\fontsukhumvitset.css" />
+    <Content Include="css\jsDatePick_ltr.css" />
+    <Content Include="css\maincss.css" />
+    <Content Include="css\maincss_en.css" />
+    <Content Include="css\maincss_thai.css" />
+    <Content Include="css\q_mainpage.css" />
+    <Content Include="css\style_health_story.css" />
+    <Content Include="css\style_history.css" />
+    <Content Include="datePicker\external\jquery\jquery.js" />
+    <Content Include="datePicker\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="datePicker\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="datePicker\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="datePicker\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="datePicker\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="datePicker\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="datePicker\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="datePicker\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="datePicker\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="datePicker\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="datePicker\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="datePicker\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="datePicker\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="datePicker\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="datePicker\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="datePicker\jquery-ui.css" />
+    <Content Include="datePicker\jquery-ui.js" />
+    <Content Include="datePicker\jquery-ui.min.css" />
+    <Content Include="datePicker\jquery-ui.min.js" />
+    <Content Include="datePicker\jquery-ui.structure.css" />
+    <Content Include="datePicker\jquery-ui.structure.min.css" />
+    <Content Include="datePicker\jquery-ui.theme.css" />
+    <Content Include="datePicker\jquery-ui.theme.min.css" />
+    <Content Include="images\100823050916691.JPG" />
+    <Content Include="images\asc.gif" />
+    <Content Include="images\Bar.jpg" />
+    <Content Include="images\barGroup.jpg" />
+    <Content Include="images\bg.gif" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\button_bg.png" />
+    <Content Include="images\desc.gif" />
+    <Content Include="images\first.gif" />
+    <Content Include="images\header-bg.gif" />
+    <Content Include="images\header-selected-bg.gif" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\img\aqua_dayDown.gif" />
+    <Content Include="images\img\aqua_dayNormal.gif" />
+    <Content Include="images\img\aqua_dayOver.gif" />
+    <Content Include="images\img\armygreen_dayDown.gif" />
+    <Content Include="images\img\armygreen_dayNormal.gif" />
+    <Content Include="images\img\armygreen_dayOver.gif" />
+    <Content Include="images\img\bananasplit_dayDown.gif" />
+    <Content Include="images\img\bananasplit_dayNormal.gif" />
+    <Content Include="images\img\bananasplit_dayOver.gif" />
+    <Content Include="images\img\beige_dayDown.gif" />
+    <Content Include="images\img\beige_dayNormal.gif" />
+    <Content Include="images\img\beige_dayOver.gif" />
+    <Content Include="images\img\boxBottomLeftCorner.png" />
+    <Content Include="images\img\boxBottomRightCorner.png" />
+    <Content Include="images\img\boxSideWallPx.gif" />
+    <Content Include="images\img\boxSideWallPx.png" />
+    <Content Include="images\img\boxTopLeftCorner.png" />
+    <Content Include="images\img\boxTopPx.gif" />
+    <Content Include="images\img\boxTopPx.png" />
+    <Content Include="images\img\boxTopRightCorner.png" />
+    <Content Include="images\img\closeButton_down.gif" />
+    <Content Include="images\img\closeButton_normal.gif" />
+    <Content Include="images\img\closeButton_over.gif" />
+    <Content Include="images\img\deepblue_dayDown.gif" />
+    <Content Include="images\img\deepblue_dayNormal.gif" />
+    <Content Include="images\img\deepblue_dayOver.gif" />
+    <Content Include="images\img\greenish_dayDown.gif" />
+    <Content Include="images\img\greenish_dayNormal.gif" />
+    <Content Include="images\img\greenish_dayOver.gif" />
+    <Content Include="images\img\lightgreen_dayDown.gif" />
+    <Content Include="images\img\lightgreen_dayNormal.gif" />
+    <Content Include="images\img\lightgreen_dayOver.gif" />
+    <Content Include="images\img\monthBackward_down.gif" />
+    <Content Include="images\img\monthBackward_normal.gif" />
+    <Content Include="images\img\monthBackward_over.gif" />
+    <Content Include="images\img\monthForward_down.gif" />
+    <Content Include="images\img\monthForward_normal.gif" />
+    <Content Include="images\img\monthForward_over.gif" />
+    <Content Include="images\img\ocean_blue_dayDown.gif" />
+    <Content Include="images\img\ocean_blue_dayNormal.gif" />
+    <Content Include="images\img\ocean_blue_dayOver.gif" />
+    <Content Include="images\img\orange_dayDown.gif" />
+    <Content Include="images\img\orange_dayNormal.gif" />
+    <Content Include="images\img\orange_dayOver.gif" />
+    <Content Include="images\img\peppermint_dayDown.gif" />
+    <Content Include="images\img\peppermint_dayNormal.gif" />
+    <Content Include="images\img\peppermint_dayOver.gif" />
+    <Content Include="images\img\pink_dayDown.gif" />
+    <Content Include="images\img\pink_dayNormal.gif" />
+    <Content Include="images\img\pink_dayOver.gif" />
+    <Content Include="images\img\purple_dayDown.gif" />
+    <Content Include="images\img\purple_dayNormal.gif" />
+    <Content Include="images\img\purple_dayOver.gif" />
+    <Content Include="images\img\torqoise_dayDown.gif" />
+    <Content Include="images\img\torqoise_dayNormal.gif" />
+    <Content Include="images\img\torqoise_dayOver.gif" />
+    <Content Include="images\img\yearBackward_down.gif" />
+    <Content Include="images\img\yearBackward_normal.gif" />
+    <Content Include="images\img\yearBackward_over.gif" />
+    <Content Include="images\img\yearForward_down.gif" />
+    <Content Include="images\img\yearForward_normal.gif" />
+    <Content Include="images\img\yearForward_over.gif" />
+    <Content Include="images\last.gif" />
+    <Content Include="images\medical_questionnaires_icon.gif" />
+    <Content Include="images\next.gif" />
+    <Content Include="images\previous.gif" />
+    <Content Include="images\quiz-games-300x300.png" />
+    <Content Include="images\sort.gif" />
+    <Content Include="images\terpilih.png" />
+    <Content Include="images\Thailand.png" />
+    <Content Include="images\United-Kingdom.png" />
+    <Content Include="index.aspx" />
+    <Content Include="Scripts\aviation_initial.js" />
+    <Content Include="Scripts\aviation_renew.js" />
+    <Content Include="Scripts\dateTimePicker.js" />
+    <Content Include="Scripts\health_history.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jsDatePick.min.1.3.js" />
+    <Content Include="Scripts\main_Page.js" />
+    <Content Include="Scripts\packed_History.js" />
+    <Content Include="Scripts\script_History.js" />
+    <Content Include="Scripts\verify_result.js" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\WS_Trakcare\configuration91.svcinfo" />
+    <None Include="Service References\WS_Trakcare\configuration.svcinfo" />
+    <None Include="Service References\WS_Trakcare\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_Trakcare\WS_GetDataBytrak1.disco" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="web\Aviation_Initial.aspx" />
+    <Content Include="web\Aviation_Renew.aspx" />
+    <Content Include="web\Default.aspx" />
+    <Content Include="web\frm_History.aspx" />
+    <Content Include="web\frm_verify_result.aspx" />
+    <Content Include="web\MainPage.aspx" />
+    <Content Include="web\Questionaire_Health_History.aspx" />
+    <None Include="Service References\WS_Trakcare\WS_GetDataBytrak1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\GetDBConfigCls.cs" />
+    <Compile Include="clsConnection\connectDatabase.cs" />
+    <Compile Include="clsExecuteSQL\executeSQL.cs" />
+    <Compile Include="clsQuestionaire\clsDefaultPatientAviation.cs" />
+    <Compile Include="clsQuestionaire\clsFamilyIllness.cs" />
+    <Compile Include="clsQuestionaire\clsGeneralInformation.cs" />
+    <Compile Include="clsQuestionaire\clsMainQuestionaire.cs" />
+    <Compile Include="clsQuestionaire\clsOtherHealthIssuesExerciseSport.cs" />
+    <Compile Include="clsQuestionaire\clsOtherHealthIssuesfavoritefood.cs" />
+    <Compile Include="clsQuestionaire\clsOtherHealthMenstrualPeriodsAtPresent.cs" />
+    <Compile Include="clsQuestionaire\clsPatientINFO.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessDoYouSmoke.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessHadAnOperation.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessillnessImpairment.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessMedicationRegularly.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessMedicationThatYouAreTaking.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessMedicineOrFood.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessUnderlyingDeceases.cs" />
+    <Compile Include="clsQuestionaire\clsPersonalIllnessVaccinationOrImmunity.cs" />
+    <Compile Include="clsQuestionaire\clsQuestionaireAviation.cs" />
+    <Compile Include="clsQuestionaire\clsQuestionaireHealthHistory.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistory.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryBiologicalHealthHazard.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryChemicalHealthHazard.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryClassificationOfEmployment.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryErgonomicHealthHazard.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryPhysicalHealthHazard.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryPPE.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryPsychologicalHealthHazard.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistorySpecialAssignment.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistorySubType.cs" />
+    <Compile Include="clsQuestionaire\clsWorkingHistoryTypeOfWork.cs" />
+    <Compile Include="clsUtility\Utility.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WS_Trakcare\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\WS_TrakcareCls.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="web\Aviation_Initial.aspx.cs">
+      <DependentUpon>Aviation_Initial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Aviation_Initial.aspx.designer.cs">
+      <DependentUpon>Aviation_Initial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Aviation_Renew.aspx.cs">
+      <DependentUpon>Aviation_Renew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Aviation_Renew.aspx.designer.cs">
+      <DependentUpon>Aviation_Renew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\frm_History.aspx.cs">
+      <DependentUpon>frm_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\frm_History.aspx.designer.cs">
+      <DependentUpon>frm_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\frm_verify_result.aspx.cs">
+      <DependentUpon>frm_verify_result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\frm_verify_result.aspx.designer.cs">
+      <DependentUpon>frm_verify_result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Questionaire_Health_History.aspx.cs">
+      <DependentUpon>Questionaire_Health_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Questionaire_Health_History.aspx.designer.cs">
+      <DependentUpon>Questionaire_Health_History.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="clsExecuteTrakcare\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\FontsThai\thaisansneue-regular.eot" />
+    <None Include="css\FontsThai\thaisansneue-regular.svg" />
+    <None Include="css\FontsThai\thaisansneue-regular.ttf" />
+    <None Include="css\FontsThai\thaisansneue-regular.woff" />
+    <None Include="css\FontsThai\thaisansneue-regular.woff2" />
+    <None Include="images\Thumbs.db" />
+    <None Include="Scripts\ssdatetimepicker.jquery.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBCheckup\DBCheckup.csproj">
+      <Project>{A3B196BC-2F74-42F3-97E8-F3B875561AAE}</Project>
+      <Name>DBCheckup</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_Trakcare\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8384</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

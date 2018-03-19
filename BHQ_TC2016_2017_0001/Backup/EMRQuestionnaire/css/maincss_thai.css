@@ -1,0 +1,70 @@
+﻿* {margin:0; padding:0; outline:none}
+body 
+{  
+   /* font: normal 16px auto "thaisans_neueregular", "Trebuchet MS" , Verdana; */ 
+    font-family :"thaisans_neueregular";
+    font-size:18px;
+    font-weight:normal;    
+    color: #4f6b72;
+	/*position:absolute;*/
+/*left:20%;  ด้านซ้ายครึ่งจอ */
+/*margin-left:-150px; margin-left ติดลบครึ่งหนึ่งของความกว้าง */ 
+	}
+
+.divBarMainTopic
+{
+	
+	font-family :"thaisans_neueregular";
+	/*margin-top: -5 px;*/
+    font-size:24px;
+    font-weight:bold;
+    height:34px;
+
+}
+.divBarGroupAll
+{
+	background-color: White;
+	/*background-color: #0072BB;
+	
+	color: Gray;
+	height: 20px;
+	width: 350px;*/
+	text-align: left;
+	margin-top: 5px;
+	font-family :"thaisans_neueregular";
+    font-size:24px;
+    font-weight:bold;
+    
+	/*font: bold 18px  auto "thaisans_neueregular", "Trebuchet MS" , Verdana; */
+}
+.height130
+{
+    height:160px;
+    
+    }
+.height110
+{
+    height:140px;
+    
+    }
+ .height190
+{
+    height:190px;
+    
+    }           
+.verify
+{
+	
+	margin-left:-50px;height: 23px;text-align: left;margin-top: -15px;color: red;text-align:center;
+	font-family :"thaisans_neueregular";
+    font-size:30px;
+    font-weight:bold;
+	/*font: bold 30px   auto "thaisans_neueregular", "Trebuchet MS" , Verdana;*/
+	}
+
+.buttonRec
+{
+	font-size: 16px;
+	font-weight: bold;
+	font-family:"thaisans_neueregular";
+}

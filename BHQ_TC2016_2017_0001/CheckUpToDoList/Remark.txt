@@ -1,0 +1,29 @@
+﻿HttpContext.Current.Request.ApplicationPath :				/virtual_dir
+HttpContext.Current.Request.CurrentExecutionFilePath :		/virtual_dir/webapp/page.aspx
+HttpContext.Current.Request.FilePath :						/virtual_dir/webapp/page.aspx
+HttpContext.Current.Request.Path :							/virtual_dir/webapp/page.aspx
+HttpContext.Current.Request.PhysicalApplicationPath :		d:\Inetpub\wwwroot\virtual_dir\
+HttpContext.Current.Request.QueryString :					/virtual_dir/webapp/page.aspx?q=qvalue
+HttpContext.Current.Request.Url.AbsolutePath :				/virtual_dir/webapp/page.aspx
+HttpContext.Current.Request.Url.AbsoluteUri :				http://localhost:2000/virtual_dir/webapp/page.aspx?q=qvalue
+HttpContext.Current.Request.Url.Host :						localhost
+HttpContext.Current.Request.Url.Authority :					localhost:80
+HttpContext.Current.Request.Url.LocalPath :					/virtual_dir/webapp/page.aspx
+HttpContext.Current.Request.Url.PathAndQuery :				/virtual_dir/webapp/page.aspx?q=qvalue
+HttpContext.Current.Request.Url.Port :						80
+HttpContext.Current.Request.Url.Query :						?q=qvalue
+HttpContext.Current.Request.Url.Scheme :					http
+HttpContext.Current.Request.Url.Segments :					/
+ 															virtual_dir/
+ 															webapp/
+ 															page.aspx
+
+
+
+HttpContext.Current.Request.Url.AbsoluteUri      // "http://www.advancesharp.com/Questions?tab=like"
+HttpContext.Current.Request.Url.OriginalString   // "http://www.advancesharp.com/Questions?tab=like"
+
+HttpContext.Current.Request.Url.PathAndQuery     // "/Questions?tab=like"
+HttpContext.Current.Request.Url.AbsolutePath     // "/Questions"
+
+HttpContext.Current.Request.Url.Query            // "?tab=like"

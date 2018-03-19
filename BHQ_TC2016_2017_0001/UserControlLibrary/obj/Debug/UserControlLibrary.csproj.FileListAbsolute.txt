@@ -1,0 +1,8 @@
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\bin\Debug\UserControlLibrary.dll
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\bin\Debug\UserControlLibrary.pdb
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\bin\Debug\GlobalHook.dll
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\obj\Debug\UserControlLibrary.Properties.Resources.resources
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\obj\Debug\UserControlLibrary.csproj.GenerateResource.Cache
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\obj\Debug\UserControlLibrary.dll
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\obj\Debug\UserControlLibrary.pdb
+E:\Source\BHQ_TC2016_2017_0001\UserControlLibrary\obj\Debug\UserControlLibrary.csprojResolveAssemblyReference.cache

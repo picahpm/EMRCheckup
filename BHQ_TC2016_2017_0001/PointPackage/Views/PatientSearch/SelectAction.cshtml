@@ -1,0 +1,28 @@
+﻿@model PointPackage.Models.SelectActionModel
+@{
+    Layout = "~/Views/PatientSearch/_MasterPatientSearch.cshtml";
+}
+
+<script type="text/javascript">
+    function clickAction(action) {
+        if (action == 3) {
+            if (confirm("Do you want to cancel package?") == false) {
+                return;
+            }
+        }
+        $('#action').val(action);
+        $('#SelectAction').submit();
+    }
+</script>
+@using (Html.BeginForm("SelectAction", "PatientSearch", FormMethod.Post, new { id = "SelectAction" }))
+{
+    @Html.HiddenFor(x => x.queue_no)
+    @Html.HiddenFor(x => x.tpr_id)
+    @Html.Hidden("action", new { @id = "action" })
+    <div class="row">
+	    <div class="6u 12u$(mobile)"><input type="button" value="Add Master Package." onclick="clickAction(1)" /></div>
+        <div class="6u$ 12u$(mobile)"><input type="button" value="Add Dummy Package." onclick="clickAction(2)" /></div>
+	    <div class="6u 12u$(mobile)"><input type="button" value="Cancel Package." onclick="clickAction(3)" /></div>
+    </div>
+}
+

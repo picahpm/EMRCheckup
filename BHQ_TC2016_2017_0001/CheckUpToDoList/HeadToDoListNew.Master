@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeadToDoListNew.master.cs" Inherits="CheckUpToDoList.HeadToDoListNew" %>
+
+<%@ Register src="wuc_login_detail.ascx" tagname="wuc_login_detail" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="style/Style.css" />
+    <style type="text/css">
+        .left-content
+        {
+	        width:300px;
+	/*
+            text-align:center;vertical-align : top; display : table-cell;
+            background-image:-webkit-gradient(linear,left top,left bottom,from( ##f9f8f7 ),to( #cccbca )); 
+            background-image:-webkit-linear-gradient( #f9f8f7,#cccbca );
+            background-image: -moz-linear-gradient( #f9f8f7,#cccbca ); 
+            background-image: -ms-linear-gradient( #f9f8f7,#cccbca ); 
+            background-image: -o-linear-gradient( #f9f8f7,#cccbca ); 
+            background-image: linear-gradient( #f9f8f7,#cccbca );
+            */
+        }
+        .right-content
+        {
+    
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <center>
+            <table border="0" cellpadding="0" cellspacing="0" style="width:1260px;">
+                <tr>
+                    <td colspan="2" style=" border-bottom: 1px solid #336699;">
+                        <!--#include file = "Header.htm"-->
+                    </td>
+                </tr>
+                <tr id="trMenuMain" runat="server">
+                    <td align="center">
+                        <div id="top-menu">
+                            <span id="lnkMenuMain" runat="server"></span><%--<a href="webfromtest.aspx">form test</a>--%>
+                        </div>
+                                
+                    </td>
+                    <td style="text-align:right;">
+                        <div id="top-menu" style=" text-align:right; float:right; display:inline; padding-right:5px; font-weight:normal;">
+                                    <uc1:wuc_login_detail ID="wuc_login_detail1" runat="server" />
+                                    &nbsp;<a href="Logout.aspx" target="_parent" style="cursor:pointer;color:Red;">Logout</a>
+                                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="vertical-align:middle; border: 1px solid #336699; " >
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_body" runat="server" >
+                             
+                        </asp:ContentPlaceHolder>
+                        <div id="page">
+                            <div id="left-content">
+                            </div>
+                            <div id="right-content">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:30px;" align="left">
+                    <!--#include file = "Footer.htm"-->
+                   </td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</body>
+</html>

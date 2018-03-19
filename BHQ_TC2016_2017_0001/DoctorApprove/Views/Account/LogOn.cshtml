@@ -1,0 +1,137 @@
+﻿@model DoctorApprove.Models.LogOnModel
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <title>Log On</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="@Url.Content("~/Scripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+        function setFocus() {
+            var txtUser = document.getElementById("txtUsername");
+            setTimeout(function () { txtUser.focus(); }, 1000);
+        }
+        </script>
+    </head>
+    <body onload="setFocus();">
+        @using (Html.BeginForm("LogOn", "Account", FormMethod.Post, new { @id = "frmLogOn", @name = "frmLogOn" }))
+        {
+            <div style="margin:0 auto;padding:50px 50px; height:450px;">
+                <center>
+                    <table align="center" bgcolor="LightBlue" cellpadding="3" cellspacing="0" 
+                        style="border: 2px solid #808080;" width="350px">
+                        <tr>
+                            <td>
+                                <table bgcolor="White" style="width: 100%;">
+                                    <tr>
+                                        <td>
+                                            <div style="text-align: center">
+                                                <span style="font-size: 20px; font-family: tahoma; font-weight: bold; color: #333333;
+                                                            text-align: center;">Approve Book</span>
+                                            </div>
+                                            <div style="text-align: right">
+                                                <span style="font-size: 10px; font-family: tahoma; font-weight: bold; color: #333333;
+                                                            text-align: right;"><b>Version : 0.01</b></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table cellpadding="3" cellspacing="0" style="width: 100%;">
+                                    <tr>
+                                        <td align="center" class="style1">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table align="center" cellpadding="3" cellspacing="0" style="width: 90%;">
+                                    <tr>
+                                        <td align="center" style="width: 40%">
+                                            <img alt="" height="100px" src="@Url.Content("~/Images/login/lock.png")" width="100px" />
+                                        </td>
+                                        <td align="right">
+                                            <table cellpadding="0" cellspacing="0" style="font-size: 12px; font-family: tahoma;color: #333333; width: 220px">
+                                                <tr>
+                                                    <td style="width: 85px">
+                                                        @Html.LabelFor(m => m.UserName, new { @id = "txtUsername", @name = "txtUsername" })
+                                                    </td>
+                                                    <td align="left" style="padding-left:5px;">
+                                                        @Html.TextBoxFor(m => m.UserName, new { style = "width:150px;" })
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" align="center" style="height:3px" >
+                                                        @Html.ValidationMessageFor(m => m.UserName, "* Required")
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> 
+                                                        @Html.LabelFor(m => m.Password)
+                                                    </td>
+                                                    <td align="left" style="padding-left:5px;">
+                                                        @Html.PasswordFor(m => m.Password, new { style = "width:150px;" })
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" align="center" style="height:3px" >
+                                                        @Html.ValidationMessageFor(m => m.Password, "* Required")
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><center>@*<a href="download/BMC_EMRCheckUpToDoList_UM_002.docx" target="_blank">User Manual</a>*@</center>
+                                                    </td>
+                                                    <td align="center" style="padding: 5px">
+                                                        <table cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <center><input type="submit" value="Login" /></center>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            @*<a href="Utility/BMC_EMR%20DM%20Pathway_UM_100.pdf" style="font-size: 9px" target="_blank">User Manual</a>*@
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center">
+                                            <font style="font-size: 12px; font-family: tahoma; color: Red;">@Html.DisplayTextFor(m => m.strMsg)</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div style="font-size: 9px; font-family: tahoma; color: #808080; text-align: justify;">
+                                                <b>Disclaimer:</b> The information contained in this application may be 
+                                                confidential and protected information intended only for the use of the entity 
+                                                name above. As the user of this application you may be prohibited by law from 
+                                                disclosing this information to any other parties without specific written 
+                                                authorization from the individual to whom it pertains and you are hereby 
+                                                notified that any disclosure, dissemination, distribution, copying, or action 
+                                                taken in reliance on the contents of this communication is strictly prohibited<br />
+                                                <br />
+                                                <center>
+                                                    Copyright (c) 2010 Greenline Synergy Co.,Ltd. All rights reserved.</center>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table bgcolor="White" style="width: 100%;">
+                                    <tr>
+                                        <td align="center">
+                                            <img alt="" height="40px" src="@Url.Content("~/images/login/bdms_logo.png")" />
+                                            <img alt="" height="40px" src="@Url.Content("~/images/login/gls_logo.png")" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        }
+    </body>
+</html>

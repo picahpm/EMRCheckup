@@ -1,0 +1,13 @@
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\CallDataTakeCareArrived.exe.config
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\CallDataTakeCareArrived.exe
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\CallDataTakeCareArrived.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\bin\Release\DBCheckup.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\obj\x86\Release\CallDataTakeCareArrived.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\obj\x86\Release\CallDataTakeCareArrived.Form1.resources
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\obj\x86\Release\CallDataTakeCareArrived.Properties.Resources.resources
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\obj\x86\Release\CallDataTakeCareArrived.csproj.GenerateResource.Cache
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\obj\x86\Release\CallDataTakeCareArrived.exe
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareArrived\obj\x86\Release\CallDataTakeCareArrived.pdb

@@ -1,0 +1,69 @@
+﻿* {margin:0; padding:0; outline:none}
+body 
+{
+    /* font: normal 15px auto sans-serif, Verdana, Arial, Helvetica; */
+    font-family :sans-serif;
+    font-size:14px;
+    font-style:normal;
+
+	color: #4f6b72;
+	 /* position:absolute;  */
+ /* left:20%; ด้านซ้ายครึ่งจอ */
+/* margin-left:-150px; margin-left ติดลบครึ่งหนึ่งของความกว้าง */ 
+	}
+.divBarMainTopic
+{
+	
+	font-family :sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    height: 23px;
+}
+.divBarGroupAll
+{
+	background-color: White;
+	/*background-color: #0072BB;
+	
+	color: Gray;
+	height: 20px;
+	width: 350px;*/
+	text-align: left;
+	margin-top: 5px;
+	 font-family :sans-serif;
+    font-size:14px;
+    font-style:normal;
+
+	/*font: bold 18px  auto sans-serif, Verdana, Arial, Helvetica; */
+}
+
+.height130
+{
+    height:130px;
+    
+    }
+.height110
+{
+    height:110px;
+    
+    } 
+.height150
+{
+    height:150px;
+    
+    }          
+.verify
+{
+	
+	margin-left:-50px;height: 23px;text-align: left;margin-top: -15px;color: red;text-align:center;
+	font-family :sans-serif;
+    font-size:30px;
+    font-weight:bold;
+	 /*font: bold 30px   auto sans-serif, Verdana, Arial, Helveticaa; */
+	}
+
+.buttonRec
+{
+	font-size: 13px;
+	font-weight: bold;
+	font-family:sans-serif;
+}

@@ -1,0 +1,39 @@
+﻿@model PointPackage.Models.PackageInformationModel
+@{
+    Layout = "~/Views/MasterPackage/_MasterMasterPackage.cshtml";
+}
+
+<script type="text/javascript">
+    function clickPackage(package_code) {
+        $('#package_code').val(package_code);
+        $('#PackageList').submit();
+    }
+</script>
+@using (Html.BeginForm("PackageList", "MasterPackage", FormMethod.Post, new { id = "PackageList" }))
+{
+    @Html.HiddenFor(x => x.string_search)
+    @Html.Hidden("package_code", new { @id = "package_code" })
+    <div class="row">
+        @for (var i = 0; i < Model.listPackageInformation.Count; i++)
+        {
+            <div class="12u$">
+                <article class="item" onclick="clickPackage('@Model.listPackageInformation[i].package_code')" style="cursor:pointer;">
+                    <header style="padding:15px 15px 15px 15px;">
+                        <h3 style="text-align:left;">Package Code : @Model.listPackageInformation[i].package_code</h3>
+                        <h3 style="text-align:left;">Package Name : @Model.listPackageInformation[i].package_name</h3>
+                    </header>
+                </article>
+            </div>
+        }
+    </div>
+}
+@{
+    if (Request.HttpMethod == "POST")
+    {
+        Session.Add("string_search", Request.Params["string_search"]);
+        Session.Add("package_code", Request.Params["package_code"]);
+        Session.Add("point", Request.Params["point"]);
+        //Response.Redirect(Url.Content("/PointPackage/MasterPackage/PackageList/"));
+    }
+}
+

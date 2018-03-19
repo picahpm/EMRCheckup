@@ -1,0 +1,42 @@
+﻿@model PointPackage.Models.AddDummyModel
+@{
+    Layout = "~/Views/PatientSearch/_MasterPatientSearch.cshtml";
+}
+
+<script type="text/javascript">
+    window.onload = function () {
+        var form = document.getElementById("AddDummyPackage");
+        form.addEventListener('submit', function (e) {
+            if ($('#selectpackage').val() == "") {
+                alert('Please select package.');
+                e.preventDefault();
+            }
+            else {
+                var strConfirm = "Do you want to add package : " + $('#selectpackage :selected').text(); +"?";
+                if (confirm(strConfirm) == false) {
+                    e.preventDefault();
+                }
+                else {
+                    $('#packagecode').val($('#selectpackage').val());
+                }
+            }
+        });
+    }
+</script>
+@using (Html.BeginForm("AddDummyPackage", "PatientSearch", FormMethod.Post, new { id = "AddDummyPackage" }))
+{
+    @Html.HiddenFor(x => x.tpr_id)
+    @Html.HiddenFor(x => x.queue_no)
+    @Html.Hidden("packagecode", new { @id = "packagecode" })
+    <div class="row">
+        <div class="12u$">
+            <article class="item">
+                <h4 style="text-align:left; padding-bottom:15px;">Please Insert Point of Dummy Package :</h4>
+                @*@Html.TextBoxFor(x => x.point, new { @style = "margin-bottom:1em; margin-top:1em;" })*@
+                @Html.DropDownList("selectpackage", "select package.")
+                <input style="margin-top:15px;" type="submit" value="Submit." />
+            </article>
+        </div>
+    </div>
+}
+

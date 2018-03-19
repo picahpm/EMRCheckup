@@ -1,0 +1,53 @@
+﻿@model PointPackage.Models.AddMasterPackageModel
+@{
+    Layout = "~/Views/MasterPackage/_MasterMasterPackage.cshtml";
+}
+
+<script type="text/javascript">
+    window.onload = function () {
+        var form = document.getElementById("AddMasterPackage");
+        form.addEventListener('submit', function (e) {
+            if ($('#selectpoint').val() == "") {
+                alert('Please select point.');
+                e.preventDefault();
+            }
+            else {
+                var strConfirm = "Do you want to add point " + $('#selectpoint :selected').text() + "?";
+                if (confirm(strConfirm) == false) {
+                    e.preventDefault();
+                }
+                else {
+                    $('#point').val($('#selectpoint').val());
+                }
+            }
+        });
+    }
+</script>
+@using (Html.BeginForm("AddMasterPackage", "MasterPackage", FormMethod.Post, new { id = "AddMasterPackage" }))
+{
+    @Html.HiddenFor(x => x.string_search)
+    @Html.HiddenFor(x => x.tpr_id)
+    @Html.HiddenFor(x => x.package_code)
+    @Html.Hidden("point", new { @id = "point" })
+    <div class="row">
+        <div class="12u$">
+            <article class="item">
+                <h4 style="text-align:left;">Package Code : @Model.package_code</h4>
+                <h4 style="text-align:left; padding-bottom:15px;">Package Name : @Model.package_name</h4>
+                @*@Html.TextBoxFor(x => x.point, new { @style = "margin-bottom:1em; margin-top:1em;" })*@
+                @Html.DropDownList("selectpoint", "select point.")
+                <input style="margin-top:15px;" type="submit" value="Submit." />
+            </article>
+        </div>
+    </div>
+}
+@{
+    if (Request.HttpMethod == "POST")
+    {
+        Session.Add("string_search", Request.Params["string_search"]);
+        Session.Add("tpr_id", Request.Params["tpr_id"]);
+        Session.Add("package_code", Request.Params["package_code"]);
+        Session.Add("point", Request.Params["point"]);
+        //Response.Redirect(Url.Content("/PointPackage/MasterPackage/AddMasterPackage/"));
+    }
+}

@@ -1,0 +1,9 @@
+﻿@model PointPackage.Models.ResultPageModel
+@{
+    Layout = "~/Views/MasterPackage/_MasterMasterPackage.cshtml";
+}
+
+@using (Html.BeginForm("ResultPage", "MasterPackage", FormMethod.Post, new { id = "ResultPage" }))
+{
+    @Html.DisplayFor(x => x.messege)
+}

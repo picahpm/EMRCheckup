@@ -1,0 +1,5 @@
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\bin\Debug\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\bin\Debug\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\obj\Debug\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\obj\Debug\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\ConfigEMRCheckUp\obj\Debug\ConfigEMRCheckUp.csprojResolveAssemblyReference.cache

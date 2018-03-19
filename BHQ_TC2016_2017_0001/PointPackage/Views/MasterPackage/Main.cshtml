@@ -1,0 +1,20 @@
+﻿@model PointPackage.Models.MasterPackageModel
+@{
+    Layout = "~/Views/MasterPackage/_MasterMasterPackage.cshtml";
+}
+@using (Html.BeginForm("Main", "MasterPackage", FormMethod.Post, new { id = "Main" }))
+{
+    <div class="12u$" style="padding-bottom:1em;">
+        @Html.TextBoxFor(x => x.string_search, new { placeholder = "Package Code/Name." })
+    </div>
+    <div class="12u$">
+        <input type="submit" value="Next.">
+    </div>
+}
+@{
+    if (Request.HttpMethod == "POST")
+    {
+        Session.Add("string_search", Request.Params["string_search"]);
+        //Response.Redirect(Url.Content("/PointPackage/MasterPackage/Main/"));
+    }
+}

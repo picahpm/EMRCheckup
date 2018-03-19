@@ -1,0 +1,13 @@
+﻿@model PointPackage.Models.PatientSearchModel
+@{
+    Layout = "~/Views/PatientSearch/_MasterPatientSearch.cshtml";
+}
+@using (Html.BeginForm("Main", "PatientSearch", FormMethod.Post, new { id = "Main" }))
+{
+    <div class="12u$" style="padding-bottom:1em;">
+        @Html.TextBoxFor(x => x.queue_no, new { placeholder = "Queue No." })
+    </div>
+    <div class="12u$">
+        <input type="submit" value="Next.">
+    </div>
+}

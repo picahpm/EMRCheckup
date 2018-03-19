@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="entityBODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="" Member="Patients">
+    <Type Name="Patients">
+      <Column Member="tpr_id" Type="System.Int32" CanBeNull="false" />
+      <Column Member="hn_no" Type="System.String" CanBeNull="false" />
+      <Column Member="en_no" Type="System.String" CanBeNull="false" />
+      <Column Member="fullName" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

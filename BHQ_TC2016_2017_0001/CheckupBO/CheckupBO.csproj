@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD6B1372-F139-488A-8605-1A6FA58E8BA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CheckupBO</RootNamespace>
+    <AssemblyName>CheckupBO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>\\10.88.26.55\Publish\BackOfficeEmrCheckup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://10.88.26.55/Publish/BackOfficeEMRCheckup/</InstallUrl>
+    <ProductName>BackOffice Manage Checkup Pathway</ProductName>
+    <PublisherName>Checkup PathWay</PublisherName>
+    <MinimumRequiredVersion>1.0.1.9</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>default.htm</WebPage>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CheckupBO.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>811D2F5CF2FFF20EE1FCC0FDC74C8D1CEF8E9374</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CheckupBO_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aboutus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aboutus.designer.cs">
+      <DependentUpon>Aboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appclass\ComboboxItem.cs" />
+    <Compile Include="Appclass\SortableBindingList.cs" />
+    <Compile Include="Appclass\ToolPaint.cs" />
+    <Compile Include="Class\GetDBConfigCls.cs" />
+    <Compile Include="entityBO.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>entityBO.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllRoom.designer.cs">
+      <DependentUpon>frmAllRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarotid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarotid.designer.cs">
+      <DependentUpon>frmCarotid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabCalculate.designer.cs">
+      <DependentUpon>frmLabCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMappingItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMappingItem.designer.cs">
+      <DependentUpon>frmMappingItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatient.designer.cs">
+      <DependentUpon>frmPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPolicyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPolicyEdit.designer.cs">
+      <DependentUpon>frmPolicyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopupRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopupRemark.designer.cs">
+      <DependentUpon>frmPopupRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueueManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueueManage.designer.cs">
+      <DependentUpon>frmQueueManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupData.designer.cs">
+      <DependentUpon>frmSetupData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupRoom.designer.cs">
+      <DependentUpon>frmSetupRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupUser.designer.cs">
+      <DependentUpon>frmSetupUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeethProblems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeethProblems.designer.cs">
+      <DependentUpon>frmTeethProblems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnlockRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnlockRoom.designer.cs">
+      <DependentUpon>frmUnlockRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewABI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewABI.designer.cs">
+      <DependentUpon>frmViewABI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewEyes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewEyes.designer.cs">
+      <DependentUpon>frmViewEyes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewHearing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewHearing.designer.cs">
+      <DependentUpon>frmViewHearing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewObstetrics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewObstetrics.designer.cs">
+      <DependentUpon>frmViewObstetrics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewTeeth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewTeeth.designer.cs">
+      <DependentUpon>frmViewTeeth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListRequestDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListRequestDoctor.designer.cs">
+      <DependentUpon>ListRequestDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePlanFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePlanFrm.designer.cs">
+      <DependentUpon>ManagePlanFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Program.Function.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WS_Trakcare\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\WS_TrakcareCls.cs" />
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Aboutus.resx">
+      <DependentUpon>Aboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="entityBO.dbml.layout">
+      <DependentUpon>entityBO.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="frmAllRoom.resx">
+      <DependentUpon>frmAllRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarotid.resx">
+      <DependentUpon>frmCarotid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabCalculate.resx">
+      <DependentUpon>frmLabCalculate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMappingItem.resx">
+      <DependentUpon>frmMappingItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatient.resx">
+      <DependentUpon>frmPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPolicyEdit.resx">
+      <DependentUpon>frmPolicyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopupRemark.resx">
+      <DependentUpon>frmPopupRemark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueueManage.resx">
+      <DependentUpon>frmQueueManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupData.resx">
+      <DependentUpon>frmSetupData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupRoom.resx">
+      <DependentUpon>frmSetupRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupUser.resx">
+      <DependentUpon>frmSetupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeethProblems.resx">
+      <DependentUpon>frmTeethProblems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnlockRoom.resx">
+      <DependentUpon>frmUnlockRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewABI.resx">
+      <DependentUpon>frmViewABI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewEyes.resx">
+      <DependentUpon>frmViewEyes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewHearing.resx">
+      <DependentUpon>frmViewHearing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewObstetrics.resx">
+      <DependentUpon>frmViewObstetrics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewTeeth.resx">
+      <DependentUpon>frmViewTeeth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListRequestDoctor.resx">
+      <DependentUpon>ListRequestDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePlanFrm.resx">
+      <DependentUpon>ManagePlanFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="entityBO.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>entityBO.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\WS_Trakcare\ws_getdatabytrak.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBCheckup\DBCheckup.csproj">
+      <Project>{A3B196BC-2F74-42F3-97E8-F3B875561AAE}</Project>
+      <Name>DBCheckup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControlLibrary\UserControlLibrary.csproj">
+      <Project>{A93445F9-0712-47BD-93FD-62FE48D07DDA}</Project>
+      <Name>UserControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_Trakcare\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_Trakcare\ws_getdatabytrak.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_Trakcare\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_Trakcare\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_Trakcare\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\button_ok.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\carotid-1.jpg" />
+    <Content Include="Resources\carotid-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

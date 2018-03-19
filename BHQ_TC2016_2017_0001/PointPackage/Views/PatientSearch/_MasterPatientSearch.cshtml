@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Add point manual.";
+    Layout = "~/Views/Shared/_MasterPage.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sectionHeader').css('width', $('#main').css('width'));
+        var detailMarginTop = document.getElementById('sectionHeader').offsetTop + document.getElementById('sectionHeader').offsetHeight;
+        $('#sectionDetail').css('margin-top', detailMarginTop + 'px');
+    });
+
+    $(window).resize(function () {
+        $('#sectionHeader').css('width', $('#main').css('width'));
+        var queueMarginTop = document.getElementById('sectionHeader').offsetTop + document.getElementById('sectionHeader').offsetHeight;
+
+        $('#sectionQueue').css('width', $('#main').css('width'));
+        $('#sectionQueue').css('margin-top', queueMarginTop + 'px');
+
+        var detailMarginTop = queueMarginTop + document.getElementById('sectionQueue').offsetHeight;
+        $('#sectionDetail').css('margin-top', detailMarginTop + 'px');
+    });
+
+
+</script>
+<div id="main">
+    <section id="sectionHeader" class="two" style="top:0px; right:0; position:fixed; display:block; padding:9px;">
+        <header>
+            <h2 style="text-align:right">Add point manual</h2>
+        </header>
+    </section>
+    <section id="sectionQueue" class="three" style="top:0px; right:0; position:fixed; display:block; padding:9px;">
+        <header>
+            <h4>Queue No : @ViewBag.QueueNo</h4>
+        </header>
+    </section>
+    <section id="sectionDetail" class="four" style="padding:1em; overflow:visible;">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </section>
+</div>

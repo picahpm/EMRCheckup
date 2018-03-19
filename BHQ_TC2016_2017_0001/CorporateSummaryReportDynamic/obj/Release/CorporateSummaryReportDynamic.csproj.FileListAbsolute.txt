@@ -1,0 +1,13 @@
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\AutoComplete.asmx
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\AutoComplete.asmx.cs
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\CorporateSummaryReportDynamic.dll
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\CorporateSummaryReportDynamic.pdb
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBToDoList.dll
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBCheckup.pdb
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\bin\DBToDoList.pdb
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\obj\Release\CorporateSummaryReportDynamic.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\obj\Release\CorporateSummaryReportDynamic.dll
+E:\Source\BHQ_TC2016_2017_0001\CorporateSummaryReportDynamic\obj\Release\CorporateSummaryReportDynamic.pdb

@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Todolist" Class="ToDoListDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.88.10.148;Initial Catalog=Todolist;Persist Security Info=True;User ID=sa" SettingsObjectName="DBToDoList.Properties.Settings" SettingsPropertyName="TodolistConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.trn_name_check" Member="trn_name_checks">
+    <Type Name="trn_name_check">
+      <Column Name="tnc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tnc_legal" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tnc_company_name" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tnc_emp_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tnc_personal_id" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="tnc_hn" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tnc_title_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_fname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_lname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_gender" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tnc_site" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tnc_department" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tnc_position" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tnc_dob" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tnc_age" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_program" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tnc_option" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tnc_appoint_date" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tnc_remark" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tnc_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tnc_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tnc_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="trn_company_detail_trn_name_check" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="mst_user_login_trn_name_check" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_company_detail" Member="trn_company_details">
+    <Type Name="trn_company_detail">
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_document_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tcd_code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tcd_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_legal" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tcd_type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tcd_year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tcd_address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tcd_tambon" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_district" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_postcode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tcd_tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_mobile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_fax" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_date_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tcd_date_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tcd_bill_company" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_bill_address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_bill_tambon" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_bill_district" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_bill_province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_bill_postcode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tcd_bill_tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_bill_mobile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_bill_fax" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_payor" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_family_welfare" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_location_remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tcd_result_address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_result_tambon" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_result_district" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_result_province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcd_result_postcode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tcd_send_rep_real" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tcd_send_rep_flag" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tcd_send_rep_copy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tcd_remark" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="tcd_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcd_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcd_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="old_tcd_document_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="new_tcd_document_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="trn_company_detail_trn_name_check" Member="trn_name_checks" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_name_check" />
+      <Association Name="trn_company_detail_trn_contact_person" Member="trn_contact_persons" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_contact_person" />
+      <Association Name="trn_company_detail_trn_checkup_location" Member="trn_checkup_locations" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_checkup_location" />
+      <Association Name="trn_company_detail_trn_plan" Member="trn_plans" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_plan" />
+      <Association Name="trn_company_detail_trn_package_detail" Member="trn_package_details" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_package_detail" />
+      <Association Name="trn_company_detail_trn_payment" Member="trn_payments" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_payment" />
+      <Association Name="trn_company_detail_trn_condition_service" Member="trn_condition_services" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_condition_service" />
+      <Association Name="trn_company_detail_trn_company_request_doctor" Member="trn_company_request_doctors" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_request_doctor" />
+      <Association Name="trn_company_detail_mst_path_file" Member="mst_path_files" ThisKey="tcd_id" OtherKey="tcd_id" Type="mst_path_file" />
+      <Association Name="trn_company_detail_trn_medical_report" Member="trn_medical_reports" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_medical_report" />
+      <Association Name="trn_company_detail_trn_company_doctor_cat" Member="trn_company_doctor_cats" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_doctor_cat" />
+      <Association Name="mst_user_login_trn_company_detail" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_user_otp" Member="mst_user_otps">
+    <Type Name="mst_user_otp">
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mul_otp" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="mul_expire" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="mst_user_login_mst_user_otp" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_checkup_location" Member="mst_checkup_locations">
+    <Type Name="mst_checkup_location">
+      <Column Name="mcl_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mcl_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mcl_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mcl_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mcl_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mcl_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mcl_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mcl_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_mst_checkup_location" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_contact_person" Member="trn_contact_persons">
+    <Type Name="trn_contact_person">
+      <Column Name="tcp_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcp_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tcp_tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcp_mobile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcp_fax" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcp_email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mct_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tcp_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tcp_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcp_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcp_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="trn_company_detail_trn_contact_person" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="mst_user_login_trn_contact_person" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="mst_contact_type_trn_contact_person" Member="mst_contact_type" ThisKey="mct_id" OtherKey="mct_id" Type="mst_contact_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_user_login" Member="mst_user_logins">
+    <Type Name="mst_user_login">
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mul_fname" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="mul_mname" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="mul_lname" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="mut_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mul_permit" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mut_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mul_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mul_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login_update" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mul_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_name_check" Member="trn_name_checks" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_name_check" />
+      <Association Name="mst_user_login_trn_company_detail" Member="trn_company_details" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_company_detail" />
+      <Association Name="mst_user_login_mst_user_otp" Member="mst_user_otp" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_otp" Cardinality="One" />
+      <Association Name="mst_user_login_mst_checkup_location" Member="mst_checkup_locations" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_checkup_location" />
+      <Association Name="mst_user_login_trn_contact_person" Member="trn_contact_persons" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_contact_person" />
+      <Association Name="mst_user_login_mst_user_login" Member="mst_user_login2" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" Cardinality="One" />
+      <Association Name="mst_user_login_mst_company" Member="mst_companies" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_company" />
+      <Association Name="mst_user_login_mst_payor" Member="mst_payors" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_payor" />
+      <Association Name="mst_user_login_trn_checkup_location" Member="trn_checkup_locations" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_checkup_location" />
+      <Association Name="mst_user_login_mst_payment_type" Member="mst_payment_types" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_payment_type" />
+      <Association Name="mst_user_login_mst_type" Member="mst_types" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_type" />
+      <Association Name="mst_user_login_trn_plan" Member="trn_plans" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_plan" />
+      <Association Name="mst_user_login_trn_package_detail" Member="trn_package_details" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_package_detail" />
+      <Association Name="mst_user_login_trn_package_request_doctor" Member="trn_package_request_doctors" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_package_request_doctor" />
+      <Association Name="mst_user_login_trn_package_doctor_cat" Member="trn_package_doctor_cats" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_package_doctor_cat" />
+      <Association Name="mst_user_login_mst_doctor_cat" Member="mst_doctor_cats" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_doctor_cat" />
+      <Association Name="mst_user_login_trn_payment" Member="trn_payments" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_billing_method" Member="mst_billing_methods" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_billing_method" />
+      <Association Name="mst_user_login_mst_payment_main" Member="mst_payment_mains" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_payment_main" />
+      <Association Name="mst_user_login_mst_payment_rate" Member="mst_payment_rates" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_payment_rate" />
+      <Association Name="mst_user_login_mst_payment_quatation" Member="mst_payment_quatations" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_payment_quatation" />
+      <Association Name="mst_user_login_mst_payment_nquatation" Member="mst_payment_nquatations" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_payment_nquatation" />
+      <Association Name="mst_user_login_mst_receive_medicine" Member="mst_receive_medicines" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_receive_medicine" />
+      <Association Name="mst_user_login_mst_condition_service" Member="mst_condition_services" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_condition_service" />
+      <Association Name="mst_user_login_trn_condition_service" Member="trn_condition_services" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_condition_service" />
+      <Association Name="mst_user_login_trn_company_request_doctor" Member="trn_company_request_doctors" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_company_request_doctor" />
+      <Association Name="mst_user_login_mst_path_file" Member="mst_path_files" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_path_file" />
+      <Association Name="mst_user_login_trn_medical_report" Member="trn_medical_reports" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_medical_report" />
+      <Association Name="mst_user_login_mst_medical_report" Member="mst_medical_reports" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_medical_report" />
+      <Association Name="mst_user_login_trn_company_doctor_cat" Member="trn_company_doctor_cats" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="trn_company_doctor_cat" />
+      <Association Name="mst_user_login_mst_prepare_yourself" Member="mst_prepare_yourselfs" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_prepare_yourself" />
+      <Association Name="mst_user_login_mst_user_type" Member="mst_user_types" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_type" />
+      <Association Name="mst_user_login_mst_user_login" Member="mst_user_login1" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="mst_user_type_mst_user_login" Member="mst_user_type" ThisKey="mut_id" OtherKey="mut_id" Type="mst_user_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_company" Member="mst_companies">
+    <Type Name="mst_company">
+      <Column Name="mco_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mco_code" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="mco_tname" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="mco_ename" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="mco_legal" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="mco_type" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mco_address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="mco_tambon" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_district" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_province" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_postcode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mco_tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_mobile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_fax" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mco_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mco_create_by" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mco_create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mco_update_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="mst_company_mst_contact_person" Member="mst_contact_persons" ThisKey="mco_id" OtherKey="mco_id" Type="mst_contact_person" />
+      <Association Name="mst_user_login_mst_company" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_payor" Member="mst_payors">
+    <Type Name="mst_payor">
+      <Column Name="msp_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="msp_code" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="msp_name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="msp_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="msp_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="msp_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_payor_trn_plan" Member="trn_plans" ThisKey="msp_code" OtherKey="msp_code" Type="trn_plan" />
+      <Association Name="mst_user_login_mst_payor" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_checkup_location" Member="trn_checkup_locations">
+    <Type Name="trn_checkup_location">
+      <Column Name="tcl_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mcl_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcl_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcl_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcl_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="trn_company_detail_trn_checkup_location" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="mst_user_login_trn_checkup_location" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_payment_type" Member="mst_payment_types">
+    <Type Name="mst_payment_type">
+      <Column Name="mpt_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpt_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mpt_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpt_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpt_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mpt_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpt_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpt_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_payment_type_trn_package_detail" Member="trn_package_details" ThisKey="mpt_id" OtherKey="mpt_id" Type="trn_package_detail" />
+      <Association Name="mst_payment_type_trn_payment" Member="trn_payments" ThisKey="mpt_id" OtherKey="mpt_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_payment_type" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_contact_type" Member="mst_contact_types">
+    <Type Name="mst_contact_type">
+      <Column Name="mct_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mct_code" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mct_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mct_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mct_create_by" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mct_create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="mct_update_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="mst_contact_type_trn_contact_person" Member="trn_contact_persons" ThisKey="mct_id" OtherKey="mct_id" Type="trn_contact_person" />
+      <Association Name="mst_contact_type_mst_contact_person" Member="mst_contact_persons" ThisKey="mct_id" OtherKey="mct_id" Type="mst_contact_person" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_type" Member="mst_types">
+    <Type Name="mst_type">
+      <Column Name="mst_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mst_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mst_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mst_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mst_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mst_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mst_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mst_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_type_mst_contact_person" Member="mst_contact_persons" ThisKey="mst_id" OtherKey="mst_id" Type="mst_contact_person" />
+      <Association Name="mst_type_trn_payment" Member="trn_payments" ThisKey="mst_id" OtherKey="mst_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_type" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_plan" Member="trn_plans">
+    <Type Name="trn_plan">
+      <Column Name="tpl_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpl_code" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="tpl_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="msp_code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="msp_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tpl_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tpl_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tpl_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_plan" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="mst_payor_trn_plan" Member="mst_payor" ThisKey="msp_code" OtherKey="msp_code" Type="mst_payor" IsForeignKey="true" />
+      <Association Name="trn_company_detail_trn_plan" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_package_detail" Member="trn_package_details">
+    <Type Name="trn_package_detail">
+      <Column Name="tpd_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tpd_order_code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tpd_order_desc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tpd_order_type" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpt_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpd_mpt_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tpd_limit_credit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tpd_mpt_remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tpd_price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpd_date_from" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tpd_date_to" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="mpy_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpd_mpy_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tpd_mpy_remark" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="tpd_mpy_remark1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="tpd_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tpd_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tpd_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="trn_package_detail_trn_package_request_doctor" Member="trn_package_request_doctors" ThisKey="tpd_id" OtherKey="tpd_id" Type="trn_package_request_doctor" />
+      <Association Name="trn_package_detail_trn_package_doctor_cat" Member="trn_package_doctor_cats" ThisKey="tpd_id" OtherKey="tpd_id" Type="trn_package_doctor_cat" />
+      <Association Name="trn_company_detail_trn_package_detail" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="mst_payment_type_trn_package_detail" Member="mst_payment_type" ThisKey="mpt_id" OtherKey="mpt_id" Type="mst_payment_type" IsForeignKey="true" />
+      <Association Name="mst_user_login_trn_package_detail" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="mst_prepare_yourself_trn_package_detail" Member="mst_prepare_yourself" ThisKey="mpy_id" OtherKey="mpy_id" Type="mst_prepare_yourself" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_package_request_doctor" Member="trn_package_request_doctors">
+    <Type Name="trn_package_request_doctor">
+      <Column Name="trd_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tpd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trd_doc_code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="trd_doc_ename" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="trd_doc_tname" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="trd_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="trd_create_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="trd_update_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_package_request_doctor" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_package_detail_trn_package_request_doctor" Member="trn_package_detail" ThisKey="tpd_id" OtherKey="tpd_id" Type="trn_package_detail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_package_doctor_cat" Member="trn_package_doctor_cats">
+    <Type Name="trn_package_doctor_cat">
+      <Column Name="tdc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tpd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mdc_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdc_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tdc_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tdc_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_package_doctor_cat" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_package_detail_trn_package_doctor_cat" Member="trn_package_detail" ThisKey="tpd_id" OtherKey="tpd_id" Type="trn_package_detail" IsForeignKey="true" />
+      <Association Name="mst_doctor_cat_trn_package_doctor_cat" Member="mst_doctor_cat" ThisKey="mdc_id" OtherKey="mdc_id" Type="mst_doctor_cat" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_contact_person" Member="mst_contact_persons">
+    <Type Name="mst_contact_person">
+      <Column Name="mcp_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mco_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mco_code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mcp_name" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="mcp_tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mcp_mobile" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mcp_fax" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mcp_email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="mct_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mst_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mcp_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mcp_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mcp_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mcp_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_contact_person_mst_contact_person" Member="mst_contact_person2" ThisKey="mcp_id" OtherKey="mcp_id" Type="mst_contact_person" Cardinality="One" />
+      <Association Name="mst_company_mst_contact_person" Member="mst_company" ThisKey="mco_id" OtherKey="mco_id" Type="mst_company" IsForeignKey="true" />
+      <Association Name="mst_contact_person_mst_contact_person" Member="mst_contact_person1" ThisKey="mcp_id" OtherKey="mcp_id" Type="mst_contact_person" IsForeignKey="true" />
+      <Association Name="mst_contact_type_mst_contact_person" Member="mst_contact_type" ThisKey="mct_id" OtherKey="mct_id" Type="mst_contact_type" IsForeignKey="true" />
+      <Association Name="mst_type_mst_contact_person" Member="mst_type" ThisKey="mst_id" OtherKey="mst_id" Type="mst_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_doctor_cat" Member="mst_doctor_cats">
+    <Type Name="mst_doctor_cat">
+      <Column Name="mdc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mdc_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mdc_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mdc_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mdc_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mdc_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mdc_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mdc_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_doctor_cat_trn_package_doctor_cat" Member="trn_package_doctor_cats" ThisKey="mdc_id" OtherKey="mdc_id" Type="trn_package_doctor_cat" />
+      <Association Name="mst_user_login_mst_doctor_cat" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_payment" Member="trn_payments">
+    <Type Name="trn_payment">
+      <Column Name="tpa_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mst_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpt_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpa_mpt_credit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpa_mpt_remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="mbm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpr_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpq_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpa_mpq_credit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpn_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpa_mpn_credit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mrm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tpa_coupon" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tpa_coupon_remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tpa_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tpa_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tpa_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="trn_payment_trn_payment" Member="trn_payment2" ThisKey="tpa_id" OtherKey="tpa_id" Type="trn_payment" Cardinality="One" />
+      <Association Name="mst_payment_type_trn_payment" Member="mst_payment_type" ThisKey="mpt_id" OtherKey="mpt_id" Type="mst_payment_type" IsForeignKey="true" />
+      <Association Name="mst_type_trn_payment" Member="mst_type" ThisKey="mst_id" OtherKey="mst_id" Type="mst_type" IsForeignKey="true" />
+      <Association Name="mst_user_login_trn_payment" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_company_detail_trn_payment" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="trn_payment_trn_payment" Member="trn_payment1" ThisKey="tpa_id" OtherKey="tpa_id" Type="trn_payment" IsForeignKey="true" />
+      <Association Name="mst_billing_method_trn_payment" Member="mst_billing_method" ThisKey="mbm_id" OtherKey="mbm_id" Type="mst_billing_method" IsForeignKey="true" />
+      <Association Name="mst_payment_main_trn_payment" Member="mst_payment_main" ThisKey="mpm_id" OtherKey="mpm_id" Type="mst_payment_main" IsForeignKey="true" />
+      <Association Name="mst_payment_rate_trn_payment" Member="mst_payment_rate" ThisKey="mpr_id" OtherKey="mpr_id" Type="mst_payment_rate" IsForeignKey="true" />
+      <Association Name="mst_payment_quatation_trn_payment" Member="mst_payment_quatation" ThisKey="mpq_id" OtherKey="mpq_id" Type="mst_payment_quatation" IsForeignKey="true" />
+      <Association Name="mst_payment_nquatation_trn_payment" Member="mst_payment_nquatation" ThisKey="mpn_id" OtherKey="mpn_id" Type="mst_payment_nquatation" IsForeignKey="true" />
+      <Association Name="mst_receive_medicine_trn_payment" Member="mst_receive_medicine" ThisKey="mrm_id" OtherKey="mrm_id" Type="mst_receive_medicine" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_billing_method" Member="mst_billing_methods">
+    <Type Name="mst_billing_method">
+      <Column Name="mbm_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mbm_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mbm_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mbm_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mbm_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mbm_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mbm_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mbm_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_billing_method_trn_payment" Member="trn_payments" ThisKey="mbm_id" OtherKey="mbm_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_billing_method" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_payment_main" Member="mst_payment_mains">
+    <Type Name="mst_payment_main">
+      <Column Name="mpm_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpm_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpm_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpm_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpm_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mpm_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpm_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpm_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_payment_main_trn_payment" Member="trn_payments" ThisKey="mpm_id" OtherKey="mpm_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_payment_main" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_payment_rate" Member="mst_payment_rates">
+    <Type Name="mst_payment_rate">
+      <Column Name="mpr_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpr_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mpr_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpr_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpr_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mpr_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpr_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpr_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_payment_rate_trn_payment" Member="trn_payments" ThisKey="mpr_id" OtherKey="mpr_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_payment_rate" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_payment_quatation" Member="mst_payment_quatations">
+    <Type Name="mst_payment_quatation">
+      <Column Name="mpq_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpq_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mpq_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpq_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpq_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mpq_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpq_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpq_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_payment_quatation_trn_payment" Member="trn_payments" ThisKey="mpq_id" OtherKey="mpq_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_payment_quatation" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_payment_nquatation" Member="mst_payment_nquatations">
+    <Type Name="mst_payment_nquatation">
+      <Column Name="mpn_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpn_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mpn_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mpn_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpn_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mpn_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpn_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpn_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_payment_nquatation_trn_payment" Member="trn_payments" ThisKey="mpn_id" OtherKey="mpn_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_payment_nquatation" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_receive_medicine" Member="mst_receive_medicines">
+    <Type Name="mst_receive_medicine">
+      <Column Name="mrm_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mrm_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mrm_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mrm_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mrm_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mrm_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mrm_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mrm_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_receive_medicine_trn_payment" Member="trn_payments" ThisKey="mrm_id" OtherKey="mrm_id" Type="trn_payment" />
+      <Association Name="mst_user_login_mst_receive_medicine" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_condition_service" Member="mst_condition_services">
+    <Type Name="mst_condition_service">
+      <Column Name="mcs_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mcs_tname" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mcs_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mcs_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mcs_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mcs_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mcs_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mcs_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_condition_service_trn_condition_service" Member="trn_condition_services" ThisKey="mcs_id" OtherKey="mcs_id" Type="trn_condition_service" />
+      <Association Name="mst_user_login_mst_condition_service" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_condition_service" Member="trn_condition_services">
+    <Type Name="trn_condition_service">
+      <Column Name="tcs_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mcs_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcs_type" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="tcs_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcs_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcs_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_condition_service_trn_condition_service" Member="mst_condition_service" ThisKey="mcs_id" OtherKey="mcs_id" Type="mst_condition_service" IsForeignKey="true" />
+      <Association Name="mst_user_login_trn_condition_service" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_company_detail_trn_condition_service" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_company_request_doctor" Member="trn_company_request_doctors">
+    <Type Name="trn_company_request_doctor">
+      <Column Name="tcr_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcr_doc_code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tcr_doc_ename" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tcr_doc_tname" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tcr_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcr_create_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcr_update_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_company_request_doctor" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_company_detail_trn_company_request_doctor" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_path_file" Member="mst_path_files">
+    <Type Name="mst_path_file">
+      <Column Name="mpf_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mpf_file_name" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="mpf_path_name" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="mpf_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpf_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpf_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_path_file_trn_attach_file" Member="trn_attach_files" ThisKey="mpf_id" OtherKey="mpf_id" Type="trn_attach_file" />
+      <Association Name="trn_company_detail_mst_path_file" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="mst_user_login_mst_path_file" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_medical_reports" Member="trn_medical_reports">
+    <Type Name="trn_medical_report">
+      <Column Name="tmr_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mmr_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tmr_rep_remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="tmr_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tmr_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tmr_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_medical_report" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_company_detail_trn_medical_report" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" />
+      <Association Name="mst_medical_report_trn_medical_report" Member="mst_medical_report" ThisKey="mmr_id" OtherKey="mmr_id" Type="mst_medical_report" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_medical_report" Member="mst_medical_reports">
+    <Type Name="mst_medical_report">
+      <Column Name="mmr_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mmr_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mmr_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mmr_sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mmr_status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="mmr_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mmr_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mmr_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_medical_report_trn_medical_report" Member="trn_medical_reports" ThisKey="mmr_id" OtherKey="mmr_id" Type="trn_medical_report" />
+      <Association Name="mst_user_login_mst_medical_report" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_company_doctor_cat" Member="trn_company_doctor_cats">
+    <Type Name="trn_company_doctor_cat">
+      <Column Name="tcdc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mdc_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcdc_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcdc_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="tcdc_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_login_trn_company_doctor_cat" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+      <Association Name="trn_company_detail_trn_company_doctor_cat" Member="trn_company_detail" ThisKey="tcd_id" OtherKey="tcd_id" Type="trn_company_detail" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_prepare_yourself" Member="mst_prepare_yourselfs">
+    <Type Name="mst_prepare_yourself">
+      <Column Name="mpy_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpy_desc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="mpy_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mpy_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpy_create_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mpy_update_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="mst_prepare_yourself_trn_package_detail" Member="trn_package_details" ThisKey="mpy_id" OtherKey="mpy_id" Type="trn_package_detail" />
+      <Association Name="mst_user_login_mst_prepare_yourself" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mst_user_type" Member="mst_user_types">
+    <Type Name="mst_user_type">
+      <Column Name="mut_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mut_code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="mut_ename" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mut_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="mut_status" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="mut_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mut_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="mut_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_user_type_mst_user_login" Member="mst_user_logins" ThisKey="mut_id" OtherKey="mut_id" Type="mst_user_login" />
+      <Association Name="mst_user_type_trn_attach_file" Member="trn_attach_files" ThisKey="mut_id" OtherKey="mut_id" Type="trn_attach_file" />
+      <Association Name="mst_user_login_mst_user_type" Member="mst_user_login" ThisKey="mul_user_login" OtherKey="mul_user_login" Type="mst_user_login" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trn_attach_file" Member="trn_attach_files">
+    <Type Name="trn_attach_file">
+      <Column Name="taf_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mpf_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mut_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="taf_create_by" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="taf_create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="taf_update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="mst_path_file_trn_attach_file" Member="mst_path_file" ThisKey="mpf_id" OtherKey="mpf_id" Type="mst_path_file" IsForeignKey="true" />
+      <Association Name="mst_user_type_trn_attach_file" Member="mst_user_type" ThisKey="mut_id" OtherKey="mut_id" Type="mst_user_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.test_document_no" Member="test_document_nos">
+    <Type Name="test_document_no">
+      <Column Name="tcd_document_no" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tcd_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_date_from" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tcd_date_to" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.test_name_check" Member="test_name_checks">
+    <Type Name="test_name_check">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcd_document_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tnc_title_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_fname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_lname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnc_gender" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="tnc_site" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tnc_department" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tnc_position" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tnc_hn_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tnc_personal_id" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="tnc_emp_id" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.index_trn_company_detail" Member="index_trn_company_details">
+    <Type Name="index_trn_company_detail">
+      <Column Name="tcd_document_no" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcd_date_from" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tcd_date_to" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_get_company" Method="sp_get_company">
+    <ElementType Name="sp_get_companyResult">
+      <Column Name="tcd_code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tcd_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCompByArrived" Method="GetCompByArrived">
+    <Parameter Name="date" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="GetCompByArrivedResult">
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcd_document_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tcd_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_search_company2" Method="sp_search_company2">
+    <Parameter Name="strSearch" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="active" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="mcl_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mst_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fromDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="endDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="strTypeComp" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="strLegal" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="sp_search_company2Result">
+      <Column Name="tcd_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcd_tname" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_legal" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="tcd_document_no" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tcd_code" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tcd_date_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tcd_date_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="mul_user_login" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

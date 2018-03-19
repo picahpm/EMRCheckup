@@ -1,0 +1,3704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="getLabresult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Lab_Item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lab_Sex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lab_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lab_dob" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lab_value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lab_Value_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vision_left" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vision_right" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pulse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bmi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pregnancy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="systolic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diastolic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smoke" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HBsAg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Anti_HBc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HBsAb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GlucoseF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GlucoseU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Diabete" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AST" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ALT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PSA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AcidPH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Eosino" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parasite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MicroalbuminU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Microalbumin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MicroalbuminM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RBCMorpho" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Hemoglobin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HbA2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProteinU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErythroU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wbcU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rbcU" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLabresultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLabresultResult" type="tns:ArrayOfOutput_result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOutput_result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="output_result" nillable="true" type="tns:output_result" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="output_result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_TName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_EName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Standard_Value_Max" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Standard_Value_Min" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Standard_Unit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Result_Thai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Result_Eng" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mlr_id" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lab_Summary" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getLabLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mlr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLabLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLabLanguageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultXray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultXrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultXrayResult" type="tns:ArrayOfResultXray" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfResultXray">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ResultXray" nillable="true" type="tns:ResultXray" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultXray">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="hn_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="en_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="mvt_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mvt_code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OEORISttDat" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="OEORITimeOrd" nillable="true" type="tns:TimeSpan" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARCIMRowId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARCIMCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARCIMDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESFileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSUSR_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESTimeVerified" nillable="true" type="tns:TimeSpan" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESDateVerified" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PathHTML" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="resultText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="biradsCate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="patient_result" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="patient_comt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XrayType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OEORIAccessionNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TimeSpan" />
+      <s:element name="RetrieveImaging">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveImagingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveImagingResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertLabResult" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDouble">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="double" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertDBEmrCheckupResultXray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="en_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveOrder" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDBEmrCheckupResultXrayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertDBEmrCheckupResultXrayBackground">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="en_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="RetrieveOrder" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDBEmrCheckupResultXrayBackgroundResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getWaitingQueue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hpc_site" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWaitingQueueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getWaitingQueueResult" type="tns:ArrayOfOutput_room_queue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOutput_room_queue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="output_room_queue" nillable="true" type="tns:output_room_queue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="output_room_queue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="room_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="queue_no" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDoctorLicence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDoctorLicenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDoctorLicenceResult" type="tns:CareProviderCode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CareProviderCode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SSUSR_Initials" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CTPCP_Desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CTPCP_Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DoctorName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CTPCP_SMCNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getServingQueue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hpc_site" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getServingQueueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getServingQueueResult" type="tns:ArrayOfOutput_queue_serving" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOutput_queue_serving">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="output_queue_serving" nillable="true" type="tns:output_queue_serving" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="output_queue_serving">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="room_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="room_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="queue_no" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getHoldingQueue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hpc_site" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getHoldingQueueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getHoldingQueueResult" type="tns:ArrayOfOutput_room_queue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWaitingDoctorRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hpc_site" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWaitingDoctorRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getWaitingDoctorRoomResult" type="tns:ArrayOfOutput_room_queue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWithin1HourQueue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hpc_site" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWithin1HourQueueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getWithin1HourQueueResult" type="tns:ArrayOfOutput_room_queue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLanguageCallQueue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hpc_site" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLanguageCallQueueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLanguageCallQueueResult" type="tns:ArrayOfOutput_lang_call_queue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOutput_lang_call_queue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="output_lang_call_queue" nillable="true" type="tns:output_lang_call_queue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="output_lang_call_queue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="room_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="queue_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hpc_site" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDisplayProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="p_first_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_last_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_dob_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDisplayProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDisplayProfileResult" type="tns:ArrayOfOut_put_display_profile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOut_put_display_profile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="out_put_display_profile" nillable="true" type="tns:out_put_display_profile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="out_put_display_profile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_en_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_name_th" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_name_en" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_dob_date" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_visit_date" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_nation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_married" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_age_th" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_age_en" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_allergy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_telephone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_avia_flag" nillable="true" type="s:unsignedByte" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_image" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_regis_type" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertQuestionairePatiant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input_questionaire_patiant" type="tns:questionaire_patiant" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="questionaire_patiant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_type" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_smok" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_nsmok_yrs" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_qsmok_yrs" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_smok_amt" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_smok_dur" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_alcohol" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_alco_yrs" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_alco_social" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_his_exercise" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_concern" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_ill_conc_oth" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_psycho" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_ill_psycho_oth" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_his" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_hyper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_heart" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_diab" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_coro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_dysl" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_cper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_gout" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_abdd" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_pulm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_para" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_stro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_putb" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_sist" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_kidn" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_epil" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_resp" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_asth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_emph" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_chro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_canc" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_ill_med_canc_oth" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_alle" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_pept" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_med_oth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_ill_med_others" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cur_med" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_diab" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_hyper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_demia" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_cardi" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_dysl" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_horm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_cmed_oth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_ill_cmed_others" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_ill_allergy" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_ill_drug_or_food" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_pill_adm" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_pill_admission" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_pill_sur" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_pill_surgery" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_vinf_hepB_virus" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_vinf_hepA_virus" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_vinf_vaccine" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_f_disease" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_hyper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_heart" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_diab" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_coro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_coro_cs" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_dysl" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_gout" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_pulm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_para" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_putb" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_stro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_pepu" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_asth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_alle" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_canc" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_fdis_canc_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_fdis_oth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_fdis_others" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_m_disease" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_hyper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_heart" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_diab" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_coro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_coro_cs" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_dysl" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_gout" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_pulm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_para" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_putb" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_stro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_pepu" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_asth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_alle" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_canc" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_mdis_canc_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_mdis_oth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_mdis_others" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_b_disease" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_hyper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_heart" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_diab" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro_bfm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro_afm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro_nfm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro_bm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro_am" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_coro_nm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_dysl" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_gout" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_pulm" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_para" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_putb" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_stro" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_pepu" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_asth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_alle" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_canc" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_bdis_canc_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fhis_bdis_oth" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_bdis_others" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_fhis_others" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_menopause" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_meno_start" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_lst_st_mens" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_lst_ed_mens" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_character" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_pregnancy" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_fwm_over_weight" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_license" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertQuestionairePatiantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertQuestionairePatiantResult" type="tns:out_put_status" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="out_put_status">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="success_flag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="error_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="error_name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertQuestionaireAviation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input_questionaire_aviation" type="tns:questionaire_aviation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="questionaire_aviation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="p_hn_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_type" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_doc_type" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_nameEN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_marital" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_place_exam" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_license_type" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_avia_type" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_avia_oths" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_license_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chge_address" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_th_address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_th_mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_en_address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_en_mobile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_th_occupa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_th_comp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_th_office" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_th_of_mobile" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_cont_address" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_person_emer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_telep_emer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_prev_examined" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_prev_exam_loc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_prev_exam_date" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_prev_exam_deca" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_med_waiver" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_waiver_spec" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_tot_fling_time" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_last_six_time" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_pres_aircraft" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_aircraft_type" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_aircraft_name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_aircraft_jet" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_aircraft_turbo" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_aircraft_heli" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_aircraft_piston" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_aircraft_other" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_aircraft_oth" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_flying_status" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_smoking" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_smoking_since" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_smoking_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_smoking_amt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_use_medicine" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_amount" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tqa_med_startdate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_reason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_name2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_amount2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tqa_med_startdate2" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_reason2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_name3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_amount3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tqa_med_startdate3" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="tqa_med_reason3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_avg_alcohal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_m20_exercise" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_freq" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_freq_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_dizz" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_dizz_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_unco" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_unco_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_eyet" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_eyet_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_hayf" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_hayf_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_hert" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_hert_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_chst" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_chst_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_high" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_high_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_stom" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_stom_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_jaun" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_jaun_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_kidn" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_kidn_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_suga" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_suga_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_epil" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_epil_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_nurv" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_nurv_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_temp" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_temp_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_drug" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_drug_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_suic" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_suic_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_losw" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_losw_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_moti" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_moti_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_reje" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_reje_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_adms" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_adms_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_avia" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_avia_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_otha" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_otha_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_gyna" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_gyna_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_othi" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_othi_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_heth" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_heth_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_lung" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_lung_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_alco" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_alco_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_ment" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_ment_rmk" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_fam_diab" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_fam_card" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_fam_ment" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_chis_conviction" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_chis_conv_rmk" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="p_license" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_single_pilot" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="p_muti_pilot" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertQuestionaireAviationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertQuestionaireAviationResult" type="tns:out_put_status" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="displayQuestionairePatiant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="displayQuestionairePatiantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="displayQuestionairePatiantResult" type="tns:questionaire_patiant" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="displayQuestionaireAviation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_doc_type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="displayQuestionaireAviationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="displayQuestionaireAviationResult" type="tns:questionaire_aviation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScreenLanguage">
+        <s:complexType />
+      </s:element>
+      <s:element name="getScreenLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getScreenLanguageResult" type="tns:ArrayOfOutput_screen_language" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOutput_screen_language">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="output_screen_language" nillable="true" type="tns:output_screen_language" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="output_screen_language">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="mrm_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mrm_scrn_eng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mrm_scrn_thai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mrm_scrn_arabic" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mrm_scrn_myan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mrm_scrn_japan" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getImagePatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getImagePatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getImagePatientResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCheckUpLabResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HN_NO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCheckUpLabResultResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCheckUpLabResultBackground">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCheckUpLabResultBackgroundResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveCheckupLabResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="en" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pregnancy" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="smoke" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="diabetes" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveCheckupLabResultResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retrieveLabToPatientLab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveLabToPatientLabResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retrieveLabToPatientLabBackground">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveLabToPatientLabBackgroundResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retrieveVitalSign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveVitalSignResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retrieveVitalSignBackground">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveVitalSignBackgroundResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendToBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendToBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendToBookResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetDoctor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetDoctorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResetDoctorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPatientPackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="point" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPatientPackageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPatientPackageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientPackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queue_no" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPatientPackageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPatientPackageResult" type="tns:ArrayOfPatient_order_set" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPatient_order_set">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="patient_order_set" nillable="true" type="tns:patient_order_set" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="patient_order_set">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tos_od_set_code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tos_od_set_name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tos_status" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReCancelPatientToCheckB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReCancelPatientToCheckBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReCancelPatientToCheckBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReAssignDoctor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReAssignDoctorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReAssignDoctorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMasterPointPackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PackageRowID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="point" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMasterPointPackageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMasterPointPackageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tps_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListCompleteEvent" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="current_site" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAutoResult" type="tns:SendAutoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendAutoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SendResult" type="tns:Result" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlertMsg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Result">
+        <s:restriction base="s:string">
+          <s:enumeration value="Complete" />
+          <s:enumeration value="NotSend" />
+          <s:enumeration value="Error" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="retrievePackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrievePackageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendDoctorApprove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="rptCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendDoctorApproveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendDoctorApproveResult" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecallApprove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecallApproveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecallApproveResult" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendToDocScan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tpr_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mrt_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mhs_code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendToDocScanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendToDocScanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfOutput_result" nillable="true" type="tns:ArrayOfOutput_result" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfResultXray" nillable="true" type="tns:ArrayOfResultXray" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="ArrayOfDouble" nillable="true" type="tns:ArrayOfDouble" />
+      <s:element name="ArrayOfOutput_room_queue" nillable="true" type="tns:ArrayOfOutput_room_queue" />
+      <s:element name="CareProviderCode" nillable="true" type="tns:CareProviderCode" />
+      <s:element name="ArrayOfOutput_queue_serving" nillable="true" type="tns:ArrayOfOutput_queue_serving" />
+      <s:element name="ArrayOfOutput_lang_call_queue" nillable="true" type="tns:ArrayOfOutput_lang_call_queue" />
+      <s:element name="ArrayOfOut_put_display_profile" nillable="true" type="tns:ArrayOfOut_put_display_profile" />
+      <s:element name="questionaire_patiant" nillable="true" type="tns:questionaire_patiant" />
+      <s:element name="questionaire_aviation" nillable="true" type="tns:questionaire_aviation" />
+      <s:element name="ArrayOfOutput_screen_language" nillable="true" type="tns:ArrayOfOutput_screen_language" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="ArrayOfPatient_order_set" nillable="true" type="tns:ArrayOfPatient_order_set" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getLabresultSoapIn">
+    <wsdl:part name="parameters" element="tns:getLabresult" />
+  </wsdl:message>
+  <wsdl:message name="getLabresultSoapOut">
+    <wsdl:part name="parameters" element="tns:getLabresultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLabLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:getLabLanguage" />
+  </wsdl:message>
+  <wsdl:message name="getLabLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:getLabLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultXraySoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultXray" />
+  </wsdl:message>
+  <wsdl:message name="GetResultXraySoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultXrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveImagingSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveImaging" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveImagingSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveImagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertLabSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertLab" />
+  </wsdl:message>
+  <wsdl:message name="InsertLabSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertLabResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXraySoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDBEmrCheckupResultXray" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXraySoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDBEmrCheckupResultXrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayBackgroundSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDBEmrCheckupResultXrayBackground" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayBackgroundSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDBEmrCheckupResultXrayBackgroundResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingQueueSoapIn">
+    <wsdl:part name="parameters" element="tns:getWaitingQueue" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingQueueSoapOut">
+    <wsdl:part name="parameters" element="tns:getWaitingQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDoctorLicenceSoapIn">
+    <wsdl:part name="parameters" element="tns:getDoctorLicence" />
+  </wsdl:message>
+  <wsdl:message name="getDoctorLicenceSoapOut">
+    <wsdl:part name="parameters" element="tns:getDoctorLicenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getServingQueueSoapIn">
+    <wsdl:part name="parameters" element="tns:getServingQueue" />
+  </wsdl:message>
+  <wsdl:message name="getServingQueueSoapOut">
+    <wsdl:part name="parameters" element="tns:getServingQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHoldingQueueSoapIn">
+    <wsdl:part name="parameters" element="tns:getHoldingQueue" />
+  </wsdl:message>
+  <wsdl:message name="getHoldingQueueSoapOut">
+    <wsdl:part name="parameters" element="tns:getHoldingQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingDoctorRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:getWaitingDoctorRoom" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingDoctorRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:getWaitingDoctorRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWithin1HourQueueSoapIn">
+    <wsdl:part name="parameters" element="tns:getWithin1HourQueue" />
+  </wsdl:message>
+  <wsdl:message name="getWithin1HourQueueSoapOut">
+    <wsdl:part name="parameters" element="tns:getWithin1HourQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCallQueueSoapIn">
+    <wsdl:part name="parameters" element="tns:getLanguageCallQueue" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCallQueueSoapOut">
+    <wsdl:part name="parameters" element="tns:getLanguageCallQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDisplayProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:getDisplayProfile" />
+  </wsdl:message>
+  <wsdl:message name="getDisplayProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:getDisplayProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertQuestionairePatiantSoapIn">
+    <wsdl:part name="parameters" element="tns:insertQuestionairePatiant" />
+  </wsdl:message>
+  <wsdl:message name="insertQuestionairePatiantSoapOut">
+    <wsdl:part name="parameters" element="tns:insertQuestionairePatiantResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertQuestionaireAviationSoapIn">
+    <wsdl:part name="parameters" element="tns:insertQuestionaireAviation" />
+  </wsdl:message>
+  <wsdl:message name="insertQuestionaireAviationSoapOut">
+    <wsdl:part name="parameters" element="tns:insertQuestionaireAviationResponse" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionairePatiantSoapIn">
+    <wsdl:part name="parameters" element="tns:displayQuestionairePatiant" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionairePatiantSoapOut">
+    <wsdl:part name="parameters" element="tns:displayQuestionairePatiantResponse" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionaireAviationSoapIn">
+    <wsdl:part name="parameters" element="tns:displayQuestionaireAviation" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionaireAviationSoapOut">
+    <wsdl:part name="parameters" element="tns:displayQuestionaireAviationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScreenLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:getScreenLanguage" />
+  </wsdl:message>
+  <wsdl:message name="getScreenLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:getScreenLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getImagePatientSoapIn">
+    <wsdl:part name="parameters" element="tns:getImagePatient" />
+  </wsdl:message>
+  <wsdl:message name="getImagePatientSoapOut">
+    <wsdl:part name="parameters" element="tns:getImagePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultSoapIn">
+    <wsdl:part name="parameters" element="tns:getCheckUpLabResult" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultSoapOut">
+    <wsdl:part name="parameters" element="tns:getCheckUpLabResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultBackgroundSoapIn">
+    <wsdl:part name="parameters" element="tns:getCheckUpLabResultBackground" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultBackgroundSoapOut">
+    <wsdl:part name="parameters" element="tns:getCheckUpLabResultBackgroundResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCheckupLabResultSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveCheckupLabResult" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCheckupLabResultSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveCheckupLabResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveLabToPatientLab" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveLabToPatientLabResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabBackgroundSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveLabToPatientLabBackground" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabBackgroundSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveLabToPatientLabBackgroundResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveVitalSign" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveVitalSignResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignBackgroundSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveVitalSignBackground" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignBackgroundSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveVitalSignBackgroundResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendToBookSoapIn">
+    <wsdl:part name="parameters" element="tns:SendToBook" />
+  </wsdl:message>
+  <wsdl:message name="SendToBookSoapOut">
+    <wsdl:part name="parameters" element="tns:SendToBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetDoctorSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetDoctor" />
+  </wsdl:message>
+  <wsdl:message name="ResetDoctorSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPatientPackageSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPatientPackage" />
+  </wsdl:message>
+  <wsdl:message name="AddPatientPackageSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPatientPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientPackageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPatientPackage" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientPackageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPatientPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReCancelPatientToCheckBSoapIn">
+    <wsdl:part name="parameters" element="tns:ReCancelPatientToCheckB" />
+  </wsdl:message>
+  <wsdl:message name="ReCancelPatientToCheckBSoapOut">
+    <wsdl:part name="parameters" element="tns:ReCancelPatientToCheckBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignDoctorSoapIn">
+    <wsdl:part name="parameters" element="tns:ReAssignDoctor" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignDoctorSoapOut">
+    <wsdl:part name="parameters" element="tns:ReAssignDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMasterPointPackageSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMasterPointPackage" />
+  </wsdl:message>
+  <wsdl:message name="AddMasterPointPackageSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMasterPointPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAuto" />
+  </wsdl:message>
+  <wsdl:message name="SendAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrievePackageSoapIn">
+    <wsdl:part name="parameters" element="tns:retrievePackage" />
+  </wsdl:message>
+  <wsdl:message name="retrievePackageSoapOut">
+    <wsdl:part name="parameters" element="tns:retrievePackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendDoctorApproveSoapIn">
+    <wsdl:part name="parameters" element="tns:SendDoctorApprove" />
+  </wsdl:message>
+  <wsdl:message name="SendDoctorApproveSoapOut">
+    <wsdl:part name="parameters" element="tns:SendDoctorApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecallApproveSoapIn">
+    <wsdl:part name="parameters" element="tns:RecallApprove" />
+  </wsdl:message>
+  <wsdl:message name="RecallApproveSoapOut">
+    <wsdl:part name="parameters" element="tns:RecallApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendToDocScanSoapIn">
+    <wsdl:part name="parameters" element="tns:SendToDocScan" />
+  </wsdl:message>
+  <wsdl:message name="SendToDocScanSoapOut">
+    <wsdl:part name="parameters" element="tns:SendToDocScanResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLabresultHttpGetIn">
+    <wsdl:part name="Lab_Item" type="s:string" />
+    <wsdl:part name="Lab_Sex" type="s:string" />
+    <wsdl:part name="Lab_date" type="s:string" />
+    <wsdl:part name="Lab_dob" type="s:string" />
+    <wsdl:part name="Lab_value" type="s:string" />
+    <wsdl:part name="Lab_Value_Type" type="s:string" />
+    <wsdl:part name="vision_left" type="s:string" />
+    <wsdl:part name="vision_right" type="s:string" />
+    <wsdl:part name="pulse" type="s:string" />
+    <wsdl:part name="bmi" type="s:string" />
+    <wsdl:part name="pregnancy" type="s:string" />
+    <wsdl:part name="systolic" type="s:string" />
+    <wsdl:part name="diastolic" type="s:string" />
+    <wsdl:part name="smoke" type="s:string" />
+    <wsdl:part name="HBsAg" type="s:string" />
+    <wsdl:part name="Anti_HBc" type="s:string" />
+    <wsdl:part name="HBsAb" type="s:string" />
+    <wsdl:part name="GlucoseF" type="s:string" />
+    <wsdl:part name="GlucoseU" type="s:string" />
+    <wsdl:part name="Diabete" type="s:string" />
+    <wsdl:part name="AST" type="s:string" />
+    <wsdl:part name="ALT" type="s:string" />
+    <wsdl:part name="PSA" type="s:string" />
+    <wsdl:part name="AcidPH" type="s:string" />
+    <wsdl:part name="Eosino" type="s:string" />
+    <wsdl:part name="Parasite" type="s:string" />
+    <wsdl:part name="MicroalbuminU" type="s:string" />
+    <wsdl:part name="Microalbumin" type="s:string" />
+    <wsdl:part name="MicroalbuminM" type="s:string" />
+    <wsdl:part name="RBCMorpho" type="s:string" />
+    <wsdl:part name="Hemoglobin" type="s:string" />
+    <wsdl:part name="HbA2" type="s:string" />
+    <wsdl:part name="MCV" type="s:string" />
+    <wsdl:part name="ProteinU" type="s:string" />
+    <wsdl:part name="ErythroU" type="s:string" />
+    <wsdl:part name="wbcU" type="s:string" />
+    <wsdl:part name="rbcU" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getLabresultHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_result" />
+  </wsdl:message>
+  <wsdl:message name="getLabLanguageHttpGetIn">
+    <wsdl:part name="mlr_id" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getLabLanguageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResultXrayHttpGetIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResultXrayHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfResultXray" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveImagingHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveImagingHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="InsertLabHttpGetIn">
+    <wsdl:part name="hn" type="s:string" />
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertLabHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDouble" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayHttpGetIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="en_no" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="RetrieveOrder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayHttpGetOut" />
+  <wsdl:message name="InsertDBEmrCheckupResultXrayBackgroundHttpGetIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="en_no" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="RetrieveOrder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayBackgroundHttpGetOut" />
+  <wsdl:message name="getWaitingQueueHttpGetIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingQueueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getDoctorLicenceHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDoctorLicenceHttpGetOut">
+    <wsdl:part name="Body" element="tns:CareProviderCode" />
+  </wsdl:message>
+  <wsdl:message name="getServingQueueHttpGetIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getServingQueueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_queue_serving" />
+  </wsdl:message>
+  <wsdl:message name="getHoldingQueueHttpGetIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getHoldingQueueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingDoctorRoomHttpGetIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingDoctorRoomHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getWithin1HourQueueHttpGetIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getWithin1HourQueueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCallQueueHttpGetIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCallQueueHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_lang_call_queue" />
+  </wsdl:message>
+  <wsdl:message name="getDisplayProfileHttpGetIn">
+    <wsdl:part name="p_first_name" type="s:string" />
+    <wsdl:part name="p_last_name" type="s:string" />
+    <wsdl:part name="p_hn_no" type="s:string" />
+    <wsdl:part name="p_dob_date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDisplayProfileHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOut_put_display_profile" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionairePatiantHttpGetIn">
+    <wsdl:part name="hn_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionairePatiantHttpGetOut">
+    <wsdl:part name="Body" element="tns:questionaire_patiant" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionaireAviationHttpGetIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="p_doc_type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionaireAviationHttpGetOut">
+    <wsdl:part name="Body" element="tns:questionaire_aviation" />
+  </wsdl:message>
+  <wsdl:message name="getScreenLanguageHttpGetIn" />
+  <wsdl:message name="getScreenLanguageHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_screen_language" />
+  </wsdl:message>
+  <wsdl:message name="getImagePatientHttpGetIn">
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getImagePatientHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultHttpGetIn">
+    <wsdl:part name="HN_NO" type="s:string" />
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultHttpGetOut" />
+  <wsdl:message name="getCheckUpLabResultBackgroundHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultBackgroundHttpGetOut" />
+  <wsdl:message name="RetrieveCheckupLabResultHttpGetIn">
+    <wsdl:part name="hn" type="s:string" />
+    <wsdl:part name="en" type="s:string" />
+    <wsdl:part name="pregnancy" type="s:string" />
+    <wsdl:part name="smoke" type="s:string" />
+    <wsdl:part name="diabetes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCheckupLabResultHttpGetOut" />
+  <wsdl:message name="retrieveLabToPatientLabHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabHttpGetOut" />
+  <wsdl:message name="retrieveLabToPatientLabBackgroundHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabBackgroundHttpGetOut" />
+  <wsdl:message name="retrieveVitalSignHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignHttpGetOut" />
+  <wsdl:message name="retrieveVitalSignBackgroundHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignBackgroundHttpGetOut" />
+  <wsdl:message name="SendToBookHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendToBookHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ResetDoctorHttpGetIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResetDoctorHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPatientPackageHttpGetIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+    <wsdl:part name="point" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPatientPackageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientPackageHttpGetIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="queue_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientPackageHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPatient_order_set" />
+  </wsdl:message>
+  <wsdl:message name="ReCancelPatientToCheckBHttpGetIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReCancelPatientToCheckBHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignDoctorHttpGetIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignDoctorHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMasterPointPackageHttpGetIn">
+    <wsdl:part name="PackageRowID" type="s:string" />
+    <wsdl:part name="point" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMasterPointPackageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="retrievePackageHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrievePackageHttpGetOut" />
+  <wsdl:message name="SendDoctorApproveHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="rptCode" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendDoctorApproveHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="RecallApproveHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecallApproveHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendToDocScanHttpGetIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="mrt_code" type="s:string" />
+    <wsdl:part name="mhs_code" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendToDocScanHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getLabresultHttpPostIn">
+    <wsdl:part name="Lab_Item" type="s:string" />
+    <wsdl:part name="Lab_Sex" type="s:string" />
+    <wsdl:part name="Lab_date" type="s:string" />
+    <wsdl:part name="Lab_dob" type="s:string" />
+    <wsdl:part name="Lab_value" type="s:string" />
+    <wsdl:part name="Lab_Value_Type" type="s:string" />
+    <wsdl:part name="vision_left" type="s:string" />
+    <wsdl:part name="vision_right" type="s:string" />
+    <wsdl:part name="pulse" type="s:string" />
+    <wsdl:part name="bmi" type="s:string" />
+    <wsdl:part name="pregnancy" type="s:string" />
+    <wsdl:part name="systolic" type="s:string" />
+    <wsdl:part name="diastolic" type="s:string" />
+    <wsdl:part name="smoke" type="s:string" />
+    <wsdl:part name="HBsAg" type="s:string" />
+    <wsdl:part name="Anti_HBc" type="s:string" />
+    <wsdl:part name="HBsAb" type="s:string" />
+    <wsdl:part name="GlucoseF" type="s:string" />
+    <wsdl:part name="GlucoseU" type="s:string" />
+    <wsdl:part name="Diabete" type="s:string" />
+    <wsdl:part name="AST" type="s:string" />
+    <wsdl:part name="ALT" type="s:string" />
+    <wsdl:part name="PSA" type="s:string" />
+    <wsdl:part name="AcidPH" type="s:string" />
+    <wsdl:part name="Eosino" type="s:string" />
+    <wsdl:part name="Parasite" type="s:string" />
+    <wsdl:part name="MicroalbuminU" type="s:string" />
+    <wsdl:part name="Microalbumin" type="s:string" />
+    <wsdl:part name="MicroalbuminM" type="s:string" />
+    <wsdl:part name="RBCMorpho" type="s:string" />
+    <wsdl:part name="Hemoglobin" type="s:string" />
+    <wsdl:part name="HbA2" type="s:string" />
+    <wsdl:part name="MCV" type="s:string" />
+    <wsdl:part name="ProteinU" type="s:string" />
+    <wsdl:part name="ErythroU" type="s:string" />
+    <wsdl:part name="wbcU" type="s:string" />
+    <wsdl:part name="rbcU" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getLabresultHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_result" />
+  </wsdl:message>
+  <wsdl:message name="getLabLanguageHttpPostIn">
+    <wsdl:part name="mlr_id" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getLabLanguageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResultXrayHttpPostIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResultXrayHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfResultXray" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveImagingHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveImagingHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="InsertLabHttpPostIn">
+    <wsdl:part name="hn" type="s:string" />
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertLabHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDouble" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayHttpPostIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="en_no" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="RetrieveOrder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayHttpPostOut" />
+  <wsdl:message name="InsertDBEmrCheckupResultXrayBackgroundHttpPostIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="en_no" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="RetrieveOrder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDBEmrCheckupResultXrayBackgroundHttpPostOut" />
+  <wsdl:message name="getWaitingQueueHttpPostIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingQueueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getDoctorLicenceHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDoctorLicenceHttpPostOut">
+    <wsdl:part name="Body" element="tns:CareProviderCode" />
+  </wsdl:message>
+  <wsdl:message name="getServingQueueHttpPostIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getServingQueueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_queue_serving" />
+  </wsdl:message>
+  <wsdl:message name="getHoldingQueueHttpPostIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getHoldingQueueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingDoctorRoomHttpPostIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getWaitingDoctorRoomHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getWithin1HourQueueHttpPostIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getWithin1HourQueueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_room_queue" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCallQueueHttpPostIn">
+    <wsdl:part name="hpc_site" type="s:string" />
+    <wsdl:part name="zone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getLanguageCallQueueHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_lang_call_queue" />
+  </wsdl:message>
+  <wsdl:message name="getDisplayProfileHttpPostIn">
+    <wsdl:part name="p_first_name" type="s:string" />
+    <wsdl:part name="p_last_name" type="s:string" />
+    <wsdl:part name="p_hn_no" type="s:string" />
+    <wsdl:part name="p_dob_date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDisplayProfileHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOut_put_display_profile" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionairePatiantHttpPostIn">
+    <wsdl:part name="hn_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionairePatiantHttpPostOut">
+    <wsdl:part name="Body" element="tns:questionaire_patiant" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionaireAviationHttpPostIn">
+    <wsdl:part name="hn_no" type="s:string" />
+    <wsdl:part name="p_doc_type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="displayQuestionaireAviationHttpPostOut">
+    <wsdl:part name="Body" element="tns:questionaire_aviation" />
+  </wsdl:message>
+  <wsdl:message name="getScreenLanguageHttpPostIn" />
+  <wsdl:message name="getScreenLanguageHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfOutput_screen_language" />
+  </wsdl:message>
+  <wsdl:message name="getImagePatientHttpPostIn">
+    <wsdl:part name="fileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getImagePatientHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultHttpPostIn">
+    <wsdl:part name="HN_NO" type="s:string" />
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultHttpPostOut" />
+  <wsdl:message name="getCheckUpLabResultBackgroundHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCheckUpLabResultBackgroundHttpPostOut" />
+  <wsdl:message name="RetrieveCheckupLabResultHttpPostIn">
+    <wsdl:part name="hn" type="s:string" />
+    <wsdl:part name="en" type="s:string" />
+    <wsdl:part name="pregnancy" type="s:string" />
+    <wsdl:part name="smoke" type="s:string" />
+    <wsdl:part name="diabetes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveCheckupLabResultHttpPostOut" />
+  <wsdl:message name="retrieveLabToPatientLabHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabHttpPostOut" />
+  <wsdl:message name="retrieveLabToPatientLabBackgroundHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveLabToPatientLabBackgroundHttpPostOut" />
+  <wsdl:message name="retrieveVitalSignHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignHttpPostOut" />
+  <wsdl:message name="retrieveVitalSignBackgroundHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrieveVitalSignBackgroundHttpPostOut" />
+  <wsdl:message name="SendToBookHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendToBookHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ResetDoctorHttpPostIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ResetDoctorHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPatientPackageHttpPostIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+    <wsdl:part name="point" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddPatientPackageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientPackageHttpPostIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="queue_no" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPatientPackageHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPatient_order_set" />
+  </wsdl:message>
+  <wsdl:message name="ReCancelPatientToCheckBHttpPostIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReCancelPatientToCheckBHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignDoctorHttpPostIn">
+    <wsdl:part name="HN" type="s:string" />
+    <wsdl:part name="EN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReAssignDoctorHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMasterPointPackageHttpPostIn">
+    <wsdl:part name="PackageRowID" type="s:string" />
+    <wsdl:part name="point" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMasterPointPackageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="retrievePackageHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="retrievePackageHttpPostOut" />
+  <wsdl:message name="SendDoctorApproveHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="rptCode" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendDoctorApproveHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="RecallApproveHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RecallApproveHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendToDocScanHttpPostIn">
+    <wsdl:part name="tpr_id" type="s:string" />
+    <wsdl:part name="mrt_code" type="s:string" />
+    <wsdl:part name="mhs_code" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendToDocScanHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WS_GetDataFromPathWaySoap">
+    <wsdl:operation name="getLabresult">
+      <wsdl:input message="tns:getLabresultSoapIn" />
+      <wsdl:output message="tns:getLabresultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <wsdl:input message="tns:getLabLanguageSoapIn" />
+      <wsdl:output message="tns:getLabLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <wsdl:input message="tns:GetResultXraySoapIn" />
+      <wsdl:output message="tns:GetResultXraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <wsdl:input message="tns:RetrieveImagingSoapIn" />
+      <wsdl:output message="tns:RetrieveImagingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <wsdl:input message="tns:InsertLabSoapIn" />
+      <wsdl:output message="tns:InsertLabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <wsdl:input message="tns:InsertDBEmrCheckupResultXraySoapIn" />
+      <wsdl:output message="tns:InsertDBEmrCheckupResultXraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <wsdl:input message="tns:InsertDBEmrCheckupResultXrayBackgroundSoapIn" />
+      <wsdl:output message="tns:InsertDBEmrCheckupResultXrayBackgroundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <wsdl:input message="tns:getWaitingQueueSoapIn" />
+      <wsdl:output message="tns:getWaitingQueueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <wsdl:input message="tns:getDoctorLicenceSoapIn" />
+      <wsdl:output message="tns:getDoctorLicenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <wsdl:input message="tns:getServingQueueSoapIn" />
+      <wsdl:output message="tns:getServingQueueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <wsdl:input message="tns:getHoldingQueueSoapIn" />
+      <wsdl:output message="tns:getHoldingQueueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <wsdl:input message="tns:getWaitingDoctorRoomSoapIn" />
+      <wsdl:output message="tns:getWaitingDoctorRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <wsdl:input message="tns:getWithin1HourQueueSoapIn" />
+      <wsdl:output message="tns:getWithin1HourQueueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <wsdl:input message="tns:getLanguageCallQueueSoapIn" />
+      <wsdl:output message="tns:getLanguageCallQueueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <wsdl:input message="tns:getDisplayProfileSoapIn" />
+      <wsdl:output message="tns:getDisplayProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertQuestionairePatiant">
+      <wsdl:input message="tns:insertQuestionairePatiantSoapIn" />
+      <wsdl:output message="tns:insertQuestionairePatiantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertQuestionaireAviation">
+      <wsdl:input message="tns:insertQuestionaireAviationSoapIn" />
+      <wsdl:output message="tns:insertQuestionaireAviationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <wsdl:input message="tns:displayQuestionairePatiantSoapIn" />
+      <wsdl:output message="tns:displayQuestionairePatiantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <wsdl:input message="tns:displayQuestionaireAviationSoapIn" />
+      <wsdl:output message="tns:displayQuestionaireAviationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <wsdl:input message="tns:getScreenLanguageSoapIn" />
+      <wsdl:output message="tns:getScreenLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <wsdl:input message="tns:getImagePatientSoapIn" />
+      <wsdl:output message="tns:getImagePatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <wsdl:input message="tns:getCheckUpLabResultSoapIn" />
+      <wsdl:output message="tns:getCheckUpLabResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <wsdl:input message="tns:getCheckUpLabResultBackgroundSoapIn" />
+      <wsdl:output message="tns:getCheckUpLabResultBackgroundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <wsdl:input message="tns:RetrieveCheckupLabResultSoapIn" />
+      <wsdl:output message="tns:RetrieveCheckupLabResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <wsdl:input message="tns:retrieveLabToPatientLabSoapIn" />
+      <wsdl:output message="tns:retrieveLabToPatientLabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <wsdl:input message="tns:retrieveLabToPatientLabBackgroundSoapIn" />
+      <wsdl:output message="tns:retrieveLabToPatientLabBackgroundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <wsdl:input message="tns:retrieveVitalSignSoapIn" />
+      <wsdl:output message="tns:retrieveVitalSignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <wsdl:input message="tns:retrieveVitalSignBackgroundSoapIn" />
+      <wsdl:output message="tns:retrieveVitalSignBackgroundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <wsdl:input message="tns:SendToBookSoapIn" />
+      <wsdl:output message="tns:SendToBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <wsdl:input message="tns:ResetDoctorSoapIn" />
+      <wsdl:output message="tns:ResetDoctorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <wsdl:input message="tns:AddPatientPackageSoapIn" />
+      <wsdl:output message="tns:AddPatientPackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <wsdl:input message="tns:GetPatientPackageSoapIn" />
+      <wsdl:output message="tns:GetPatientPackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <wsdl:input message="tns:ReCancelPatientToCheckBSoapIn" />
+      <wsdl:output message="tns:ReCancelPatientToCheckBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <wsdl:input message="tns:ReAssignDoctorSoapIn" />
+      <wsdl:output message="tns:ReAssignDoctorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <wsdl:input message="tns:AddMasterPointPackageSoapIn" />
+      <wsdl:output message="tns:AddMasterPointPackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAuto">
+      <wsdl:input message="tns:SendAutoSoapIn" />
+      <wsdl:output message="tns:SendAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <wsdl:input message="tns:retrievePackageSoapIn" />
+      <wsdl:output message="tns:retrievePackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <wsdl:input message="tns:SendDoctorApproveSoapIn" />
+      <wsdl:output message="tns:SendDoctorApproveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <wsdl:input message="tns:RecallApproveSoapIn" />
+      <wsdl:output message="tns:RecallApproveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <wsdl:input message="tns:SendToDocScanSoapIn" />
+      <wsdl:output message="tns:SendToDocScanSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_GetDataFromPathWayHttpGet">
+    <wsdl:operation name="getLabresult">
+      <wsdl:input message="tns:getLabresultHttpGetIn" />
+      <wsdl:output message="tns:getLabresultHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <wsdl:input message="tns:getLabLanguageHttpGetIn" />
+      <wsdl:output message="tns:getLabLanguageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <wsdl:input message="tns:GetResultXrayHttpGetIn" />
+      <wsdl:output message="tns:GetResultXrayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <wsdl:input message="tns:RetrieveImagingHttpGetIn" />
+      <wsdl:output message="tns:RetrieveImagingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <wsdl:input message="tns:InsertLabHttpGetIn" />
+      <wsdl:output message="tns:InsertLabHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <wsdl:input message="tns:InsertDBEmrCheckupResultXrayHttpGetIn" />
+      <wsdl:output message="tns:InsertDBEmrCheckupResultXrayHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <wsdl:input message="tns:InsertDBEmrCheckupResultXrayBackgroundHttpGetIn" />
+      <wsdl:output message="tns:InsertDBEmrCheckupResultXrayBackgroundHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <wsdl:input message="tns:getWaitingQueueHttpGetIn" />
+      <wsdl:output message="tns:getWaitingQueueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <wsdl:input message="tns:getDoctorLicenceHttpGetIn" />
+      <wsdl:output message="tns:getDoctorLicenceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <wsdl:input message="tns:getServingQueueHttpGetIn" />
+      <wsdl:output message="tns:getServingQueueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <wsdl:input message="tns:getHoldingQueueHttpGetIn" />
+      <wsdl:output message="tns:getHoldingQueueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <wsdl:input message="tns:getWaitingDoctorRoomHttpGetIn" />
+      <wsdl:output message="tns:getWaitingDoctorRoomHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <wsdl:input message="tns:getWithin1HourQueueHttpGetIn" />
+      <wsdl:output message="tns:getWithin1HourQueueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <wsdl:input message="tns:getLanguageCallQueueHttpGetIn" />
+      <wsdl:output message="tns:getLanguageCallQueueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <wsdl:input message="tns:getDisplayProfileHttpGetIn" />
+      <wsdl:output message="tns:getDisplayProfileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <wsdl:input message="tns:displayQuestionairePatiantHttpGetIn" />
+      <wsdl:output message="tns:displayQuestionairePatiantHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <wsdl:input message="tns:displayQuestionaireAviationHttpGetIn" />
+      <wsdl:output message="tns:displayQuestionaireAviationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <wsdl:input message="tns:getScreenLanguageHttpGetIn" />
+      <wsdl:output message="tns:getScreenLanguageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <wsdl:input message="tns:getImagePatientHttpGetIn" />
+      <wsdl:output message="tns:getImagePatientHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <wsdl:input message="tns:getCheckUpLabResultHttpGetIn" />
+      <wsdl:output message="tns:getCheckUpLabResultHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <wsdl:input message="tns:getCheckUpLabResultBackgroundHttpGetIn" />
+      <wsdl:output message="tns:getCheckUpLabResultBackgroundHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <wsdl:input message="tns:RetrieveCheckupLabResultHttpGetIn" />
+      <wsdl:output message="tns:RetrieveCheckupLabResultHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <wsdl:input message="tns:retrieveLabToPatientLabHttpGetIn" />
+      <wsdl:output message="tns:retrieveLabToPatientLabHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <wsdl:input message="tns:retrieveLabToPatientLabBackgroundHttpGetIn" />
+      <wsdl:output message="tns:retrieveLabToPatientLabBackgroundHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <wsdl:input message="tns:retrieveVitalSignHttpGetIn" />
+      <wsdl:output message="tns:retrieveVitalSignHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <wsdl:input message="tns:retrieveVitalSignBackgroundHttpGetIn" />
+      <wsdl:output message="tns:retrieveVitalSignBackgroundHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <wsdl:input message="tns:SendToBookHttpGetIn" />
+      <wsdl:output message="tns:SendToBookHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <wsdl:input message="tns:ResetDoctorHttpGetIn" />
+      <wsdl:output message="tns:ResetDoctorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <wsdl:input message="tns:AddPatientPackageHttpGetIn" />
+      <wsdl:output message="tns:AddPatientPackageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <wsdl:input message="tns:GetPatientPackageHttpGetIn" />
+      <wsdl:output message="tns:GetPatientPackageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <wsdl:input message="tns:ReCancelPatientToCheckBHttpGetIn" />
+      <wsdl:output message="tns:ReCancelPatientToCheckBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <wsdl:input message="tns:ReAssignDoctorHttpGetIn" />
+      <wsdl:output message="tns:ReAssignDoctorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <wsdl:input message="tns:AddMasterPointPackageHttpGetIn" />
+      <wsdl:output message="tns:AddMasterPointPackageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <wsdl:input message="tns:retrievePackageHttpGetIn" />
+      <wsdl:output message="tns:retrievePackageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <wsdl:input message="tns:SendDoctorApproveHttpGetIn" />
+      <wsdl:output message="tns:SendDoctorApproveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <wsdl:input message="tns:RecallApproveHttpGetIn" />
+      <wsdl:output message="tns:RecallApproveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <wsdl:input message="tns:SendToDocScanHttpGetIn" />
+      <wsdl:output message="tns:SendToDocScanHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_GetDataFromPathWayHttpPost">
+    <wsdl:operation name="getLabresult">
+      <wsdl:input message="tns:getLabresultHttpPostIn" />
+      <wsdl:output message="tns:getLabresultHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <wsdl:input message="tns:getLabLanguageHttpPostIn" />
+      <wsdl:output message="tns:getLabLanguageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <wsdl:input message="tns:GetResultXrayHttpPostIn" />
+      <wsdl:output message="tns:GetResultXrayHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <wsdl:input message="tns:RetrieveImagingHttpPostIn" />
+      <wsdl:output message="tns:RetrieveImagingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <wsdl:input message="tns:InsertLabHttpPostIn" />
+      <wsdl:output message="tns:InsertLabHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <wsdl:input message="tns:InsertDBEmrCheckupResultXrayHttpPostIn" />
+      <wsdl:output message="tns:InsertDBEmrCheckupResultXrayHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <wsdl:input message="tns:InsertDBEmrCheckupResultXrayBackgroundHttpPostIn" />
+      <wsdl:output message="tns:InsertDBEmrCheckupResultXrayBackgroundHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <wsdl:input message="tns:getWaitingQueueHttpPostIn" />
+      <wsdl:output message="tns:getWaitingQueueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <wsdl:input message="tns:getDoctorLicenceHttpPostIn" />
+      <wsdl:output message="tns:getDoctorLicenceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <wsdl:input message="tns:getServingQueueHttpPostIn" />
+      <wsdl:output message="tns:getServingQueueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <wsdl:input message="tns:getHoldingQueueHttpPostIn" />
+      <wsdl:output message="tns:getHoldingQueueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <wsdl:input message="tns:getWaitingDoctorRoomHttpPostIn" />
+      <wsdl:output message="tns:getWaitingDoctorRoomHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <wsdl:input message="tns:getWithin1HourQueueHttpPostIn" />
+      <wsdl:output message="tns:getWithin1HourQueueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <wsdl:input message="tns:getLanguageCallQueueHttpPostIn" />
+      <wsdl:output message="tns:getLanguageCallQueueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <wsdl:input message="tns:getDisplayProfileHttpPostIn" />
+      <wsdl:output message="tns:getDisplayProfileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <wsdl:input message="tns:displayQuestionairePatiantHttpPostIn" />
+      <wsdl:output message="tns:displayQuestionairePatiantHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <wsdl:input message="tns:displayQuestionaireAviationHttpPostIn" />
+      <wsdl:output message="tns:displayQuestionaireAviationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <wsdl:input message="tns:getScreenLanguageHttpPostIn" />
+      <wsdl:output message="tns:getScreenLanguageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <wsdl:input message="tns:getImagePatientHttpPostIn" />
+      <wsdl:output message="tns:getImagePatientHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <wsdl:input message="tns:getCheckUpLabResultHttpPostIn" />
+      <wsdl:output message="tns:getCheckUpLabResultHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <wsdl:input message="tns:getCheckUpLabResultBackgroundHttpPostIn" />
+      <wsdl:output message="tns:getCheckUpLabResultBackgroundHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <wsdl:input message="tns:RetrieveCheckupLabResultHttpPostIn" />
+      <wsdl:output message="tns:RetrieveCheckupLabResultHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <wsdl:input message="tns:retrieveLabToPatientLabHttpPostIn" />
+      <wsdl:output message="tns:retrieveLabToPatientLabHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <wsdl:input message="tns:retrieveLabToPatientLabBackgroundHttpPostIn" />
+      <wsdl:output message="tns:retrieveLabToPatientLabBackgroundHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <wsdl:input message="tns:retrieveVitalSignHttpPostIn" />
+      <wsdl:output message="tns:retrieveVitalSignHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <wsdl:input message="tns:retrieveVitalSignBackgroundHttpPostIn" />
+      <wsdl:output message="tns:retrieveVitalSignBackgroundHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <wsdl:input message="tns:SendToBookHttpPostIn" />
+      <wsdl:output message="tns:SendToBookHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <wsdl:input message="tns:ResetDoctorHttpPostIn" />
+      <wsdl:output message="tns:ResetDoctorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <wsdl:input message="tns:AddPatientPackageHttpPostIn" />
+      <wsdl:output message="tns:AddPatientPackageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <wsdl:input message="tns:GetPatientPackageHttpPostIn" />
+      <wsdl:output message="tns:GetPatientPackageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <wsdl:input message="tns:ReCancelPatientToCheckBHttpPostIn" />
+      <wsdl:output message="tns:ReCancelPatientToCheckBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <wsdl:input message="tns:ReAssignDoctorHttpPostIn" />
+      <wsdl:output message="tns:ReAssignDoctorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <wsdl:input message="tns:AddMasterPointPackageHttpPostIn" />
+      <wsdl:output message="tns:AddMasterPointPackageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <wsdl:input message="tns:retrievePackageHttpPostIn" />
+      <wsdl:output message="tns:retrievePackageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <wsdl:input message="tns:SendDoctorApproveHttpPostIn" />
+      <wsdl:output message="tns:SendDoctorApproveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <wsdl:input message="tns:RecallApproveHttpPostIn" />
+      <wsdl:output message="tns:RecallApproveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <wsdl:input message="tns:SendToDocScanHttpPostIn" />
+      <wsdl:output message="tns:SendToDocScanHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_GetDataFromPathWaySoap" type="tns:WS_GetDataFromPathWaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLabresult">
+      <soap:operation soapAction="http://tempuri.org/getLabresult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <soap:operation soapAction="http://tempuri.org/getLabLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <soap:operation soapAction="http://tempuri.org/GetResultXray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <soap:operation soapAction="http://tempuri.org/RetrieveImaging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <soap:operation soapAction="http://tempuri.org/InsertLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <soap:operation soapAction="http://tempuri.org/InsertDBEmrCheckupResultXray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <soap:operation soapAction="http://tempuri.org/InsertDBEmrCheckupResultXrayBackground" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <soap:operation soapAction="http://tempuri.org/getWaitingQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <soap:operation soapAction="http://tempuri.org/getDoctorLicence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <soap:operation soapAction="http://tempuri.org/getServingQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <soap:operation soapAction="http://tempuri.org/getHoldingQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <soap:operation soapAction="http://tempuri.org/getWaitingDoctorRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <soap:operation soapAction="http://tempuri.org/getWithin1HourQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <soap:operation soapAction="http://tempuri.org/getLanguageCallQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <soap:operation soapAction="http://tempuri.org/getDisplayProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertQuestionairePatiant">
+      <soap:operation soapAction="http://tempuri.org/insertQuestionairePatiant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertQuestionaireAviation">
+      <soap:operation soapAction="http://tempuri.org/insertQuestionaireAviation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <soap:operation soapAction="http://tempuri.org/displayQuestionairePatiant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <soap:operation soapAction="http://tempuri.org/displayQuestionaireAviation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <soap:operation soapAction="http://tempuri.org/getScreenLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <soap:operation soapAction="http://tempuri.org/getImagePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <soap:operation soapAction="http://tempuri.org/getCheckUpLabResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <soap:operation soapAction="http://tempuri.org/getCheckUpLabResultBackground" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <soap:operation soapAction="http://tempuri.org/RetrieveCheckupLabResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <soap:operation soapAction="http://tempuri.org/retrieveLabToPatientLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <soap:operation soapAction="http://tempuri.org/retrieveLabToPatientLabBackground" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <soap:operation soapAction="http://tempuri.org/retrieveVitalSign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <soap:operation soapAction="http://tempuri.org/retrieveVitalSignBackground" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <soap:operation soapAction="http://tempuri.org/SendToBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <soap:operation soapAction="http://tempuri.org/ResetDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <soap:operation soapAction="http://tempuri.org/AddPatientPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <soap:operation soapAction="http://tempuri.org/GetPatientPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <soap:operation soapAction="http://tempuri.org/ReCancelPatientToCheckB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <soap:operation soapAction="http://tempuri.org/ReAssignDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <soap:operation soapAction="http://tempuri.org/AddMasterPointPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuto">
+      <soap:operation soapAction="http://tempuri.org/SendAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <soap:operation soapAction="http://tempuri.org/retrievePackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <soap:operation soapAction="http://tempuri.org/SendDoctorApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <soap:operation soapAction="http://tempuri.org/RecallApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <soap:operation soapAction="http://tempuri.org/SendToDocScan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_GetDataFromPathWaySoap12" type="tns:WS_GetDataFromPathWaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getLabresult">
+      <soap12:operation soapAction="http://tempuri.org/getLabresult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <soap12:operation soapAction="http://tempuri.org/getLabLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <soap12:operation soapAction="http://tempuri.org/GetResultXray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveImaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <soap12:operation soapAction="http://tempuri.org/InsertLab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <soap12:operation soapAction="http://tempuri.org/InsertDBEmrCheckupResultXray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <soap12:operation soapAction="http://tempuri.org/InsertDBEmrCheckupResultXrayBackground" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <soap12:operation soapAction="http://tempuri.org/getWaitingQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <soap12:operation soapAction="http://tempuri.org/getDoctorLicence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <soap12:operation soapAction="http://tempuri.org/getServingQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <soap12:operation soapAction="http://tempuri.org/getHoldingQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <soap12:operation soapAction="http://tempuri.org/getWaitingDoctorRoom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <soap12:operation soapAction="http://tempuri.org/getWithin1HourQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <soap12:operation soapAction="http://tempuri.org/getLanguageCallQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <soap12:operation soapAction="http://tempuri.org/getDisplayProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertQuestionairePatiant">
+      <soap12:operation soapAction="http://tempuri.org/insertQuestionairePatiant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertQuestionaireAviation">
+      <soap12:operation soapAction="http://tempuri.org/insertQuestionaireAviation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <soap12:operation soapAction="http://tempuri.org/displayQuestionairePatiant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <soap12:operation soapAction="http://tempuri.org/displayQuestionaireAviation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <soap12:operation soapAction="http://tempuri.org/getScreenLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <soap12:operation soapAction="http://tempuri.org/getImagePatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <soap12:operation soapAction="http://tempuri.org/getCheckUpLabResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <soap12:operation soapAction="http://tempuri.org/getCheckUpLabResultBackground" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveCheckupLabResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <soap12:operation soapAction="http://tempuri.org/retrieveLabToPatientLab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <soap12:operation soapAction="http://tempuri.org/retrieveLabToPatientLabBackground" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <soap12:operation soapAction="http://tempuri.org/retrieveVitalSign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <soap12:operation soapAction="http://tempuri.org/retrieveVitalSignBackground" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <soap12:operation soapAction="http://tempuri.org/SendToBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <soap12:operation soapAction="http://tempuri.org/ResetDoctor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <soap12:operation soapAction="http://tempuri.org/AddPatientPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <soap12:operation soapAction="http://tempuri.org/GetPatientPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <soap12:operation soapAction="http://tempuri.org/ReCancelPatientToCheckB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <soap12:operation soapAction="http://tempuri.org/ReAssignDoctor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <soap12:operation soapAction="http://tempuri.org/AddMasterPointPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuto">
+      <soap12:operation soapAction="http://tempuri.org/SendAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <soap12:operation soapAction="http://tempuri.org/retrievePackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <soap12:operation soapAction="http://tempuri.org/SendDoctorApprove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <soap12:operation soapAction="http://tempuri.org/RecallApprove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <soap12:operation soapAction="http://tempuri.org/SendToDocScan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_GetDataFromPathWayHttpGet" type="tns:WS_GetDataFromPathWayHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="getLabresult">
+      <http:operation location="/getLabresult" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <http:operation location="/getLabLanguage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <http:operation location="/GetResultXray" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <http:operation location="/RetrieveImaging" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <http:operation location="/InsertLab" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <http:operation location="/InsertDBEmrCheckupResultXray" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <http:operation location="/InsertDBEmrCheckupResultXrayBackground" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <http:operation location="/getWaitingQueue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <http:operation location="/getDoctorLicence" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <http:operation location="/getServingQueue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <http:operation location="/getHoldingQueue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <http:operation location="/getWaitingDoctorRoom" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <http:operation location="/getWithin1HourQueue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <http:operation location="/getLanguageCallQueue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <http:operation location="/getDisplayProfile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <http:operation location="/displayQuestionairePatiant" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <http:operation location="/displayQuestionaireAviation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <http:operation location="/getScreenLanguage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <http:operation location="/getImagePatient" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <http:operation location="/getCheckUpLabResult" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <http:operation location="/getCheckUpLabResultBackground" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <http:operation location="/RetrieveCheckupLabResult" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <http:operation location="/retrieveLabToPatientLab" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <http:operation location="/retrieveLabToPatientLabBackground" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <http:operation location="/retrieveVitalSign" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <http:operation location="/retrieveVitalSignBackground" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <http:operation location="/SendToBook" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <http:operation location="/ResetDoctor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <http:operation location="/AddPatientPackage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <http:operation location="/GetPatientPackage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <http:operation location="/ReCancelPatientToCheckB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <http:operation location="/ReAssignDoctor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <http:operation location="/AddMasterPointPackage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <http:operation location="/retrievePackage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <http:operation location="/SendDoctorApprove" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <http:operation location="/RecallApprove" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <http:operation location="/SendToDocScan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_GetDataFromPathWayHttpPost" type="tns:WS_GetDataFromPathWayHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getLabresult">
+      <http:operation location="/getLabresult" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLabLanguage">
+      <http:operation location="/getLabLanguage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultXray">
+      <http:operation location="/GetResultXray" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveImaging">
+      <http:operation location="/RetrieveImaging" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLab">
+      <http:operation location="/InsertLab" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXray">
+      <http:operation location="/InsertDBEmrCheckupResultXray" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDBEmrCheckupResultXrayBackground">
+      <http:operation location="/InsertDBEmrCheckupResultXrayBackground" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingQueue">
+      <http:operation location="/getWaitingQueue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDoctorLicence">
+      <http:operation location="/getDoctorLicence" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServingQueue">
+      <http:operation location="/getServingQueue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHoldingQueue">
+      <http:operation location="/getHoldingQueue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaitingDoctorRoom">
+      <http:operation location="/getWaitingDoctorRoom" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWithin1HourQueue">
+      <http:operation location="/getWithin1HourQueue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLanguageCallQueue">
+      <http:operation location="/getLanguageCallQueue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDisplayProfile">
+      <http:operation location="/getDisplayProfile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionairePatiant">
+      <http:operation location="/displayQuestionairePatiant" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="displayQuestionaireAviation">
+      <http:operation location="/displayQuestionaireAviation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenLanguage">
+      <http:operation location="/getScreenLanguage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImagePatient">
+      <http:operation location="/getImagePatient" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResult">
+      <http:operation location="/getCheckUpLabResult" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getCheckUpLabResultBackground">
+      <http:operation location="/getCheckUpLabResultBackground" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCheckupLabResult">
+      <http:operation location="/RetrieveCheckupLabResult" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLab">
+      <http:operation location="/retrieveLabToPatientLab" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveLabToPatientLabBackground">
+      <http:operation location="/retrieveLabToPatientLabBackground" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSign">
+      <http:operation location="/retrieveVitalSign" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveVitalSignBackground">
+      <http:operation location="/retrieveVitalSignBackground" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendToBook">
+      <http:operation location="/SendToBook" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetDoctor">
+      <http:operation location="/ResetDoctor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPatientPackage">
+      <http:operation location="/AddPatientPackage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientPackage">
+      <http:operation location="/GetPatientPackage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCancelPatientToCheckB">
+      <http:operation location="/ReCancelPatientToCheckB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAssignDoctor">
+      <http:operation location="/ReAssignDoctor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMasterPointPackage">
+      <http:operation location="/AddMasterPointPackage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePackage">
+      <http:operation location="/retrievePackage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SendDoctorApprove">
+      <http:operation location="/SendDoctorApprove" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecallApprove">
+      <http:operation location="/RecallApprove" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendToDocScan">
+      <http:operation location="/SendToDocScan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_GetDataFromPathWay">
+    <wsdl:port name="WS_GetDataFromPathWaySoap" binding="tns:WS_GetDataFromPathWaySoap">
+      <soap:address location="http://10.88.10.148/webTest/WS_GetDataFromPathWay.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_GetDataFromPathWaySoap12" binding="tns:WS_GetDataFromPathWaySoap12">
+      <soap12:address location="http://10.88.10.148/webTest/WS_GetDataFromPathWay.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_GetDataFromPathWayHttpGet" binding="tns:WS_GetDataFromPathWayHttpGet">
+      <http:address location="http://10.88.10.148/webTest/WS_GetDataFromPathWay.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_GetDataFromPathWayHttpPost" binding="tns:WS_GetDataFromPathWayHttpPost">
+      <http:address location="http://10.88.10.148/webTest/WS_GetDataFromPathWay.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

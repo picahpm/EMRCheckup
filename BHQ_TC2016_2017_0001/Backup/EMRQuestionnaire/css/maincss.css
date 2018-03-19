@@ -1,0 +1,398 @@
+﻿body
+{
+	background-color: #FFFFFF;
+	color: #4f6b72;
+	width: 1080px;
+	height: auto;
+	width :auto;
+	
+
+}
+
+
+.divFinalTable
+{
+	margin-top: 5px;
+}
+.What_is_your_favorite_foodLeftRight
+{
+	margin-right: 500px;
+	float: right;
+	/*margin-top: -80px;*/
+}
+.informationRightHeader
+{
+	margin-left: 400px;
+	/*margin-top: -195px;*/
+}
+.informationRightText
+{
+	margin-left: 5px;
+}
+.fatherRight
+{
+	margin-left: 400px;
+	/*margin-top: -270px;*/
+}
+.Have_you_ever_had_any_vaccination_or_immunityRight
+{
+	margin-left: 400px;
+	/*margin-top: -100px;*/
+}
+.Do_you_have_any_underlying_deceasesRight
+{
+	margin-left: 400px;
+	/*margin-top: -170px;*/
+}
+.DoyouuseanyPersonalRight
+{
+	margin-left: 400px;
+	/*margin-top: -105px;*/
+}
+.ChemicalhealthhazardLeftRight
+{
+	margin-left: 400px;
+	/*margin-top: -125px;*/
+}
+.AnyPersonalRight
+{
+	margin-left: 400px;
+	/*margin-top: -105px;*/
+}
+.BiologicalHealtHazardRight
+{
+	margin-left: 400px;
+	/*margin-top: -85px;*/
+}
+.PhysicalHealthHazardRight
+{
+	margin-top: 5px;
+	float: right;
+	margin-left: 500px;
+}
+.SlecialAssignmentLeft
+{
+	margin-right: 330px;
+	/*margin-top: -105px;*/
+	float: right;
+}
+.ClassificationofEmploymentRight
+{
+	/*margin-left: 190px;
+	margin-top: -165px;*/
+	float: inherit;
+}
+.subGroupLeft
+{
+	margin-left: 10px;
+}
+.percentConcern_01
+{
+	margin-left: 350px;
+	/*margin-top: -90px;*/
+	width: 30px;
+}
+.percentConcern
+{
+	margin-left: 430px;
+	margin-top: -110px;
+}
+.grpCurrentRight
+{
+	margin-left: 400px;
+	/*margin-top: -100px;*/
+	width: 300px;
+}
+.FatherRight
+{
+	margin-left: 400px;
+	/*margin-top: -120px;*/
+	width: 300px;
+}
+.grpCurrentLeft
+{
+	margin-top: 5px;
+	width: 300px;
+}
+.divRight
+{
+	margin-right: 400px;
+	float: right;
+/*	margin-top: -85px;*/
+}
+.divRightFamily
+{
+	margin-right: 200px;
+	float: right;
+	/*margin-top: -200px;*/
+}
+.FadivRightPersonal
+{
+	margin-right: 500px;
+	float: right;
+	margin-top: -80px;
+}
+.FadivRightFamily
+{
+	margin-right: 525px;
+	float: right;
+	margin-top: -105px;
+}
+#grpDiseaseRespiratory
+{
+	margin-left: 20px;
+}
+.subDivRdo
+{
+	width: 400px;
+	color: Black;
+	margin-left: 110px;
+	margin-top: -20px;
+}
+.socialPerMonth
+{
+	margin-left: 120px;
+	margin-top: -17px;
+}
+.txtTextRight
+{
+	text-align: right;
+	width: 40px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	border: 1px solid #999;
+}
+.DiseaseRight
+{
+	margin-right: 400px;
+	/*margin-top: -160px;*/
+	float: right;
+}
+.national
+{
+	text-align: right;
+	margin-top: 20px;
+}
+.Content
+{
+	width: 1080px; /* จำเป็นต้องกำหนดความกว้างให้คงที่ */
+	/*position: absolute;
+	
+	left: 20%;  ด้านซ้ายครึ่งจอ */
+	/*margin-left: -150px;*/
+	top: 5px;
+}
+.inputboxOthers
+{
+	width: 300px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	border: 1px solid #D3DEE7;
+}
+.inputbox
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	/*border: 1px solid #999; border:0px;*/
+	
+	border: 1px solid #D3DEE7;
+ 
+}
+.Others
+{
+	width: 400px;
+	height: 50px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	/*border: 1px solid #999; */
+	border:0px;
+	border: 1px solid #D3DEE7;
+}
+
+.inputbox:focus
+{
+	background-color: #FFF;
+	border: 1px solid #07c;
+}
+.centerTextAlign
+{
+	text-align: center;
+}
+.greyTd
+{
+	background-color: Gray;
+}
+.footer
+{
+	margin-top: -20px;
+}
+.divBarMainTopic
+{
+	background-color:#1775D1;
+	/*background-image: url('../images/barGroup.jpg');*/
+	
+	text-align: left;
+	/*margin-top: -15px;*/
+	color: #FFFFFF;
+}
+.divBarGroupAll
+{
+	background-color: White;
+	/*background-color: #0072BB;
+	
+	color: Gray;
+	height: 20px;
+	width: 350px;*/
+	text-align: left;
+	margin-top: 5px;
+	font: bold 15px ;
+}
+.divBarGroup
+{
+	/*background-color:#64B5F6;*/
+	background-image: url('../images/barGroup.png');
+	height: 23px;
+	text-align: left;
+	/*margin-top: -15px;*/
+	color: #FFFFFF;
+}
+.buttonRec
+{
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Arial;
+	color: #ffffff;
+	width: 120px;
+	min-width: 54px;
+	height: 30px;
+	white-space: nowrap;
+	cursor: pointer;
+	outline: 0 none;
+	padding: 0 10px 2px;
+	text-align: center;
+	border: 1px solid #91bd09;
+	background-color:#1775D1;
+	border-radius: 10px;
+}
+
+.header
+{
+	/*background-image: url('../images/header.jpg'); */
+	background-color: White;
+	width: 1080px;
+	height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#bar
+{
+	background-image: url('../images/bar.jpg');
+	width: 1080px;
+	height: 36px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px auto;
+}
+
+table, caption, td, tr, th
+{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+/* ---- Paragraphs ---- */
+
+p
+{
+	margin-bottom: 15px;
+}
+
+/* ---- Table ---- 	width: 100%;margin-bottom: 15px;*/
+
+table
+{
+	border-collapse: collapse;
+	
+    	width: 100%;
+}
+
+
+
+caption
+{
+	text-align: left;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+table td, table th
+{
+	padding: 5px;
+	border: 1px solid #fff;
+	border-width: 0 1px 1px 0;
+}
+
+thead th
+{
+	 background: #91c5d4; 
+}
+
+thead th[colspan], thead th[rowspan]
+{
+	 background: #66a9bd; 
+}
+
+tbody th, tfoot th
+{
+	/*text-align: left;*/
+ 	background: #91c5d4; 
+}
+
+tbody td, tfoot td
+{
+	/*text-align: left;
+	 background: #ecf2f6; */
+	background: #FFFFFF;
+	height: inherit;
+}
+
+tfoot th
+{
+	background: #b0cc7f;
+}
+
+tfoot td
+{
+	background: #d7e1c5;
+	font-weight: bold;
+}
+
+tbody tr.odd td
+{
+	background: #bcd9e1;
+}
+.trPath
+{
+	/* background: #ecf2f6; */
+	 background: #FFFFFF; 
+	text-align:left;
+	
+}

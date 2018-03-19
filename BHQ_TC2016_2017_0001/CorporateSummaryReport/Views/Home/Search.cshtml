@@ -1,0 +1,183 @@
+﻿@model CorporateSummaryReport.Models.SearchModel
+
+
+@{
+    ViewBag.Title = "Search.";
+    Layout = "~/Views/Shared/_LayoutGenerate.cshtml";
+    
+    <link href="@Url.Content("~/Content/styleform.css?version=7")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery.min.js?version=7")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui.min.js?version=7")" type="text/javascript"></script>
+    <!--[if lte IE 8]>
+	    <style>
+            .fixed_headers thead tr th {
+                width : 10px;
+            }
+            .fixed_headers tbody tr td {
+                width : 10px;
+            }
+        </style>
+    <![endif]-->
+    
+    IDictionary<string, object> htmlAttributes;
+    object objAttributes;
+    if (ViewData.TryGetValue("htmlAttributes", out objAttributes))
+    {
+        htmlAttributes = objAttributes as IDictionary<string, object> ?? HtmlHelper.AnonymousObjectToHtmlAttributes(objAttributes);
+    }
+    else
+    {
+        htmlAttributes = new RouteValueDictionary();
+    }
+    htmlAttributes.Add("type", "date");
+    String format = (Request.UserAgent != null && Request.UserAgent.Contains("Chrome")) ? "{0:yyyy-MM-dd}" : "{0:d}";
+}
+
+<style>
+    html{
+        height: 94%;
+    }
+    body{
+        height: 94%;
+    }
+    .ui-autocomplete {
+		max-height: 100px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+	}
+</style>
+<script type="text/javascript">
+    $(window).resize(function () {
+        $("#formBottom").height(0);
+        $("#formBottom").height($("#tbodyBottom").height());
+    });
+    $(document).ready(function () {
+        $("#formBottom").height(0);
+        $("#formBottom").height($("#tbodyBottom").height());
+    });
+    
+    var model = @Html.Raw(Json.Encode(Model));
+    $(function () {
+        $('#companyname').autocomplete({
+            source: model.dataListCompany,
+            open: function() {
+                $("ul.ui-menu").width($(this).innerWidth());
+                $('ul.ui-menu').offset({ left : $(this).offset().left });
+            }
+        });
+        model;
+    });
+
+    $(function () {
+        $("input[type=text]").first().focus();
+    });
+
+    function update_criteria_func(val) {
+        document.getElementById('func').value = val;
+    }
+</script>
+
+<table id="tblForm" style="width:100%; height:100%; margin:10px auto 10px; min-width:990px;">
+    <thead>
+        <tr style="height:250px;">
+            <td>
+                <h1 class="register-title">Corporate Summary Report(fix)</h1>
+                @using (Html.BeginForm("Search", "Home", FormMethod.Post, new { @class = "register", @style = "height:270px;" }))
+                {
+                    @Html.HiddenFor(x => x.func)
+                    <table style="width:100%;">
+                        <tr>
+                            <td style="width:130px;">
+                                <article>Company Name.</article>
+                            </td>
+                            <td colspan="5">
+                                @Html.TextBoxFor(x => x.companyname, new { @id = "companyname", @type = "text", @class = "register-input", @onfocus = "this.select()" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:130px;">
+                                <article>Sub Company Name.</article>
+                            </td>
+                            <td colspan="5">
+                                @Html.TextBoxFor(x => x.sub_companyname, new { @id = "sub_companyname", @type = "text", @class = "register-input", @onfocus = "this.select()" ,@Value = @Model.sub_companyname, @readonly = true })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <article>No. of patients</article>
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(x => x.patients, new { @id = "patients", @type = "text", @class = "register-input", @autocomplete = "off", @onfocus = "this.select()", @Value = @Model.patients, @readonly = true })
+                            </td>
+                            <td>
+                                <article>No. of arrived patients</article>
+                            </td>
+                            
+                            <td>
+                                @Html.TextBoxFor(x => x.totalservice, new { @id = "totalservice", @type = "text", @class = "register-input", @onfocus = "this.select()", @Value = @Model.totalservice , @readonly = true })
+                            </td>
+                            
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <article>Start Date.</article>
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(x => x.startdate, "{0:yyyy-MM-dd}", new { @type = "date", @class = "register-date", @required = "required" })
+                            </td>
+                            <td>
+                                <article>End Date.</article>
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(x => x.enddate, "{0:yyyy-MM-dd}", new { @type = "date", @class = "register-date", @required = "required" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <input type="submit" value="Show Patients List" class="register-button" style="width:70%;" onclick="update_criteria_func(0)" /> @*update_criteria_func(0) = functionCriterias.funcSearch*@
+                            </td>
+                            <td colspan="2" align="left">
+                                <input type="submit" value="Confirm Criterias" class="register-button" style="width:70%; color:red;" onclick="update_criteria_func(1)" /> @*update_criteria_func(1) = functionCriterias.funcConfirm*@
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </td>
+        </tr>
+    </thead>
+    <tbody id="tbodyBottom" style="height:100%;">
+        <tr>
+            <td>
+                @using (Html.BeginForm("GenerateReport", "Home", FormMethod.Post, new { @id = "formBottom", @class = "register", style = "min-height:250px; height:100%;", @target = "_blank" }))
+                {
+                    <table id="tblPatientList" style="height:100%;" class="fixed_headers">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>HN</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Arrived</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < @Model.listPatient.Count; i++)
+                            {
+                                var no = i + 1;
+                                <tr>
+                                    <td>@no</td>
+                                    <td>@Model.listPatient[i].hn</td>                          
+                                    <td>@Model.listPatient[i].id</td>
+                                    <td>@Model.listPatient[i].name</td>
+                                    <td>@Model.listPatient[i].arrived.ToString("dd/MM/yyyy")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>

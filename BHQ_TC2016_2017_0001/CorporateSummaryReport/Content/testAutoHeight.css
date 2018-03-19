@@ -1,0 +1,28 @@
+﻿#container{
+    display:table;  
+    background-color:#CCC;
+    margin:0 auto;
+}
+
+.row{
+    display:table-row;
+}
+
+.col{
+    display: table-cell;
+}
+
+#col1{
+    background-color:#0CC;
+    width:200px;
+}
+
+#col2{
+    background-color:#9F9;
+    width:300px;
+}
+
+#col3{
+    background-color:#699;
+    width:200px;
+}

@@ -1,0 +1,12 @@
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\CheckupWebService.dll
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\CheckupWebService.pdb
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\DBToDoList.dll
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\Ghostscript.NET.dll
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\DBCheckup.pdb
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\bin\DBToDoList.pdb
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\obj\Debug\CheckupWebService.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\obj\Debug\CheckupWebService.Properties.Resources.resources
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\obj\Debug\CheckupWebService.csproj.GenerateResource.Cache
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\obj\Debug\CheckupWebService.dll
+E:\Source\BHQ_TC2016_2017_0001\CheckupWebService\obj\Debug\CheckupWebService.pdb

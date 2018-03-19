@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="@Url.Content("~/assets/js/ie/html5shiv.js")"></script><![endif]-->
+		<link rel="stylesheet" href="@Url.Content("~/assets/css/main.css")" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="@Url.Content("~/assets/css/ie8.css")" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="@Url.Content("~/assets/css/ie9.css")" /><![endif]-->
+        <script type="text/javascript" src="@Url.Content("~/assets/js/jquery.min.js")"></script>
+		<script type="text/javascript" src="@Url.Content("~/assets/js/jquery.scrolly.min.js")"></script>
+		<script type="text/javascript" src="@Url.Content("~/assets/js/jquery.scrollzer.min.js")"></script>
+		<script type="text/javascript" src="@Url.Content("~/assets/js/skel.min.js")"></script>
+		<script type="text/javascript" src="@Url.Content("~/assets/js/util.js")"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js")"></script><![endif]-->
+		<script type="text/javascript" src="@Url.Content("~/assets/js/main.js")"></script>
+        <title>@ViewBag.Title</title>
+    </head>
+    <body id="bodyID">
+
+        <!-- Header -->
+        <div id="header">
+            <div class="top">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1 id="title">EMR Checkup.</h1>
+                </div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="@Url.Action("Main", "PatientSearch")" class="skel-layers-ignoreHref"><span class="icon fa-user">Add point manual</span></a></li>
+						<li><a href="@Url.Action("Main", "MasterPackage")" class="skel-layers-ignoreHref"><span class="icon fa-th">Setup package master</span></a></li>
+                        <li><a href="@Url.Action("UserManaul", "Manaul")" class="skel-layers-ignoreHref" target="_blank"><span>Usermanual</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+        @RenderBody()
+	</body>
+</html>

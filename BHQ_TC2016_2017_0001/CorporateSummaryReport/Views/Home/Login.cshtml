@@ -1,0 +1,49 @@
+﻿@model CorporateSummaryReport.Models.LoginModel
+@{
+    ViewBag.Title = "Login.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+    <link href="@Url.Content("~/Content/Site.css?version=1")" rel="stylesheet" type="text/css" />
+}
+
+<h1 class="register-title">Corporate Summary Report</h1>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "register", @autocomplete = "off" }))
+{
+    <table style="width:100%;">
+        <tr>
+            <td>
+                <img class="picLock" src="@Url.Content("~/Images/lock2.png")" />
+            </td>
+            <td style="vertical-align:top; padding-left:10px; width:100%;">
+                <table style="width:100%;">
+                    <tr>
+                        <td><a style="float:right; font-size:11px;" href="#">User Manual</a></td>
+                    </tr>
+                    <tr>
+                        <td>@Html.TextBoxFor(x => x.username, new { @type = "text", @class = "register-input", @placeholder = "Username", @autocomplete = "off", @onfocus = "this.select()" })</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.TextBoxFor(x => x.password, new { @type = "password", @class = "register-input", @placeholder = "Password", @autocomplete = "off", @onfocus = "this.select()" })</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Login" class="register-button"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div style="margin-top:10px;" class="bodyDisclaimer">
+                    Disclaimer: The information contained in this application may be 
+                    confidential and protected information intended only for the use of the entity 
+                    name above. As the user of this application you may be prohibited by law from 
+                    disclosing this information to any other parties without specific written 
+                    authorization from the individual to whom it pertains and you are hereby 
+                    notified that any disclosure, dissemination, distribution, copying, or action 
+                    taken in reliance on the contents of this communication is strictly prohibited
+                    <div style="text-align:center; margin-top:13px;">Copyright (c) 2010 Greenline Synergy Co.,Ltd. All rights reserved.</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+}

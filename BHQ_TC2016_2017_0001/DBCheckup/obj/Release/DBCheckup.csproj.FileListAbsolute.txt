@@ -1,0 +1,8 @@
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\bin\Release\DBCheckup.dll.config
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\bin\Release\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\bin\Release\DBCheckup.pdb
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\bin\Release\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\bin\Release\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\obj\Release\DBCheckup.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\obj\Release\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\DBCheckup\obj\Release\DBCheckup.pdb

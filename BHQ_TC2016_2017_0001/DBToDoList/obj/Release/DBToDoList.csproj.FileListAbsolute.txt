@@ -1,0 +1,8 @@
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\bin\Release\DBToDoList.dll.config
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\bin\Release\DBToDoList.dll
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\bin\Release\DBToDoList.pdb
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\bin\Release\ConfigEMRCheckUp.dll
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\bin\Release\ConfigEMRCheckUp.pdb
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\obj\Release\DBToDoList.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\obj\Release\DBToDoList.dll
+E:\Source\BHQ_TC2016_2017_0001\DBToDoList\obj\Release\DBToDoList.pdb

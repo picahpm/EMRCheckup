@@ -1,0 +1,2358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07805917-A92D-4E6E-A9E4-4D77754B2EB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BKvs2010</RootNamespace>
+    <AssemblyName>BKvs2010</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\pi\pichada\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>EMR Checkup</ProductName>
+    <PublisherName>EMR Checkup</PublisherName>
+    <MinimumRequiredVersion>1.1.0.10</MinimumRequiredVersion>
+    <WebPage>default.htm</WebPage>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BKvs2010.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="setLogUser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\setLogUser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APITrakcare\GetAllergyCls.cs" />
+    <Compile Include="APITrakcare\GetPatientImageCls.cs" />
+    <Compile Include="APITrakcare\GetPatientInfoCls.cs" />
+    <Compile Include="APITrakcare\LogonTrakcareCls.cs" />
+    <Compile Include="Class\AlertOutDepartment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\CompanyCls.cs" />
+    <Compile Include="Controllers\PatientInfoControl.cs" />
+    <Compile Include="DialogImaging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogImaging.Designer.cs">
+      <DependentUpon>DialogImaging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogInterpretation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogInterpretation.Designer.cs">
+      <DependentUpon>DialogInterpretation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmrClass\AutoCompleteDoctor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\CallQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\DoctorBookExpressCls.cs" />
+    <Compile Include="Models\AddressModels.cs" />
+    <Compile Include="Models\CorpMedicelRptModels.cs" />
+    <Compile Include="Models\TabAddressModels.cs" />
+    <Compile Include="PopupAddLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupAddLab.Designer.cs">
+      <DependentUpon>PopupAddLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CheckPrinterClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\CheckUpLabClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\FavoriteCls.cs" />
+    <Compile Include="EmrClass\GetMasterProjectConfigCls.cs" />
+    <Compile Include="EmrClass\GetPatientImage.cs" />
+    <Compile Include="Forms\QuestionnaireFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionnaireFrm.designer.cs">
+      <DependentUpon>QuestionnaireFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PatientInfoModel.cs" />
+    <Compile Include="Report\TestPrinterFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\TestPrinterFrm.Designer.cs">
+      <DependentUpon>TestPrinterFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\WS_CheckupCls.cs" />
+    <Compile Include="Service\WS_SendToDocscanCls.cs" />
+    <Compile Include="UserControlEMR\BookAddressUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\BookAddressUC.designer.cs">
+      <DependentUpon>BookAddressUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\BookBasicMeasurementUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\BookBasicMeasurementUC.designer.cs">
+      <DependentUpon>BookBasicMeasurementUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\BookTransaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\BookTransaction.designer.cs">
+      <DependentUpon>BookTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\EyeExamRecordUC_test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\EyeExamRecordUC_test.Designer.cs">
+      <DependentUpon>EyeExamRecordUC_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\FavoriteDoctorTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\FavoriteTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\FavoriteTextBoxForEyeExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\IntelliSenseTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\IntelliSenseTextBox.designer.cs">
+      <DependentUpon>IntelliSenseTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PatientProfileBookUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PatientProfileBookUC.Designer.cs">
+      <DependentUpon>PatientProfileBookUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PrototypeFavoriteTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PrototypeFavoriteTextBox.designer.cs">
+      <DependentUpon>PrototypeFavoriteTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ClsBasicMeasurement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\clsLogSendAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\ClsManageUserLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\ClsPendingOnStation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\ClsSkipOnStation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\ClsTCPClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\countDownCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\DocScan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\DocScan\SendToDocScanCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmBGScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBGScreen.Designer.cs">
+      <DependentUpon>frmBGScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\FunctionDataCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\GetDataFromWSTrakCare.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\GetDataMasterCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\GetDataToDoListCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\GetPTPackageCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\ImportPatientToBookCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\inheriteContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\logPatientFlowCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\ManageQueueTransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\ReserveSkipCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\SendAutoCls.cs" />
+    <Compile Include="Class\SendManaulCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\SendQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\SendToBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\SendToCheckBCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\SkipOrderSetEST.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PatientProfileHorizontalUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PatientProfileHorizontalUC.designer.cs">
+      <DependentUpon>PatientProfileHorizontalUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PrototypeFavoriteTextBoxForEyeExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PrototypeFavoriteTextBoxForEyeExam.Designer.cs">
+      <DependentUpon>PrototypeFavoriteTextBoxForEyeExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ToolPaint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\TransactionPlanCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\TransactionQueueCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmrClass\FunctionDataCls.cs" />
+    <Compile Include="Utility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\VistalSignCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\WaitingListCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DialogABI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogABI.Designer.cs">
+      <DependentUpon>DialogABI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAllExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAllExam.Designer.cs">
+      <DependentUpon>DialogAllExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAssessmentAndPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAssessmentAndPlan.Designer.cs">
+      <DependentUpon>DialogAssessmentAndPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAudio.Designer.cs">
+      <DependentUpon>DialogAudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogCarotid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogCarotid.Designer.cs">
+      <DependentUpon>DialogCarotid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDental.Designer.cs">
+      <DependentUpon>DialogDental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEcho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEcho.Designer.cs">
+      <DependentUpon>DialogEcho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEKG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEKG.Designer.cs">
+      <DependentUpon>DialogEKG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEST.Designer.cs">
+      <DependentUpon>DialogEST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogEyes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogEyes.Designer.cs">
+      <DependentUpon>DialogEyes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPAP.Designer.cs">
+      <DependentUpon>DialogPAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPFT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPFT.Designer.cs">
+      <DependentUpon>DialogPFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPHM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPHM.Designer.cs">
+      <DependentUpon>DialogPHM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogPhysicalExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPhysicalExam.Designer.cs">
+      <DependentUpon>DialogPhysicalExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmrClass\RandomAlphanumeric.cs" />
+    <Compile Include="Forms\ABIFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABIFrm.Designer.cs">
+      <DependentUpon>ABIFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BMDFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BMDFrm.Designer.cs">
+      <DependentUpon>BMDFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarotidFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CarotidFrm.Designer.cs">
+      <DependentUpon>CarotidFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CheckupInheriteFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChestXrayFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChestXrayFrm.Designer.cs">
+      <DependentUpon>ChestXrayFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DentalFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DentalFrm.Designer.cs">
+      <DependentUpon>DentalFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoctorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoctorFrm.Designer.cs">
+      <DependentUpon>DoctorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EKGFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EKGFrm.Designer.cs">
+      <DependentUpon>EKGFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESTFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ESTFrm.Designer.cs">
+      <DependentUpon>ESTFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EyesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EyesFrm.Designer.cs">
+      <DependentUpon>EyesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GYNFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GYNFrm.Designer.cs">
+      <DependentUpon>GYNFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HearingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HearingFrm.Designer.cs">
+      <DependentUpon>HearingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MammogramFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MammogramFrm.Designer.cs">
+      <DependentUpon>MammogramFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PapResultFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PapResultFrm.Designer.cs">
+      <DependentUpon>PapResultFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatternCheckupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PFTFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PFTFrm.Designer.cs">
+      <DependentUpon>PFTFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PopupLoadingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PopupLoadingFrm.designer.cs">
+      <DependentUpon>PopupLoadingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UGIFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UGIFrm.Designer.cs">
+      <DependentUpon>UGIFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UltrasoundFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UltrasoundFrm.Designer.cs">
+      <DependentUpon>UltrasoundFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitingListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitingListFrm.Designer.cs">
+      <DependentUpon>WaitingListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoardcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashBoardcs.Designer.cs">
+      <DependentUpon>frmDashBoardcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageWaiting.Designer.cs">
+      <DependentUpon>frmManageWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionareOccmed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionareOccmed.Designer.cs">
+      <DependentUpon>frmQuestionareOccmed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportPatientToBookFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportPatientToBookFrm.Designer.cs">
+      <DependentUpon>ImportPatientToBookFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientBookAddressFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientBookAddressFrm.Designer.cs">
+      <DependentUpon>PatientBookAddressFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpLogInBookAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpLogInBookAdmin.Designer.cs">
+      <DependentUpon>popUpLogInBookAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="popUpLogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpLogView.Designer.cs">
+      <DependentUpon>popUpLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCancelQueue.Designer.cs">
+      <DependentUpon>frmCancelQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateConsultPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateConsultPatient.Designer.cs">
+      <DependentUpon>frmCreateConsultPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAviationMedCerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAviationMedCerReport.Designer.cs">
+      <DependentUpon>frmAviationMedCerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckpointB2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckpointB2.Designer.cs">
+      <DependentUpon>frmCheckpointB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChoicePRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoicePRM.Designer.cs">
+      <DependentUpon>frmChoicePRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHealthSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHealthSelect.Designer.cs">
+      <DependentUpon>frmHealthSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedicalCertificateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedicalCertificateReport.designer.cs">
+      <DependentUpon>frmMedicalCertificateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPE_OutQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPE_OutQueue.Designer.cs">
+      <DependentUpon>frmPE_OutQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopupBookFinishRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopupBookFinishRemark.Designer.cs">
+      <DependentUpon>frmPopupBookFinishRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportVaccination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportVaccination.Designer.cs">
+      <DependentUpon>frmReportVaccination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectDoctor.designer.cs">
+      <DependentUpon>frmSelectDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewDocScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewDocScan.Designer.cs">
+      <DependentUpon>frmViewDocScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackageAdditionItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackageAdditionItem.Designer.cs">
+      <DependentUpon>frmPackageAdditionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPFTChgDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPFTChgDoc.Designer.cs">
+      <DependentUpon>frmPFTChgDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPFTResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPFTResult.Designer.cs">
+      <DependentUpon>frmPFTResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmObstetricsChgDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObstetricsChgDoc.Designer.cs">
+      <DependentUpon>frmObstetricsChgDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintReport.Designer.cs">
+      <DependentUpon>frmPrintReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookPrint.Designer.cs">
+      <DependentUpon>frmBookPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarotidHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarotidHistory.Designer.cs">
+      <DependentUpon>frmCarotidHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatientStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientStatus.Designer.cs">
+      <DependentUpon>frmPatientStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreRegister.Designer.cs">
+      <DependentUpon>frmPreRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlertPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlertPatient.Designer.cs">
+      <DependentUpon>frmAlertPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllRoom.Designer.cs">
+      <DependentUpon>frmAllRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppointment.Designer.cs">
+      <DependentUpon>frmAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookResult.Designer.cs">
+      <DependentUpon>frmBookResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookResultSettingByHN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookResultSettingByHN.Designer.cs">
+      <DependentUpon>frmBookResultSettingByHN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarotid_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarotid_2.Designer.cs">
+      <DependentUpon>frmCarotid_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChoiceRoomCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoiceRoomCancel.Designer.cs">
+      <DependentUpon>frmChoiceRoomCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoreDetail_Diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoreDetail_Diagnosis.Designer.cs">
+      <DependentUpon>frmMoreDetail_Diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNextAnnualCheckup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNextAnnualCheckup.Designer.cs">
+      <DependentUpon>frmNextAnnualCheckup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPE_DialogOtherExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPE_DialogOtherExam.Designer.cs">
+      <DependentUpon>frmPE_DialogOtherExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFaceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFaceSheet.Designer.cs">
+      <DependentUpon>frmFaceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginRoom.Designer.cs">
+      <DependentUpon>frmLoginRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopupRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopupRemark.Designer.cs">
+      <DependentUpon>frmPopupRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionareAviation_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionareAviation_F.Designer.cs">
+      <DependentUpon>frmQuestionareAviation_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionareAviation_N.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionareAviation_N.Designer.cs">
+      <DependentUpon>frmQuestionareAviation_N.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckPointC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckPointC.Designer.cs">
+      <DependentUpon>frmCheckPointC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLabProfile.Designer.cs">
+      <DependentUpon>frmLabProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPHM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPHM.Designer.cs">
+      <DependentUpon>frmPHM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportChestXRay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportChestXRay.Designer.cs">
+      <DependentUpon>frmReportChestXRay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCumulative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCumulative.Designer.cs">
+      <DependentUpon>frmCumulative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCumulativeVitalSigns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCumulativeVitalSigns.Designer.cs">
+      <DependentUpon>frmCumulativeVitalSigns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarotidReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarotidReport.Designer.cs">
+      <DependentUpon>frmCarotidReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBasicMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBasicMeasurement.Designer.cs">
+      <DependentUpon>frmBasicMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChoicePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoicePopUp.Designer.cs">
+      <DependentUpon>frmChoicePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChoiceRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoiceRoom.Designer.cs">
+      <DependentUpon>frmChoiceRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmObstetrics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObstetrics.designer.cs">
+      <DependentUpon>frmObstetrics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScreeningPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScreeningPage.Designer.cs">
+      <DependentUpon>frmScreeningPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewQueueList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewQueueList.Designer.cs">
+      <DependentUpon>frmViewQueueList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewscan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewscan.Designer.cs">
+      <DependentUpon>frmViewscan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWaiting.Designer.cs">
+      <DependentUpon>frmWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageBox\ImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageBox\ImageBox.Designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageBox\ImageBoxGridDisplayMode.cs" />
+    <Compile Include="ImageBox\ImageBoxGridScale.cs" />
+    <Compile Include="popUpRejectReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="popUpRejectReason.Designer.cs">
+      <DependentUpon>popUpRejectReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupUltrasoundLower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupUltrasoundLower.Designer.cs">
+      <DependentUpon>PopupUltrasoundLower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrePareData\PrepareDataCls.cs" />
+    <Compile Include="PrePareData\StaticDataCls.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Program.Function.cs" />
+    <Compile Include="Program.Object.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueClass\ResultTransactionCls.cs" />
+    <Compile Include="QueueClass\SendAutoCls.cs" />
+    <Compile Include="QueueClass\TransactionPlanCls.cs" />
+    <Compile Include="QueueClass\TransactionQueueCls.cs" />
+    <Compile Include="Report\ClsReport.cs" />
+    <Compile Include="Report\ClsReportDocument.cs" />
+    <Compile Include="Report\ClsReportPatientBook.cs" />
+    <Compile Include="Report\frmPatientBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPatientBook.Designer.cs">
+      <DependentUpon>frmPatientBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPreviewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPreviewReport.Designer.cs">
+      <DependentUpon>frmPreviewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmSelectCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmSelectCopy.Designer.cs">
+      <DependentUpon>frmSelectCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectQueue.Designer.cs">
+      <DependentUpon>frmSelectQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_PathWay\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_SendToDocscan\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_Trakcare\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ExamResultUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ExamResultUI.Designer.cs">
+      <DependentUpon>ExamResultUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\PatientProfileUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\PatientProfileUC.Designer.cs">
+      <DependentUpon>PatientProfileUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIAllLeft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIAllLeft.Designer.cs">
+      <DependentUpon>UIAllLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIBasicMeasurement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIBasicMeasurement.Designer.cs">
+      <DependentUpon>UIBasicMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIDashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIDashBoard.Designer.cs">
+      <DependentUpon>UIDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIFooter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIFooter.Designer.cs">
+      <DependentUpon>UIFooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIGridChangeDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIGridChangeDoctor.Designer.cs">
+      <DependentUpon>UIGridChangeDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIMapping.Designer.cs">
+      <DependentUpon>UIMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIMenuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIMenuBar.Designer.cs">
+      <DependentUpon>UIMenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIQueue.Designer.cs">
+      <DependentUpon>UIQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIUserprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIUserprofile.Designer.cs">
+      <DependentUpon>UIUserprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIWaitingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIWaitingList.Designer.cs">
+      <DependentUpon>UIWaitingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIWaitList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIWaitList.Designer.cs">
+      <DependentUpon>UIWaitList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\UIProfileHorizontal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\UIProfileHorizontal.Designer.cs">
+      <DependentUpon>UIProfileHorizontal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AbiUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AbiUC.Designer.cs">
+      <DependentUpon>AbiUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AddAdmitionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AddAdmitionFrm.Designer.cs">
+      <DependentUpon>AddAdmitionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AdditionalItemUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AdditionalItemUC.Designer.cs">
+      <DependentUpon>AdditionalItemUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AddSurgeryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AddSurgeryFrm.Designer.cs">
+      <DependentUpon>AddSurgeryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AudioUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AudioUC.Designer.cs">
+      <DependentUpon>AudioUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationExamUC.Designer.cs">
+      <DependentUpon>AviationExamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\BMDUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\BMDUC.Designer.cs">
+      <DependentUpon>BMDUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\CarotidDuplexReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\CarotidDuplexReport.Designer.cs">
+      <DependentUpon>CarotidDuplexReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\CarotidUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\CarotidUC.Designer.cs">
+      <DependentUpon>CarotidUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\CheckupInheriteFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ChestXrayUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ChestXrayUC.Designer.cs">
+      <DependentUpon>ChestXrayUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\DentalSelectProblemFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\DentalSelectProblemFrm.Designer.cs">
+      <DependentUpon>DentalSelectProblemFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\DentalUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\DentalUC.Designer.cs">
+      <DependentUpon>DentalUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\EchoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\EchoUC.Designer.cs">
+      <DependentUpon>EchoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\EKGUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\EKGUC.Designer.cs">
+      <DependentUpon>EKGUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ESTUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ESTUC.Designer.cs">
+      <DependentUpon>ESTUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ExamCheckupUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ExamCheckupUC.Designer.cs">
+      <DependentUpon>ExamCheckupUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAircrewAus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAircrewAus.Designer.cs">
+      <DependentUpon>AviationAircrewAus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAirCrewCan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAirCrewCan.Designer.cs">
+      <DependentUpon>AviationAirCrewCan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAirCrewFAA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAirCrewFAA.Designer.cs">
+      <DependentUpon>AviationAirCrewFAA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAirCrewThai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\AviationAirCrewThai.Designer.cs">
+      <DependentUpon>AviationAirCrewThai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ExamOccMedUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ExamOccMedUC.Designer.cs">
+      <DependentUpon>ExamOccMedUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\EyeExamOccUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\EyeExamOccUC.Designer.cs">
+      <DependentUpon>EyeExamOccUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\EyeExamRecordUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\EyeExamRecordUC.Designer.cs">
+      <DependentUpon>EyeExamRecordUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\FitToFlyAircrewExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\FitToFlyAircrewExamUC.Designer.cs">
+      <DependentUpon>FitToFlyAircrewExamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\HistoryDataCls.cs" />
+    <Compile Include="UserControlEMR\MammogramUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\MammogramUC.Designer.cs">
+      <DependentUpon>MammogramUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ObjectiveUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ObjectiveUC.Designer.cs">
+      <DependentUpon>ObjectiveUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ObsteticsChiefComplainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ObsteticsChiefComplainUC.Designer.cs">
+      <DependentUpon>ObsteticsChiefComplainUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ObstetricsPhysicalExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ObstetricsPhysicalExamUC.Designer.cs">
+      <DependentUpon>ObstetricsPhysicalExamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\ObstetricsResultUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\ObstetricsResultUC.Designer.cs">
+      <DependentUpon>ObstetricsResultUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\PapResultUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\PapResultUC.Designer.cs">
+      <DependentUpon>PapResultUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\PersonalHealthManagmentUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\PersonalHealthManagmentUC.Designer.cs">
+      <DependentUpon>PersonalHealthManagmentUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\SubjectiveUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\SubjectiveUC.Designer.cs">
+      <DependentUpon>SubjectiveUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabCarotidUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabCarotidUC.Designer.cs">
+      <DependentUpon>TabCarotidUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabEyesExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabEyesExamUC.Designer.cs">
+      <DependentUpon>TabEyesExamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\OffShoreAircrewExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\OffShoreAircrewExamUC.Designer.cs">
+      <DependentUpon>OffShoreAircrewExamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\PftMainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\PftMainUC.Designer.cs">
+      <DependentUpon>PftMainUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\PftOccMedUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\PftOccMedUC.Designer.cs">
+      <DependentUpon>PftOccMedUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabObstetricsCKUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabObstetricsCKUC.Designer.cs">
+      <DependentUpon>TabObstetricsCKUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabObstetricsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabObstetricsUC.Designer.cs">
+      <DependentUpon>TabObstetricsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabPftUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabPftUC.Designer.cs">
+      <DependentUpon>TabPftUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabAssessmentAndPlanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabAssessmentAndPlanUC.Designer.cs">
+      <DependentUpon>TabAssessmentAndPlanUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\TabPhyExamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\TabPhyExamUC.Designer.cs">
+      <DependentUpon>TabPhyExamUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\UgiUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\UgiUC.Designer.cs">
+      <DependentUpon>UgiUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEMR\UltrasoundUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEMR\UltrasoundUC.Designer.cs">
+      <DependentUpon>UltrasoundUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\newFooterUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\newFooterUC.Designer.cs">
+      <DependentUpon>newFooterUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\newPatientMappingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\newPatientMappingUC.Designer.cs">
+      <DependentUpon>newPatientMappingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\NewPatientProfileLandscape.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\NewPatientProfileLandscape.Designer.cs">
+      <DependentUpon>NewPatientProfileLandscape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\newPatientProfileStationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\newPatientProfileStationUC.Designer.cs">
+      <DependentUpon>newPatientProfileStationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\newPatientProfileUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\newPatientProfileUC.designer.cs">
+      <DependentUpon>newPatientProfileUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\newWaitingListStationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\newWaitingListStationUC.Designer.cs">
+      <DependentUpon>newWaitingListStationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\newWaitingListUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\newWaitingListUC.Designer.cs">
+      <DependentUpon>newWaitingListUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\RadiologyUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\RadiologyUC.Designer.cs">
+      <DependentUpon>RadiologyUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\WS_TrakCareCls.cs" />
+    <EmbeddedResource Include="DialogImaging.resx">
+      <DependentUpon>DialogImaging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogInterpretation.resx">
+      <DependentUpon>DialogInterpretation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionnaireFrm.resx">
+      <DependentUpon>QuestionnaireFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBGScreen.resx">
+      <DependentUpon>frmBGScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogABI.resx">
+      <DependentUpon>DialogABI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAllExam.resx">
+      <DependentUpon>DialogAllExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAssessmentAndPlan.resx">
+      <DependentUpon>DialogAssessmentAndPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAudio.resx">
+      <DependentUpon>DialogAudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogCarotid.resx">
+      <DependentUpon>DialogCarotid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDental.resx">
+      <DependentUpon>DialogDental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEcho.resx">
+      <DependentUpon>DialogEcho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEKG.resx">
+      <DependentUpon>DialogEKG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEST.resx">
+      <DependentUpon>DialogEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogEyes.resx">
+      <DependentUpon>DialogEyes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPAP.resx">
+      <DependentUpon>DialogPAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPFT.resx">
+      <DependentUpon>DialogPFT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPHM.resx">
+      <DependentUpon>DialogPHM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPhysicalExam.resx">
+      <DependentUpon>DialogPhysicalExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABIFrm.resx">
+      <DependentUpon>ABIFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BMDFrm.resx">
+      <DependentUpon>BMDFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CarotidFrm.resx">
+      <DependentUpon>CarotidFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChestXrayFrm.resx">
+      <DependentUpon>ChestXrayFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DentalFrm.resx">
+      <DependentUpon>DentalFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoctorFrm.resx">
+      <DependentUpon>DoctorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EKGFrm.resx">
+      <DependentUpon>EKGFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ESTFrm.resx">
+      <DependentUpon>ESTFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EyesFrm.resx">
+      <DependentUpon>EyesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GYNFrm.resx">
+      <DependentUpon>GYNFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HearingFrm.resx">
+      <DependentUpon>HearingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MammogramFrm.resx">
+      <DependentUpon>MammogramFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PapResultFrm.resx">
+      <DependentUpon>PapResultFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PFTFrm.resx">
+      <DependentUpon>PFTFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PopupLoadingFrm.resx">
+      <DependentUpon>PopupLoadingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitingListFrm.resx">
+      <DependentUpon>WaitingListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCancelQueue.resx">
+      <DependentUpon>frmCancelQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateConsultPatient.resx">
+      <DependentUpon>frmCreateConsultPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAviationMedCerReport.resx">
+      <DependentUpon>frmAviationMedCerReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckpointB2.resx">
+      <DependentUpon>frmCheckpointB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChoicePRM.resx">
+      <DependentUpon>frmChoicePRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashBoardcs.resx">
+      <DependentUpon>frmDashBoardcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHealthSelect.resx">
+      <DependentUpon>frmHealthSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageWaiting.resx">
+      <DependentUpon>frmManageWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedicalCertificateReport.resx">
+      <DependentUpon>frmMedicalCertificateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPE_OutQueue.resx">
+      <DependentUpon>frmPE_OutQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopupBookFinishRemark.resx">
+      <DependentUpon>frmPopupBookFinishRemark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionareOccmed.resx">
+      <DependentUpon>frmQuestionareOccmed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportVaccination.resx">
+      <DependentUpon>frmReportVaccination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectDoctor.resx">
+      <DependentUpon>frmSelectDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewDocScan.resx">
+      <DependentUpon>frmViewDocScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackageAdditionItem.resx">
+      <DependentUpon>frmPackageAdditionItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPFTChgDoc.resx">
+      <DependentUpon>frmPFTChgDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPFTResult.resx">
+      <DependentUpon>frmPFTResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObstetricsChgDoc.resx">
+      <DependentUpon>frmObstetricsChgDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintReport.resx">
+      <DependentUpon>frmPrintReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookPrint.resx">
+      <DependentUpon>frmBookPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarotidHistory.resx">
+      <DependentUpon>frmCarotidHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientStatus.resx">
+      <DependentUpon>frmPatientStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreRegister.resx">
+      <DependentUpon>frmPreRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlertPatient.resx">
+      <DependentUpon>frmAlertPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllRoom.resx">
+      <DependentUpon>frmAllRoom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppointment.resx">
+      <DependentUpon>frmAppointment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookResult.resx">
+      <DependentUpon>frmBookResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookResultSettingByHN.resx">
+      <DependentUpon>frmBookResultSettingByHN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarotid_2.resx">
+      <DependentUpon>frmCarotid_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChoiceRoomCancel.resx">
+      <DependentUpon>frmChoiceRoomCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFaceSheet.resx">
+      <DependentUpon>frmFaceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoreDetail_Diagnosis.resx">
+      <DependentUpon>frmMoreDetail_Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNextAnnualCheckup.resx">
+      <DependentUpon>frmNextAnnualCheckup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginRoom.resx">
+      <DependentUpon>frmLoginRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPE_DialogOtherExam.resx">
+      <DependentUpon>frmPE_DialogOtherExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopupRemark.resx">
+      <DependentUpon>frmPopupRemark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionareAviation_F.resx">
+      <DependentUpon>frmQuestionareAviation_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionareAviation_N.resx">
+      <DependentUpon>frmQuestionareAviation_N.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckPointC.resx">
+      <DependentUpon>frmCheckPointC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarotidReport.resx">
+      <DependentUpon>frmCarotidReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCumulative.resx">
+      <DependentUpon>frmCumulative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCumulativeVitalSigns.resx">
+      <DependentUpon>frmCumulativeVitalSigns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLabProfile.resx">
+      <DependentUpon>frmLabProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBasicMeasurement.resx">
+      <DependentUpon>frmBasicMeasurement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChoicePopUp.resx">
+      <DependentUpon>frmChoicePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChoiceRoom.resx">
+      <DependentUpon>frmChoiceRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObstetrics.resx">
+      <DependentUpon>frmObstetrics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPHM.resx">
+      <DependentUpon>frmPHM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportChestXRay.resx">
+      <DependentUpon>frmReportChestXRay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScreeningPage.resx">
+      <DependentUpon>frmScreeningPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewscan.resx">
+      <DependentUpon>frmViewscan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWaiting.resx">
+      <DependentUpon>frmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportPatientToBookFrm.resx">
+      <DependentUpon>ImportPatientToBookFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientBookAddressFrm.resx">
+      <DependentUpon>PatientBookAddressFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupAddLab.resx">
+      <DependentUpon>PopupAddLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpLogInBookAdmin.resx">
+      <DependentUpon>popUpLogInBookAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpLogView.resx">
+      <DependentUpon>popUpLogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpRejectReason.resx">
+      <DependentUpon>popUpRejectReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupUltrasoundLower.resx">
+      <DependentUpon>PopupUltrasoundLower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPatientBook.resx">
+      <DependentUpon>frmPatientBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPreviewReport.resx">
+      <DependentUpon>frmPreviewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmSelectCopy.resx">
+      <DependentUpon>frmSelectCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectQueue.resx">
+      <DependentUpon>frmSelectQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TestPrinterFrm.resx">
+      <DependentUpon>TestPrinterFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\BookAddressUC.resx">
+      <DependentUpon>BookAddressUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\BookBasicMeasurementUC.resx">
+      <DependentUpon>BookBasicMeasurementUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\BookTransaction.resx">
+      <DependentUpon>BookTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\EyeExamRecordUC_test.resx">
+      <DependentUpon>EyeExamRecordUC_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\FavoriteDoctorTextBox.resx">
+      <DependentUpon>FavoriteDoctorTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\FavoriteTextBox.resx">
+      <DependentUpon>FavoriteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\FavoriteTextBoxForEyeExam.resx">
+      <DependentUpon>FavoriteTextBoxForEyeExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PatientProfileBookUC.resx">
+      <DependentUpon>PatientProfileBookUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PrototypeFavoriteTextBox.resx">
+      <DependentUpon>PrototypeFavoriteTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\ExamResultUI.resx">
+      <DependentUpon>ExamResultUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PatientProfileHorizontalUC.resx">
+      <DependentUpon>PatientProfileHorizontalUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PatientProfileUC.resx">
+      <DependentUpon>PatientProfileUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\PrototypeFavoriteTextBoxForEyeExam.resx">
+      <DependentUpon>PrototypeFavoriteTextBoxForEyeExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIAllLeft.resx">
+      <DependentUpon>UIAllLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIBasicMeasurement.resx">
+      <DependentUpon>UIBasicMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIDashBoard.resx">
+      <DependentUpon>UIDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIFooter.resx">
+      <DependentUpon>UIFooter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIGridChangeDoctor.resx">
+      <DependentUpon>UIGridChangeDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIMapping.resx">
+      <DependentUpon>UIMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIMenuBar.resx">
+      <DependentUpon>UIMenuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIQueue.resx">
+      <DependentUpon>UIQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIUserprofile.resx">
+      <DependentUpon>UIUserprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIWaitingList.resx">
+      <DependentUpon>UIWaitingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIWaitList.resx">
+      <DependentUpon>UIWaitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\UIProfileHorizontal.resx">
+      <DependentUpon>UIProfileHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AbiUC.resx">
+      <DependentUpon>AbiUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AddAdmitionFrm.resx">
+      <DependentUpon>AddAdmitionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AdditionalItemUC.resx">
+      <DependentUpon>AdditionalItemUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AddSurgeryFrm.resx">
+      <DependentUpon>AddSurgeryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AudioUC.resx">
+      <DependentUpon>AudioUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AviationExamUC.resx">
+      <DependentUpon>AviationExamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\BMDUC.resx">
+      <DependentUpon>BMDUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\CarotidDuplexReport.resx">
+      <DependentUpon>CarotidDuplexReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\CarotidUC.resx">
+      <DependentUpon>CarotidUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ChestXrayUC.resx">
+      <DependentUpon>ChestXrayUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\DentalSelectProblemFrm.resx">
+      <DependentUpon>DentalSelectProblemFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\DentalUC.resx">
+      <DependentUpon>DentalUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\EchoUC.resx">
+      <DependentUpon>EchoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\EKGUC.resx">
+      <DependentUpon>EKGUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ESTUC.resx">
+      <DependentUpon>ESTUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ExamCheckupUC.resx">
+      <DependentUpon>ExamCheckupUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AviationAircrewAus.resx">
+      <DependentUpon>AviationAircrewAus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AviationAirCrewCan.resx">
+      <DependentUpon>AviationAirCrewCan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AviationAirCrewFAA.resx">
+      <DependentUpon>AviationAirCrewFAA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\AviationAirCrewThai.resx">
+      <DependentUpon>AviationAirCrewThai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ExamOccMedUC.resx">
+      <DependentUpon>ExamOccMedUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\EyeExamOccUC.resx">
+      <DependentUpon>EyeExamOccUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\EyeExamRecordUC.resx">
+      <DependentUpon>EyeExamRecordUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\FitToFlyAircrewExamUC.resx">
+      <DependentUpon>FitToFlyAircrewExamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\MammogramUC.resx">
+      <DependentUpon>MammogramUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ObjectiveUC.resx">
+      <DependentUpon>ObjectiveUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ObsteticsChiefComplainUC.resx">
+      <DependentUpon>ObsteticsChiefComplainUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ObstetricsPhysicalExamUC.resx">
+      <DependentUpon>ObstetricsPhysicalExamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\ObstetricsResultUC.resx">
+      <DependentUpon>ObstetricsResultUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\PapResultUC.resx">
+      <DependentUpon>PapResultUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\PersonalHealthManagmentUC.resx">
+      <DependentUpon>PersonalHealthManagmentUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\SubjectiveUC.resx">
+      <DependentUpon>SubjectiveUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabCarotidUC.resx">
+      <DependentUpon>TabCarotidUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabEyesExamUC.resx">
+      <DependentUpon>TabEyesExamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\OffShoreAircrewExamUC.resx">
+      <DependentUpon>OffShoreAircrewExamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\PftMainUC.resx">
+      <DependentUpon>PftMainUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\PftOccMedUC.resx">
+      <DependentUpon>PftOccMedUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabObstetricsCKUC.resx">
+      <DependentUpon>TabObstetricsCKUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabObstetricsUC.resx">
+      <DependentUpon>TabObstetricsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabPftUC.resx">
+      <DependentUpon>TabPftUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabAssessmentAndPlanUC.resx">
+      <DependentUpon>TabAssessmentAndPlanUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\TabPhyExamUC.resx">
+      <DependentUpon>TabPhyExamUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\UgiUC.resx">
+      <DependentUpon>UgiUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEMR\UltrasoundUC.resx">
+      <DependentUpon>UltrasoundUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\newFooterUC.resx">
+      <DependentUpon>newFooterUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\newPatientMappingUC.resx">
+      <DependentUpon>newPatientMappingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\NewPatientProfileLandscape.resx">
+      <DependentUpon>NewPatientProfileLandscape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\newPatientProfileStationUC.resx">
+      <DependentUpon>newPatientProfileStationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\newPatientProfileUC.resx">
+      <DependentUpon>newPatientProfileUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\newWaitingListStationUC.resx">
+      <DependentUpon>newWaitingListStationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\newWaitingListUC.resx">
+      <DependentUpon>newWaitingListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\RadiologyUC.resx">
+      <DependentUpon>RadiologyUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewQueueList.resx">
+      <DependentUpon>frmViewQueueList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\BKvs2010.Models.CorpMedicelRptModels.datasource" />
+    <None Include="Properties\DataSources\BKvs2010.Models.TabAddressModels+Address.datasource" />
+    <None Include="Properties\DataSources\BKvs2010.Models.TabAddressModels.datasource" />
+    <None Include="Properties\DataSources\DBCheckup.trn_book_event.datasource" />
+    <None Include="Properties\DataSources\DBCheckup.trn_doctor_xray.datasource" />
+    <None Include="Properties\DataSources\DBCheckup.trn_patient_regi.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.CareProviderCode2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.output_lang_call_queue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.output_queue_serving.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.output_result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.output_room_queue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.output_screen_language.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.out_put_display_profile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.out_put_status.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.patient_order_set1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.questionaire_aviation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.questionaire_patiant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.ResultXray3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\BKvs2010.WS_PathWay.SendAutoResult2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_PathWay\WS_GetDataFromPathWay.wsdl" />
+    <None Include="Service References\WS_SendToDocscan\SaveToDocscan.wsdl" />
+    <None Include="Service References\WS_Trakcare\WS_GetDataBytrak1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBCheckup\DBCheckup.csproj">
+      <Project>{A3B196BC-2F74-42F3-97E8-F3B875561AAE}</Project>
+      <Name>DBCheckup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBToDoList\DBToDoList.csproj">
+      <Project>{652230B5-E6DD-439B-8429-ED635E475A1B}</Project>
+      <Name>DBToDoList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControlLibrary\UserControlLibrary.csproj">
+      <Project>{A93445F9-0712-47BD-93FD-62FE48D07DDA}</Project>
+      <Name>UserControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\setLogUser.dll" />
+    <Content Include="Icon\add2.png" />
+    <Content Include="Icon\add_to_favorites.png" />
+    <Content Include="Icon\alert.jpg" />
+    <Content Include="Icon\arrow_left_green.gif" />
+    <Content Include="Icon\arrow_right_green.gif" />
+    <None Include="Service References\WS_PathWay\WS_GetDataFromPathWay.disco" />
+    <None Include="Service References\WS_Trakcare\WS_GetDataBytrak1.disco" />
+    <None Include="Resources\PAP.png" />
+    <None Include="Service References\WS_SendToDocscan\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_SendToDocscan\configuration.svcinfo" />
+    <None Include="Service References\WS_SendToDocscan\configuration91.svcinfo" />
+    <None Include="Service References\WS_SendToDocscan\SaveToDocscan.disco" />
+    <None Include="Service References\WS_Trakcare\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_Trakcare\configuration.svcinfo" />
+    <None Include="Service References\WS_Trakcare\configuration91.svcinfo" />
+    <None Include="Service References\WS_PathWay\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_PathWay\configuration.svcinfo" />
+    <None Include="Service References\WS_PathWay\configuration91.svcinfo" />
+    <None Include="Icon\btnCallQueue.Image.png" />
+    <None Include="Icon\btnCancel.Image.png" />
+    <None Include="Icon\btnHold.Image.png" />
+    <None Include="Icon\btnPrint.Image.png" />
+    <None Include="Icon\btnPrintPreview.Image.png" />
+    <None Include="Icon\btnSaveDraft.Image.png" />
+    <None Include="Icon\btnSendAuto.Image.png" />
+    <None Include="Icon\btnSendDoc.Image.png" />
+    <None Include="Icon\btnSendManual.Image.png" />
+    <None Include="Icon\btnSendToCheckB.Image.png" />
+    <Content Include="Icon\cancel.png" />
+    <Content Include="Icon\correctGreen.png" />
+    <Content Include="Icon\disks.png" />
+    <Content Include="Icon\disk_blue.png" />
+    <Content Include="Icon\document_add.png" />
+    <Content Include="Icon\document_into.jpg" />
+    <Content Include="Icon\document_out.png" />
+    <Content Include="Icon\document_view.png" />
+    <Content Include="Icon\favicon %281%29.ico" />
+    <Content Include="Icon\folder.png" />
+    <Content Include="Icon\folder_sent_mail.png" />
+    <Content Include="Icon\folder_txt.png" />
+    <Content Include="Icon\history.gif" />
+    <Content Include="Icon\printer.png" />
+    <Content Include="Icon\SandC.png" />
+    <Content Include="Icon\sound.bmp" />
+    <Content Include="Icon\sound1.bmp" />
+    <Content Include="Icon\stopwatch_pause.png" />
+    <Content Include="Icon\Summary.png" />
+    <Content Include="Icon\view.png" />
+    <Content Include="Icon\WT.gif" />
+    <Content Include="Image\TempLogo.jpg" />
+    <Content Include="RadiologyImage\ABI.png" />
+    <Content Include="RadiologyImage\AllExam.png" />
+    <Content Include="RadiologyImage\Carotid.png" />
+    <Content Include="RadiologyImage\Dental.png" />
+    <Content Include="RadiologyImage\Echo.png" />
+    <Content Include="RadiologyImage\EKG.png" />
+    <Content Include="RadiologyImage\EST.png" />
+    <Content Include="RadiologyImage\Eyes.png" />
+    <Content Include="RadiologyImage\Hearing.png" />
+    <Content Include="RadiologyImage\Lab.png" />
+    <Content Include="RadiologyImage\OtherExam.png" />
+    <Content Include="RadiologyImage\PAP.png" />
+    <Content Include="RadiologyImage\PFT.png" />
+    <Content Include="RadiologyImage\PhysicalExam.png" />
+    <Content Include="RadiologyImage\Xray.png" />
+    <None Include="Resources\add_to_favorites_eyeexam.bmp" />
+    <None Include="Resources\add_to_favorites_eyeexam.png" />
+    <Content Include="Resources\carotid-1.jpg" />
+    <Content Include="Resources\carotid-2.jpg" />
+    <Content Include="Resources\carotid.png" />
+    <Content Include="Resources\favicon.ico" />
+    <Content Include="Resources\no_image.jpg" />
+    <None Include="Resources\PFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_PathWay\" />
+    <WCFMetadataStorage Include="Service References\WS_SendToDocscan\" />
+    <WCFMetadataStorage Include="Service References\WS_Trakcare\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

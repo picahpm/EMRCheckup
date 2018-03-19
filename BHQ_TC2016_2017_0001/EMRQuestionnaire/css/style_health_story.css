@@ -1,0 +1,127 @@
+﻿* {margin:0; padding:0; outline:none}
+body {font: normal 10px auto "Trebuchet MS" , Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFDE4;
+	color: #4f6b72;
+	width: 1080px;
+	height: auto;
+	position:absolute;
+left:20%; /* ด้านซ้ายครึ่งจอ */
+margin-left:-150px; /*margin-left ติดลบครึ่งหนึ่งของความกว้าง */ 
+	}
+.header
+{
+	background-image: url('../images/header.jpg');
+	background-color: White;
+	width: 1080px;
+	height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+.Content
+{
+background-color: White;
+	width: 1080px;
+	height: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.sortable {width:1080px; border-left:1px solid #c6d5e1; border-top:1px solid #c6d5e1; border-bottom:none; margin:0 auto 15px}
+
+.sortable th h3 {font-size:10px; padding:6px 8px 8px}
+.sortable td {padding:4px 6px 6px; border-bottom:1px solid #c6d5e1; border-right:1px solid #c6d5e1}
+.sortable .head h3 {background:url(../images/sort.gif) 7px center no-repeat; cursor:pointer; padding-left:18px}
+.sortable .desc, .sortable .asc {background-color:#a1d40a;}
+.sortable .desc h3 {background:url(../images/desc.gif) 7px center no-repeat; cursor:pointer; padding-left:18px}
+.sortable .asc h3 {background:url(../images/asc.gif) 7px  center no-repeat; cursor:pointer; padding-left:18px}
+.sortable .head:hover, .sortable .desc:hover, .sortable .asc:hover {color:#fff}
+.sortable .evenrow td {background:#fff}
+.sortable .oddrow td {background:#ecf2f6}
+.sortable td.evenselected {background:#ecf2f6}
+.sortable td.oddselected {background:#dce6ee}
+
+#controls {width:980px; margin:0 auto; height:20px}
+#perpage {float:left; width:200px}
+#perpage select {float:left; font-size:11px}
+#perpage span {float:left; margin:2px 0 0 5px}
+#navigation {float:left; width:580px; text-align:center}
+#navigation img {cursor:pointer}
+#text {float:left; width:200px; text-align:right; margin-top:2px}
+
+table, caption, td, tr, th
+{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+/* ---- Paragraphs ---- */
+
+p
+{
+	margin-bottom: 15px;
+}
+
+/* ---- Table ---- */
+
+table
+{
+	border-collapse: collapse;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+caption
+{
+	text-align: left;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+table td, table th
+{
+	padding: 5px;
+	border: 1px solid #fff;
+	border-width: 0 1px 1px 0;
+}
+
+thead th
+{
+	background: #91c5d4;
+}
+
+thead th[colspan], thead th[rowspan]
+{
+	background: #66a9bd;
+}
+
+tbody th, tfoot th
+{
+	text-align: left;
+	background: #91c5d4;
+}
+
+tbody td, tfoot td
+{
+	text-align: left;
+	background: #ECF2F6;
+}
+
+tfoot th
+{
+	background: #b0cc7f;
+}
+
+tfoot td
+{
+	background: #d7e1c5;
+	font-weight: bold;
+}
+
+tbody tr.odd td
+{
+	background: #bcd9e1;
+}
+

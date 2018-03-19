@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="pathway">
+  <DataContextMoniker Name="/pathwayDataContext" />
+  <nestedChildShapes>
+    <classShape Id="73fa5cf8-730f-4a11-b928-e1db74e2e9c1" isExpanded="false" absoluteBounds="2.375, 1.25, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/output_result" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f45c5d9-05ed-497f-87b5-2c78ccbde268" absoluteBounds="2.3899999999999997, 1.71, 1.5950000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9960f6a-99b7-4463-8c36-2c7ec0e14ac3" isExpanded="false" absoluteBounds="2.375, 4.25, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/output_room_queue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfcf10d0-5a1e-4d59-8ef7-8def9909525c" absoluteBounds="2.3900000000000006, 4.71, 1.5950000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e9a094d-6dc6-4d48-9078-b8c85039815b" isExpanded="false" absoluteBounds="2.375, 5, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/output_queue_serving" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3607740-5b7c-4071-a8c4-b774c3ae6233" absoluteBounds="2.3900000000000006, 5.46, 1.5950000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60768ad0-26d4-4a88-bca8-b753450b0b86" isExpanded="false" absoluteBounds="2.375, 2, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/output_lang_call_queue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ebe5dc5-9469-4002-bae4-f59a12554dca" absoluteBounds="2.39, 2.46, 1.5950000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d933e05a-0e68-4d48-84f7-b1a037fec039" isExpanded="false" absoluteBounds="2.375, 2.75, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/out_put_display_profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1970f601-442f-4c7e-a2fa-01bfa966c7bb" absoluteBounds="2.39, 3.21, 1.5950000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5694f49-2300-400c-ac5b-b24dfc3ce71b" isExpanded="false" absoluteBounds="0.5, 0.5, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/questionaire_patiant" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2071c35d-fc2b-4347-a9fb-4acc0c455de9" absoluteBounds="0.51500000000000012, 0.96, 1.5950000000000002, 25.248575846354164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95d1ba0c-9051-47a6-ae86-d7533dad28dc" isExpanded="false" absoluteBounds="2.375, 3.5, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/out_put_status" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee0458d7-b473-4eae-ab35-755beee01eeb" absoluteBounds="2.3899999999999997, 3.96, 1.5950000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="abe19c04-fac7-4a4d-bda6-9509ed3fe23b" isExpanded="false" absoluteBounds="2.375, 0.5, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/output_queue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3858e8fb-b805-4fc8-a852-e20f6e88e3f7" absoluteBounds="2.3899999999999997, 0.96, 1.5950000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b5c640d-acf8-4801-ba29-3f558b3b3856" isExpanded="false" absoluteBounds="6.125, 2, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/questionaire_aviation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="662b30de-d5b9-4a42-8fb6-08aa41e28581" absoluteBounds="6.14, 2.46, 1.5950000000000002, 24.4793701171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57133712-a3ff-423a-b339-feb8726f506f" isExpanded="false" absoluteBounds="0.5, 1.25, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/testObj" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63498e78-62f6-439a-b4ef-144e69f2be71" absoluteBounds="0.515, 1.71, 1.5950000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="595cf6a7-64f1-4831-9004-4d38e081d62c" isExpanded="false" absoluteBounds="2.375, 5.75, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/output_screen_language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46af42c9-8669-4c41-bf87-1bc926cc36d0" absoluteBounds="2.39, 6.21, 1.5950000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a0ce7ca-8259-447f-a61f-113cf3800088" isExpanded="false" absoluteBounds="2.375, 6.5, 1.625, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/ResultPath" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f50d8e83-4ad8-4e15-b7c5-9aa2003fa874" absoluteBounds="2.39, 6.96, 1.5950000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00a8e183-21f4-43fa-ac69-d088a50122ac" isExpanded="false" absoluteBounds="6.125, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/pathwayDataContext/CareProviderCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40d0c8d1-5370-4887-82a8-25216c3ff244" absoluteBounds="6.14, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

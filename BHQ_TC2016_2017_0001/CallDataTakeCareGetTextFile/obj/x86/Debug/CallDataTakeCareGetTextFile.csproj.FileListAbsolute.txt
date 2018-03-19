@@ -1,0 +1,10 @@
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Debug\CallDataTakeCareGetTextFile.exe.config
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Debug\CallDataTakeCareGetTextFile.exe
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Debug\CallDataTakeCareGetTextFile.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Debug\DBCheckup.dll
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\bin\Debug\DBCheckup.pdb
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Debug\CallDataTakeCareGetTextFile.csprojResolveAssemblyReference.cache
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Debug\CallDataTakeCareGetTextFile.Properties.Resources.resources
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Debug\CallDataTakeCareGetTextFile.csproj.GenerateResource.Cache
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Debug\CallDataTakeCareGetTextFile.exe
+E:\Source\BHQ_TC2016_2017_0001\CallDataTakeCareGetTextFile\obj\x86\Debug\CallDataTakeCareGetTextFile.pdb

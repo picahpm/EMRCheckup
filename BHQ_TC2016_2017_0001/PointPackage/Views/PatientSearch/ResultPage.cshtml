@@ -1,0 +1,9 @@
+﻿@model PointPackage.Models.ResultPageModel
+@{
+    Layout = "~/Views/PatientSearch/_MasterPatientSearch.cshtml";
+}
+
+@using (Html.BeginForm("ResultPage", "PatientSearch", FormMethod.Post, new { id = "ResultPage" }))
+{
+    @Html.DisplayFor(x => x.messege)
+}

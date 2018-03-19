@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85AABAE9-C342-4CA7-8808-ABFFB85CDDAC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CheckUpToDoList</RootNamespace>
+    <AssemblyName>CheckUpToDoList</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.607, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AjaxControlToolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AjaxControlToolkit\AjaxControlToolkit.dll" />
+    <Content Include="App_Class\tmpExcel.html" />
+    <Content Include="BackOffice\AdminControlPage.aspx" />
+    <Content Include="BackOffice\BOLogin.aspx" />
+    <Content Include="BackOffice\default.htm" />
+    <Content Include="BackOffice\LogOff.aspx" />
+    <Content Include="default.htm" />
+    <Content Include="Footer.htm" />
+    <Content Include="frmCompanyMst.aspx" />
+    <Content Include="frmCompanyMstBody.aspx" />
+    <Content Include="frmCompanyMstSearch.aspx" />
+    <Content Include="frmHome.aspx" />
+    <Content Include="frmMasterCompany.aspx" />
+    <Content Include="frmmktdata.aspx" />
+    <Content Include="frmmktNew.aspx" />
+    <Content Include="frmSearch.aspx" />
+    <Content Include="frmSearchCompany.aspx" />
+    <Content Include="frm_collection.aspx" />
+    <Content Include="frm_collection_content.aspx" />
+    <Content Include="frm_collection_search.aspx" />
+    <Content Include="frm_company_details.aspx" />
+    <Content Include="frm_contact_center.aspx" />
+    <Content Include="frm_contact_center_content.aspx" />
+    <Content Include="frm_contact_center_search.aspx" />
+    <Content Include="frm_hpc.aspx" />
+    <Content Include="frm_hpc_content.aspx" />
+    <Content Include="frm_hpc_search.aspx" />
+    <Content Include="frm_mkt.aspx" />
+    <Content Include="Header.htm" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\go-lt-off.gif" />
+    <Content Include="images\go-lt-on.gif" />
+    <Content Include="images\go-rt-off.gif" />
+    <Content Include="images\login\bdms_logo.png" />
+    <Content Include="images\login\btlogin1.gif" />
+    <Content Include="images\login\btlogin2.gif" />
+    <Content Include="images\login\GLS_logo.png" />
+    <Content Include="images\login\lock.png" />
+    <Content Include="images\login\pink-ribbon-1.jpg" />
+    <Content Include="images\login\pink-ribbon.jpg" />
+    <Content Include="images\logo.bmp" />
+    <Content Include="images\LogobankokHospital.jpg" />
+    <Content Include="images\pin-dn-off.gif" />
+    <Content Include="images\pin-dn-on.gif" />
+    <Content Include="images\pin-up-off.gif" />
+    <Content Include="images\pin-up-on.gif" />
+    <Content Include="images\tab-line.gif" />
+    <Content Include="images\wait\ajax-loader.gif" />
+    <Content Include="ImportExcelFile.aspx" />
+    <Content Include="InterfaceTrakCare\RunJob.aspx" />
+    <Content Include="js\complex.css" />
+    <Content Include="js\complex.js" />
+    <Content Include="js\debug.js" />
+    <Content Include="js\jquery-1.3.2.min.js" />
+    <Content Include="js\jquery-1.8.2.js" />
+    <Content Include="js\jquery-1.9.1.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="js\jquery-ui-latest.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.layout-latest.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.ui.datepicker.css" />
+    <Content Include="js\jquery.ui.datepicker.js" />
+    <Content Include="js\JScript1.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="LogsInterface\log_2013-09-30.txt" />
+    <Content Include="LogsInterface\log_2013-11-11.txt" />
+    <Content Include="LogsInterface\log_2013-11-12.txt" />
+    <Content Include="LogsInterface\log_2015-05-13.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="PLogin.aspx" />
+    <Content Include="Remark.txt" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\WS_Trakcare\configuration91.svcinfo" />
+    <None Include="Service References\WS_Trakcare\configuration.svcinfo" />
+    <None Include="Service References\WS_Trakcare\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WS_Trakcare\WS_GetDataBytrak1.disco" />
+    <Content Include="Style.css" />
+    <Content Include="style\images\animated-overlay.gif" />
+    <Content Include="style\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="style\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="style\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="style\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="style\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="style\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="style\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="style\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="style\images\ui-icons_222222_256x240.png" />
+    <Content Include="style\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\images\ui-icons_454545_256x240.png" />
+    <Content Include="style\images\ui-icons_888888_256x240.png" />
+    <Content Include="style\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="style\smoothness\images\animated-overlay.gif" />
+    <Content Include="style\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="style\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="style\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="style\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="style\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="style\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="style\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="style\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="style\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="style\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="style\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="style\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="style\smoothness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="style\smoothness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="style\Style.css" />
+    <Content Include="style\styleAutoComplete.css" />
+    <Content Include="TestCalendar.aspx" />
+    <Content Include="testCalendarMaster.aspx" />
+    <Content Include="TestUpload.aspx" />
+    <Content Include="test_frm_mkt.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="webfromtest.aspx" />
+    <Content Include="WSCheckUpToDoList.asmx" />
+    <Content Include="wuc_login_detail.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Class\mybasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\AdminControlPage.aspx.cs">
+      <DependentUpon>AdminControlPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\AdminControlPage.aspx.designer.cs">
+      <DependentUpon>AdminControlPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\BOLogin.aspx.cs">
+      <DependentUpon>BOLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\BOLogin.aspx.designer.cs">
+      <DependentUpon>BOLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOffice\LogOff.aspx.cs">
+      <DependentUpon>LogOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOffice\LogOff.aspx.designer.cs">
+      <DependentUpon>LogOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\GetMasterProjectConfigCls.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="frmCompanyMst.aspx.cs">
+      <DependentUpon>frmCompanyMst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCompanyMst.aspx.designer.cs">
+      <DependentUpon>frmCompanyMst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanyMstBody.aspx.cs">
+      <DependentUpon>frmCompanyMstBody.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCompanyMstBody.aspx.designer.cs">
+      <DependentUpon>frmCompanyMstBody.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanyMstSearch.aspx.cs">
+      <DependentUpon>frmCompanyMstSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCompanyMstSearch.aspx.designer.cs">
+      <DependentUpon>frmCompanyMstSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.aspx.cs">
+      <DependentUpon>frmHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHome.aspx.designer.cs">
+      <DependentUpon>frmHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasterCompany.aspx.cs">
+      <DependentUpon>frmMasterCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMasterCompany.aspx.designer.cs">
+      <DependentUpon>frmMasterCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmmktdata.aspx.cs">
+      <DependentUpon>frmmktdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmmktdata.aspx.designer.cs">
+      <DependentUpon>frmmktdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmmktNew.aspx.cs">
+      <DependentUpon>frmmktNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmmktNew.aspx.designer.cs">
+      <DependentUpon>frmmktNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.aspx.cs">
+      <DependentUpon>frmSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSearch.aspx.designer.cs">
+      <DependentUpon>frmSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchCompany.aspx.cs">
+      <DependentUpon>frmSearchCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmSearchCompany.aspx.designer.cs">
+      <DependentUpon>frmSearchCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_collection.aspx.cs">
+      <DependentUpon>frm_collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_collection.aspx.designer.cs">
+      <DependentUpon>frm_collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_collection_content.aspx.cs">
+      <DependentUpon>frm_collection_content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_collection_content.aspx.designer.cs">
+      <DependentUpon>frm_collection_content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_collection_search.aspx.cs">
+      <DependentUpon>frm_collection_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_collection_search.aspx.designer.cs">
+      <DependentUpon>frm_collection_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_company_details.aspx.cs">
+      <DependentUpon>frm_company_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_company_details.aspx.designer.cs">
+      <DependentUpon>frm_company_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_contact_center.aspx.cs">
+      <DependentUpon>frm_contact_center.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_contact_center.aspx.designer.cs">
+      <DependentUpon>frm_contact_center.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_contact_center_content.aspx.cs">
+      <DependentUpon>frm_contact_center_content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_contact_center_content.aspx.designer.cs">
+      <DependentUpon>frm_contact_center_content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_contact_center_search.aspx.cs">
+      <DependentUpon>frm_contact_center_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_contact_center_search.aspx.designer.cs">
+      <DependentUpon>frm_contact_center_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hpc.aspx.cs">
+      <DependentUpon>frm_hpc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_hpc.aspx.designer.cs">
+      <DependentUpon>frm_hpc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hpc_content.aspx.cs">
+      <DependentUpon>frm_hpc_content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_hpc_content.aspx.designer.cs">
+      <DependentUpon>frm_hpc_content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_hpc_search.aspx.cs">
+      <DependentUpon>frm_hpc_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_hpc_search.aspx.designer.cs">
+      <DependentUpon>frm_hpc_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mkt.aspx.cs">
+      <DependentUpon>frm_mkt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_mkt.aspx.designer.cs">
+      <DependentUpon>frm_mkt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcCls.cs" />
+    <Compile Include="GetDataTrakCare.ashx.cs">
+      <DependentUpon>GetDataTrakCare.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HeadToDoListNew.Master.cs">
+      <DependentUpon>HeadToDoListNew.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HeadToDoListNew.Master.designer.cs">
+      <DependentUpon>HeadToDoListNew.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExcelFile.aspx.cs">
+      <DependentUpon>ImportExcelFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportExcelFile.aspx.designer.cs">
+      <DependentUpon>ImportExcelFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceTrakCare\RunJob.aspx.cs">
+      <DependentUpon>RunJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InterfaceTrakCare\RunJob.aspx.designer.cs">
+      <DependentUpon>RunJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PLogin.aspx.cs">
+      <DependentUpon>PLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PLogin.aspx.designer.cs">
+      <DependentUpon>PLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WS_Trakcare\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\WS_TrakCareCls.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SortableBindingList.cs" />
+    <Compile Include="TempUpload.cs" />
+    <Compile Include="TestCalendar.aspx.cs">
+      <DependentUpon>TestCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestCalendar.aspx.designer.cs">
+      <DependentUpon>TestCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testCalendarMaster.aspx.cs">
+      <DependentUpon>testCalendarMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testCalendarMaster.aspx.designer.cs">
+      <DependentUpon>testCalendarMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUpload.aspx.cs">
+      <DependentUpon>TestUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUpload.aspx.designer.cs">
+      <DependentUpon>TestUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_frm_mkt.aspx.cs">
+      <DependentUpon>test_frm_mkt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_frm_mkt.aspx.designer.cs">
+      <DependentUpon>test_frm_mkt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webfromtest.aspx.cs">
+      <DependentUpon>webfromtest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webfromtest.aspx.designer.cs">
+      <DependentUpon>webfromtest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WSCheckUpToDoList.asmx.cs">
+      <DependentUpon>WSCheckUpToDoList.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wuc_login_detail.ascx.cs">
+      <DependentUpon>wuc_login_detail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wuc_login_detail.ascx.designer.cs">
+      <DependentUpon>wuc_login_detail.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AllFileUpload\test01\5555\" />
+    <Folder Include="AllFileUpload\test01\ContactCenter\" />
+    <Folder Include="AllFileUpload\test01\Location\" />
+    <Folder Include="AllFileUpload\test01\PTT2014_1\" />
+    <Folder Include="AllFileUpload\test01\TRU2013\" />
+    <Folder Include="AllFileUpload\test01\weqeqwe\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+    <Folder Include="tempUpload\" />
+    <Folder Include="Upload\test01\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AllFileUpload\test01\Collection\10_timesheet_mar13_sumit.xlsx" />
+    <None Include="AllFileUpload\test01\Contact\Form Timesheet.xls" />
+    <None Include="AllFileUpload\test01\FB2013\131108163119Book ผู้ป่วย V3.xls" />
+    <None Include="AllFileUpload\test01\FB2013\131108163747BMC Aviation Board_UAT_100.doc" />
+    <None Include="AllFileUpload\test01\HPC\summary_tranfer.xlsx" />
+    <None Include="AllFileUpload\test01\Marketing\attachment.xls" />
+    <None Include="AllFileUpload\test01\Marketing\aviation_tranfer.doc" />
+    <None Include="AllFileUpload\test01\Marketing\HPC.docx" />
+    <None Include="AllFileUpload\test01\Marketing\StffPermission.xlsx" />
+    <None Include="AllFileUpload\test01\Marketing\STR-BMC_Aviation Board.xls" />
+    <None Include="AllFileUpload\test01\PER2013\131126092130Check up to do list.docx" />
+    <None Include="AllFileUpload\test01\PTT2014\131206111752131128170413ใบตอบรับ_รายชื่อ.pdf" />
+    <None Include="AllFileUpload\test01\TRUE2013\131112141041BMC Aviation Board_UAT_100.doc" />
+    <Content Include="App_Themes\FontSkin\Skin1.skin" />
+    <None Include="Download\BMC_EMRCheckUpToDoList_UM_002.docx" />
+    <Content Include="GetDataTrakCare.ashx" />
+    <Content Include="HeadToDoListNew.Master" />
+    <None Include="Service References\WS_Trakcare\WS_GetDataBytrak1.wsdl" />
+    <None Include="Temp\1awuzyj3vaxlkazimgzmxpgr_2013_12_6_11_17\131128170413ใบตอบรับ%252Bรายชื่อ.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBCheckup\DBCheckup.csproj">
+      <Project>{A3B196BC-2F74-42F3-97E8-F3B875561AAE}</Project>
+      <Name>DBCheckup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBToDoList\DBToDoList.csproj">
+      <Project>{652230B5-E6DD-439B-8429-ED635E475A1B}</Project>
+      <Name>DBToDoList</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_Trakcare\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4841</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

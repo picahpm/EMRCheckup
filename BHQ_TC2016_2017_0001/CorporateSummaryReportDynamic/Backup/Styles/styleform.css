@@ -1,0 +1,504 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ui, ul, ol,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040;
+  background: #e0d5bd;
+  height: 100%;
+  max-height: 100%; 
+}
+
+.register-title {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  width: 900px;
+  line-height: 43px;
+  margin: 0px auto 10px;
+  font-size: 19px;
+  font-weight: 500;
+  color: white;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background: #346988;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, #dc745e, #d45742);
+  background-image: -moz-linear-gradient(top, #dc745e, #d45742);
+  background-image: -o-linear-gradient(top, #dc745e, #d45742);
+  background-image: linear-gradient(to bottom, #1daafb, #346988);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.register {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  margin: 0 auto;
+  width: 860px;
+  padding: 20px;
+  background: #e1e4e8;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.register-input {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 2px;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0px 5px 0px 5px;
+}
+
+.register-input:focus {
+    border-color: #1e9ce6;
+    outline: 0;
+}
+
+.register-date {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin-top: 2px;
+    font-weight: 500;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0px 5px 0px 5px;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+datalist { 
+    display: none;
+}
+
+.register-date:focus {
+  border-color: #1e9ce6;
+  outline: 0;
+}
+
+.register-button {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  width: 100%;
+  height: 42px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494d59;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: #fcfcfc;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -moz-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -o-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: linear-gradient(to bottom, #fefefe, #eeeeee);
+  -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+}
+.register-button:active {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  background: #eee;
+  border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc);
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+}
+.register-button:focus {
+  outline: 0;
+}
+
+.register-switch {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  height: 32px;
+  margin-bottom: 15px;
+  padding: 4px;
+  background: #6db244;
+  border-radius: 2px;
+  background-image: -webkit-linear-gradient(top, #60a83a, #7dbe52);
+  background-image: -moz-linear-gradient(top, #60a83a, #7dbe52);
+  background-image: -o-linear-gradient(top, #60a83a, #7dbe52);
+  background-image: linear-gradient(to bottom, #60a83a, #7dbe52);
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), inset 1px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), inset 1px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.register-switch-input {
+  display: none;
+}
+
+.register-switch-label {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  float: left;
+  width: 50%;
+  line-height: 32px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.register-switch-input:checked + .register-switch-label {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  font-weight: 500;
+  color: #434248;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: white;
+  border-radius: 2px;
+  background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -moz-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -o-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: linear-gradient(to bottom, #fefefe, #eeeeee);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+:-moz-placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+  color: #aaa;
+  font-weight: 300;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.bodyDisclaimer {
+    font: 9px/11px 'Helvetica'; /*'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    color: #808080; 
+    text-align: justify;
+} 
+
+
+.ui-autocomplete {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;
+    _width: 160px;
+    padding: 4px 0;
+    margin: 2px 0 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+}
+.ui-state-hover, &.ui-state-active {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+      color: #ffffff;
+      text-decoration: none;
+      background-color: #0088cc;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      background-image: none;
+    }
+    
+    
+.ui-autocomplete > li {
+    background-color:White;
+    padding: 3px 20px;
+}
+.ui-autocomplete > li.ui-state-focus {
+    background-color: #DDD;
+}
+
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+
+.fixed_headers {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_headers td {
+}
+
+.fixed_headers th, td {
+    padding: 5px;
+}
+
+.fixed_headers th {
+    text-align: center;
+    border-left: 1px solid;
+}
+
+.fixed_headers td:nth-child(1) { text-align:right; }
+.fixed_headers td:nth-child(2) { text-align:center; }
+.fixed_headers td:nth-child(3) { text-align:center; }
+.fixed_headers td:nth-child(4) { text-align:left; }
+.fixed_headers td:nth-child(5) { text-align:center; }
+ 
+.fixed_headers th:nth-child(1) { width: 40px; }
+.fixed_headers th:nth-child(2) { width: 109px; }
+.fixed_headers th:nth-child(3) { width: 124px; }
+.fixed_headers th:nth-child(4) { width: 425px; }
+.fixed_headers th:nth-child(5) { width: 100px; }
+
+/*.col1 { width: 40px; }
+.col2 { width: 109px; }
+.col3 { width: 124px; }
+.col4 { min-width: 430px; }
+.col5 { width: 100px; }*/
+
+
+.fixed_headers tbody tr:nth-child(odd) {
+    background-color:  #dae6f1;/**/
+}
+.fixed_headers tbody tr:nth-child(even) {
+    background-color: white; /*#dae6f1*/
+}
+
+.fixed_headers th {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    border-collapse: collapse;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    background-image: linear-gradient(to bottom, #2b9de0, #388fc1); /*#2b9de0, #388fc1*/
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: #346988;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 25px;
+    margin: 0px 0px 5px;
+    border-radius: 3px 3px 0px 0px;
+    width: 844px;
+}
+
+.fixed_headers thead tr
+{
+    border: 1px solid;
+}
+
+.fixed_headers tbody
+{
+    padding: 1px 1px 1px 1px;
+}
+
+.fixed_headers tbody {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    background-color: White; /**/
+}
+
+
+.old_ie_wrapper {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.old_ie_wrapper tbody { height: auto; }
+
+.gvDynamicCss {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.gvDynamicCss td {
+}
+
+.gvDynamicCss th, td {
+    padding: 5px;
+}
+
+.gvDynamicCss th {
+    text-align: center;
+    border-left: 1px solid;
+}
+
+.gvDynamicCss td:nth-child(1) { text-align:right; }
+.gvDynamicCss td:nth-child(2) { text-align:center; }
+.gvDynamicCss td:nth-child(3) { text-align:left; }
+.gvDynamicCss td { text-align:center; }
+ 
+.gvDynamicCss th:nth-child(1) { min-width: 40px; }
+.gvDynamicCss th:nth-child(2) { min-width: 110px; }
+.gvDynamicCss th:nth-child(3) { min-width: 200px; }
+.gvDynamicCss th{ min-width: 80px; }
+.gvDynamicCss tbody tr:nth-child(odd) {
+    background-color:#dae6f1 ; /**/
+}
+.gvDynamicCss tbody tr:nth-child(even) {
+    background-color: white; /*#dae6f1*/
+}
+
+.gvDynamicCss th {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    /*display: block;*/
+    border-collapse: collapse;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    background-image: linear-gradient(to bottom, #2b9de0, #388fc1); /*#2b9de0, #388fc1*/
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    background-color: #346988;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 25px;
+    margin: 0px 0px 5px;
+    border-radius: 3px 3px 0px 0px;
+    /*width: 844px;*/
+}
+
+.gvDynamicCss thead tr
+{
+    border: 1px solid;
+}
+
+.gvDynamicCss tbody
+{
+    padding: 1px 1px 1px 1px;
+}
+
+.gvDynamicCss tbody {
+  behavior: url(/CorporateSummaryReport/PIE/PIE.htc);
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    background-color: White; /**/
+}
+
+select.custom-dropdown {
+    -webkit-appearance: none;  /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+    -moz-appearance: none;  /*REMOVES DEFAULT FIREFOX STYLE*/
+    border: 0 !important;  /*REMOVES BORDER*/
+    
+    color: #122058;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 35%;
+    cursor: pointer;
+
+    background: #f8f9fb url(drop-down-arrow.png) no-repeat right center;
+    background-size: 40px 37px; /*TO ACCOUNT FOR @2X IMAGE FOR RETINA */
+ 
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+

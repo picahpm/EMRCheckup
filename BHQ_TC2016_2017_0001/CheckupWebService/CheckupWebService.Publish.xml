@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\work\webservicecheckupBHQ\" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="10/30/2017 15:41:04" />
+    <file relUrl="bin/Ghostscript.NET.dll" publishTime="07/02/2017 15:20:30" />
+    <file relUrl="bin/CheckupWebService.pdb" publishTime="11/06/2017 09:43:24" />
+    <file relUrl="Images/normal_mid.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="Images/PointRed.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="Images/PointGreen.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="Images/normal_right.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="bin/DBToDoList.dll" publishTime="11/03/2017 13:26:58" />
+    <file relUrl="Images/ChartBackGround.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="bin/DBToDoList.pdb" publishTime="11/03/2017 13:26:58" />
+    <file relUrl="Images/PointBlue.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="Images/normal_range.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="Images/normal_left.png" publishTime="07/02/2017 15:20:29" />
+    <file relUrl="bin/CheckupWebService.dll" publishTime="11/06/2017 09:43:24" />
+    <file relUrl="WS_GetDataFromPathWay.asmx" publishTime="07/02/2017 15:20:30" />
+    <file relUrl="bin/DBCheckup.dll" publishTime="11/03/2017 13:26:57" />
+    <file relUrl="Images/Error.png" publishTime="07/02/2017 15:20:28" />
+    <file relUrl="bin/DBCheckup.pdb" publishTime="11/03/2017 13:26:57" />
+    <file relUrl="DLL/Ghostscript.NET.dll" publishTime="07/02/2017 15:20:30" />
+  </publishProfile>
+</publishData>

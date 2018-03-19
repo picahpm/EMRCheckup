@@ -1,0 +1,34 @@
+﻿@model PointPackage.Models.PatientInformationModel
+@{
+    Layout = "~/Views/PatientSearch/_MasterPatientSearch.cshtml";
+}
+
+<script type="text/javascript">
+    function clickPatient(tpr_id) {
+        $('#tpr_id').val(tpr_id);
+        $('#PatientList').submit();
+    }
+</script>
+@using (Html.BeginForm("PatientList", "PatientSearch", FormMethod.Post, new { id = "PatientList" }))
+{
+    @Html.HiddenFor(x => x.queue_no)
+    @Html.Hidden("tpr_id", new { @id = "tpr_id" })
+    <div class="row">
+        @for (var i = 0; i < Model.listPatientInformation.Count; i++)
+        {
+            <div class="4u 12u$(mobile)">
+                <article class="item" onclick="clickPatient(@Model.listPatientInformation[i].tpr_id)" style="cursor:pointer;">
+                    <header style="padding:15px 15px 15px 15px;">
+                        <h3 style="text-align:left;">HN : @Model.listPatientInformation[i].hn</h3>
+                        <h3 style="text-align:left;">EN : @Model.listPatientInformation[i].en</h3>
+                        <h3 style="text-align:left;">Name : @Model.listPatientInformation[i].name</h3>
+                        <h3 style="text-align:left;">Lastname : @Model.listPatientInformation[i].lastname</h3>
+                        <h3 style="text-align:left;">Arrived Date : @Model.listPatientInformation[i].arrived_date.ToString("dd/MM/yyyy")</h3>
+                        <h3 style="text-align:left;">Arrived Time : @Model.listPatientInformation[i].arrived_date.ToString("HH:mm:ss")</h3>
+                    </header>
+                </article>
+            </div>
+        }
+    </div>
+}
+
